@@ -1,0 +1,11 @@
+__pycache__
+outputs
+poetry.lock
+.env
+logs
+notebooks/models/all-MiniLM-L6-v2
+NonTracked
+models
+data/eda/all_submissions_with_decisions.pkl
+.DS_Store
+data/model_cache/

@@ -1,0 +1,43 @@
+# IMPORTANT: the defaults section tells Hydra to validate against our schema.
+defaults:
+  - schema: data_acquisition
+  - _self_
+
+#Database Configuration
+mongodb:
+  host: localhost
+  port: 27017
+  db_name: openreview_db_iclr_2024
+  username: ${oc.env:MONGO_USERNAME,}
+  password: ${oc.env:MONGO_PASSWORD,}
+
+embedding_model: text-multilingual-embedding-002
+
+gpt_reasoning_models:
+  openai: gpt-4o
+  google: gemini-2.5-flash #for question separation judge
+  anthropic: claude-3-7-sonnet@20250219 #for question separation judge
+  google_topic_assignment_judge: gemini-2.5-pro #for topic assignment judge
+  anthropic_topic_assignment_judge: claude-sonnet-4@20250514 #for topic assignment judge
+
+topic_assignment_model: gpt-4o
+
+llm_models:
+  question_separation: gemini-2.5-pro #anthropic.claude-v3-haiku
+  question_filtering: gemini-2.5-flash #anthropic.claude-v3-haiku
+
+#Main Data Sources
+iclr_2024_venue: ICLR.cc/2024/Conference
+iclr_2025_venue: ICLR.cc/2025/Conference
+pdf_directory: data/paper_pdf_documents
+
+#Openreview Configuration
+open_review_conf:
+  api_version: v2
+  root_conference_names:
+    - ICLR
+    - NeurIPS
+    - ICML
+    - aclweb.org/ACL
+    - EMNLP
+    - auai.org/UAI
