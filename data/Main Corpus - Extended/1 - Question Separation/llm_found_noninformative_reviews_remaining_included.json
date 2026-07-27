@@ -1,0 +1,4019 @@
+[
+    {
+        "review_id": "wbo2qutfcP",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "ueruSAKlUm",
+        "raw_questions": "I have no questions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "ttDjPXOGQl",
+        "raw_questions": "Please see my comments in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "tbwVxQsfYA",
+        "raw_questions": "refer to the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "t7jNyAgsBZ",
+        "raw_questions": "Please address questions in Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "tbXu2j91N5",
+        "raw_questions": "Please refer to Weakness. I will consider raising the scores after the rebuttal period if the authors could address the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "sczcP2bKP1",
+        "raw_questions": "please see the weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "sO7tXs18mC",
+        "raw_questions": "Please see weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "rQnmwWT5XG",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "rGvKhs976j",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "qnsiunOcXM",
+        "raw_questions": "Please see weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "pirUObTYXT",
+        "raw_questions": "See weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "pf1gBanuVp",
+        "raw_questions": "Please see Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "pLSVTQblIC",
+        "raw_questions": "/",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "ohJ1SgSHDa",
+        "raw_questions": "See #Weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "oQphVV3TkY",
+        "raw_questions": "I didn't really have any big questions on this paper -- very solid!",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "oLtd6DmKy6",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "nv1proJGa4",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "noJRi76AHQ",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "mQh0JXsBZR",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "m9id0ZsKmv",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "lP7p3feQlP",
+        "raw_questions": "No",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "lB9FoTAy7d",
+        "raw_questions": "See weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "kuNMOhO24U",
+        "raw_questions": "Refer to Weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "kLFe8vF70r",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "k4kbxLy9ey",
+        "raw_questions": "Please find the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "jCsJDl7hhi",
+        "raw_questions": "Please See the Weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "j9F1pNGBQr",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "isypt3elHp",
+        "raw_questions": "Please refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "irHs0aW5Q3",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "iXrzgTsJPz",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "iVQFRSC94m",
+        "raw_questions": "Please see the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "iK5DYjrq4x",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "iNfGomvCgf",
+        "raw_questions": "Can the authors please comment on my concerns listed in the weaknesses?",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "iCuPly4GCu",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "i7xo20uiUX",
+        "raw_questions": "No specific questions, please look at weaknesses for certain clarifications.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "i7mhZEhOCg",
+        "raw_questions": "See the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "hp2QORcsie",
+        "raw_questions": "No questions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "hlQxh0mWSq",
+        "raw_questions": "Please see the previous section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "hjwPb7r2fR",
+        "raw_questions": "1. See the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gzva19tyks",
+        "raw_questions": "please see the weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gw3JM9A4EX",
+        "raw_questions": "My questions are stated in the weakness above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gqylBC5dci",
+        "raw_questions": "See Weakness section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gkdfSdBLzm",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gfk3WQehu7",
+        "raw_questions": "Please see details of Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gVO0FZ67bq",
+        "raw_questions": "Please address the concerns in above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "gA7yXwqY7f",
+        "raw_questions": "* See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "g1r8GQ8P9O",
+        "raw_questions": "see above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "fvZoXJGYpZ",
+        "raw_questions": "Please refer to the weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "fdO8PrKqLS",
+        "raw_questions": "See weaknesses as above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "fIUSVSfzfe",
+        "raw_questions": "See the weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "f7IootBKsy",
+        "raw_questions": "Please refer to the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "f4OU5cQCxx",
+        "raw_questions": "See limitations",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "eJw9H4gS1D",
+        "raw_questions": "Please see the first point in Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "dzRhSuftMF",
+        "raw_questions": "Please check the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "dhWISMZZsT",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "dYkNoRE1yG",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "dUt3MFhR8k",
+        "raw_questions": "See weaknesses part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "d4baYRXqZp",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "cqTCmzm6YX",
+        "raw_questions": "In the Summary",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "cYe58tltJK",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "cRAkNGGFEO",
+        "raw_questions": "See my concerns listed above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "cOoiSztcg1",
+        "raw_questions": "Please see the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "c8bzfNmdlQ",
+        "raw_questions": "Please see weaknesses for details.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "bqgWuDXLDr",
+        "raw_questions": "See \"weaknesses\".",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "brGSVfcZ3Y",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "bbbv7Vag8L",
+        "raw_questions": "I think the important details are well described and there is no particular question.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "bOZoIZYSZh",
+        "raw_questions": "See above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "bEmoHgtZ4H",
+        "raw_questions": "Please address the weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "b1MNqwBqX6",
+        "raw_questions": "Please refer to weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "alXHrMSMl3",
+        "raw_questions": "My questions are included in the weakness section. I am willing to adjust my scores if my concerns are properly addressed.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "aDxMifnuNX",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "a5OqBtkMBO",
+        "raw_questions": "Please see the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Zd3pByR5pV",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "ZM1tXWWm2b",
+        "raw_questions": "see weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Yyt9I9gCUL",
+        "raw_questions": "Please see above weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YwsmsTbiF9",
+        "raw_questions": "Please see questions and comments under weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YwnzgrffGy",
+        "raw_questions": "Please refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YjxirSmkNs",
+        "raw_questions": "Please refer to the weaknesses section for my queries.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Yfwik7BxT6",
+        "raw_questions": "See Weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YNnZSxC7hW",
+        "raw_questions": "see above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YCOyaeBnhH",
+        "raw_questions": "Please refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "YC8DbLEet8",
+        "raw_questions": "See above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Y8RyP0Meln",
+        "raw_questions": "Please address the weaknesses above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Y6ClCXbOy4",
+        "raw_questions": "Please see Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "XyVOyU8BKz",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "XgpTzU3Uad",
+        "raw_questions": "Please address the questions above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "XP3HmzAGY8",
+        "raw_questions": "See weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WtK5japEqC",
+        "raw_questions": "Please see weaknesses for points that could be addressed in the rebuttal.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WqroV6Vw1h",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Wm5tolyH6G",
+        "raw_questions": "See weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WcTVR9uL2k",
+        "raw_questions": "Please refer to the pros and cons part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WXlEZbVK4F",
+        "raw_questions": "See the above weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WXH0WIXrAU",
+        "raw_questions": "Please see the weakness above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "WQK8Oxb20q",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Vuy24vk0ei",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "VsWrJrlsrG",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Vp2lILktrE",
+        "raw_questions": "Please refer to the 'Weaknesses' part. I will increase my score if the authors can address my concerns.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "VZhMa5bpZ1",
+        "raw_questions": "Please refer to the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "VYDbGyZ254",
+        "raw_questions": "please check the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "UnLorMepj8",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "USCz2Awr0b",
+        "raw_questions": "None.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "UCC3fPoJ0J",
+        "raw_questions": "See above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "UAmUhVe3E8",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "U7xKDT2N0V",
+        "raw_questions": "Please see weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "U2CvrqmVbJ",
+        "raw_questions": "see weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "TibhThc3sh",
+        "raw_questions": "See the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Tutb4c9N7P",
+        "raw_questions": "Please refer to Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "TIqxRVgKfo",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "T0ft37cVZE",
+        "raw_questions": "See the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "SnXiruJplr",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "SXF2OkUWN9",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "SGznR2jDD5",
+        "raw_questions": "See weaknesses:\n- Improve the text and clarity.\n- Is Section 3 not trivial?\n- Is there a substantial technical contribution?",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "RuFeGjpNVW",
+        "raw_questions": "see above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "RoD0KPsHUV",
+        "raw_questions": "Please refer to Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "RFXOFKHPNX",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "REFrHLduxX",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "RBj9aruPFR",
+        "raw_questions": "mentioned above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "R93l60qQLv",
+        "raw_questions": "See weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "QvOnxAP7cl",
+        "raw_questions": "Please refer to the comments in the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Rizu3G1mxe",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "QbhHk7D1BL",
+        "raw_questions": "see weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "QUTGwWXMdn",
+        "raw_questions": "see the weakness above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "QTNzvE2o8f",
+        "raw_questions": "(see points mentioned above)",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "PtKjDtbwCf",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "PhaDDAlXUZ",
+        "raw_questions": "See weaknesses above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OyxIcOw9ML",
+        "raw_questions": "See confirmative questions above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OvwTIpzrF1",
+        "raw_questions": "I asked questions in the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OssbYBMKzj",
+        "raw_questions": "See the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Op2af8yZ55",
+        "raw_questions": "Please refer to the weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OlSeaXz5A2",
+        "raw_questions": "Refer to the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Ob0JBNseDB",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OWBga2y0tQ",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OSSEF7fGgI",
+        "raw_questions": "see above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OQrhjVRdDU",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OO5WdhTYY1",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OKzY7Fa2kV",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "OBgnw6LrcV",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NzBdtRc5S1",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "O7O8VgHv5q",
+        "raw_questions": "Refer to the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NqWMG1C88m",
+        "raw_questions": "See the weak points.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NjPQ8FuzJt",
+        "raw_questions": "Please refer to weakness 1 and 2",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NdT1jEpZJB",
+        "raw_questions": "As my concerns shown in the Weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NVqhLPpRhN",
+        "raw_questions": "See Weakness Section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NI5BsdIiGt",
+        "raw_questions": "NA",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "N8KwQzX5by",
+        "raw_questions": "Please see weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "NCU5oHaNLV",
+        "raw_questions": "Please see the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "N3RHFQ9taA",
+        "raw_questions": "Please address my concerns in the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "N37UJbIbsa",
+        "raw_questions": "-",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "MgRWtpdB1z",
+        "raw_questions": "Please see the Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "MUa4KwxwHV",
+        "raw_questions": "See Weaknesses above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "MN5g5eGlZN",
+        "raw_questions": "See the Weakness above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "LvZaY3SfuP",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Lshau2x4wY",
+        "raw_questions": "n/a",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Lp5Mp0an62",
+        "raw_questions": "See aboove.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Lgp8xWbTnW",
+        "raw_questions": "Please refer to weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "LpzqvR1hSR",
+        "raw_questions": "Please address my concerns in the \"Weaknesses\" section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "LcwhuYIsLv",
+        "raw_questions": "Please see the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "LPPLZnnudc",
+        "raw_questions": "See the weakness section above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "L6f39X7xIx",
+        "raw_questions": "Please see questions above regarding comparison to previous work and hyper-parameter search.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "L5coNxyTZZ",
+        "raw_questions": "Please see my comments in Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Kcqsz1XW5o",
+        "raw_questions": "See Strengths and Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "KAfk4GBkKo",
+        "raw_questions": "I hope the authors can address some of my concerns in Weaknesses. I don't have any other questions here.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "K415jaw6qx",
+        "raw_questions": "Please see my comments above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Jyixis7spe",
+        "raw_questions": "n/a",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "K6amDXXfof",
+        "raw_questions": "See weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Jy5inUqIHt",
+        "raw_questions": "Please see the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JpM7PqKQZo",
+        "raw_questions": "See the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Jj6B2eTz0m",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JRnT65RzU0",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JP9IDg5aFG",
+        "raw_questions": "See the weaknesses section for the questions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JGiXru1931",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JDqBDvi34e",
+        "raw_questions": "Please refer to the weakness session for more detail.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "J8AI1ScraX",
+        "raw_questions": "I have no particular question, apart from the one mentioned above, about the control that the use of CLIP introduces into the proposed representation.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "JPdBKDuKBs",
+        "raw_questions": "Similar to the points I made in weaknesses session, I would read more on the intuition behind all your experiments.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "IE9nqBx8T2",
+        "raw_questions": "See weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "INQ8xtWEfP",
+        "raw_questions": "I would like the authors to address the concerns I raised in the weaknesses part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "I4MT8FLLfE",
+        "raw_questions": "See weaknesses section above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "IazfSXN7CW",
+        "raw_questions": "Please see the strengths and weaknesses. In addition to grammar, the presentation should also be improved. Related Work lists previous papers and their limitations, rather than providing the reader with background information for this paper’s research field. The Ablation Study is vague, and it is unclear what it is comparing. This makes it difficult to see exactly which components in their pipeline are contributing to the improved results.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HvMgyFZvJR",
+        "raw_questions": "See weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HXpAfmgh2t",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HSoXqvYnSh",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HJNdxE4z44",
+        "raw_questions": "See weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HLQX8WIfLK",
+        "raw_questions": "please refer to the Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HGMcUqe3i1",
+        "raw_questions": "Please refer to Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "HCcdCy9cfh",
+        "raw_questions": "See concerns in the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "H85Ji9DeXx",
+        "raw_questions": "Please see the Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GotR09nePU",
+        "raw_questions": "n/a",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GhwmkKrn3X",
+        "raw_questions": "Please see the comments in the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GUBKzQ9evq",
+        "raw_questions": "Please refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GTWeOPHmVw",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GEhuFEc6hx",
+        "raw_questions": "Please refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "GBGuMRonFV",
+        "raw_questions": "Please refer to the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "G6TsyarP4M",
+        "raw_questions": "Please see the Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "G7oA5jtBQO",
+        "raw_questions": "No further questions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Fm1r3HIyon",
+        "raw_questions": "See above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "FgNH3bgAXj",
+        "raw_questions": "Please see weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "FOaPP78tgO",
+        "raw_questions": "No",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "F8BzRlUmcW",
+        "raw_questions": "Please refer to paper weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "EQePdHSTEY",
+        "raw_questions": "NA.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "EOeq86ih5V",
+        "raw_questions": "Refer to the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "E4eQeSo214",
+        "raw_questions": "NA",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "DyxsvRHrcL",
+        "raw_questions": "See weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Do2Fof3xHI",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "DTrnsp9wGA",
+        "raw_questions": "Please refer to the weaknesses mentioned above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "DALDtTOt4L",
+        "raw_questions": "No",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CtEjoaPtnz",
+        "raw_questions": "See weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CrJ7PM8LXy",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CuhlAqtAWQ",
+        "raw_questions": "As mentioned above, kinematics models have been applied for ML trajectory forecasting and hence, the contributions of this paper seem minor.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CLfiXkdLA7",
+        "raw_questions": "(see previous comments)",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CQOKsRSK9r",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CJA75PRCRf",
+        "raw_questions": "See the weaknesses section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CGXUwDNoh9",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CGfS3XTo8E",
+        "raw_questions": "See weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CETfjSpWdX",
+        "raw_questions": "See in weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "CBt4L5lpOa",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "C2K3369lvo",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "C86ArpEnGv",
+        "raw_questions": "See Weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "BwG9bElMcr",
+        "raw_questions": "Please refer to my comments in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "BXvkZKyEh1",
+        "raw_questions": "Please refer to Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "BED90XJx7U",
+        "raw_questions": "Please see the weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Aojkno4WwM",
+        "raw_questions": "I do not have any questions since the presentation is clear and intuitive.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "Af03kwZIHS",
+        "raw_questions": "Please answer my question listed above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "AVDFdSF8oS",
+        "raw_questions": "My questions and concerns about this paper are listed in the Weakness part. I will raise my rating if the author can address my concerns with reasonable evidence.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "AQOZRGvvLZ",
+        "raw_questions": "Please see comments above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "AEMR5tszj3",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "AA2bBQT5cL",
+        "raw_questions": "Please refer to the questions in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "9lj9JKyH43",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "9Vqxe6SEoB",
+        "raw_questions": "Kindly refer to the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "9Ysb21IgUO",
+        "raw_questions": "Please address the weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "9T4OHHKswH",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "98aHB0HT9s",
+        "raw_questions": "Please take a look at the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "91q95F3iyB",
+        "raw_questions": "N/A",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "90MHJTJcXP",
+        "raw_questions": "See the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "8l59fdwInP",
+        "raw_questions": "Please check weakness for details.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "8fBdUsh9Gi",
+        "raw_questions": "Please see my above comments.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "8WrzSh3HGI",
+        "raw_questions": "NA",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "8PYHA5RVKo",
+        "raw_questions": "Please refer to the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "8EcckOIEUs",
+        "raw_questions": "'None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7yF6qbadim",
+        "raw_questions": "Please see the questions in the ``Weaknesses\".",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7mAiq0OHd7",
+        "raw_questions": "My questions are in the Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7cimaA30vy",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7UjeP7NiIq",
+        "raw_questions": "Please see the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7L7TnbitmB",
+        "raw_questions": "Refer to weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "7AZgaGMfpd",
+        "raw_questions": "See the previous section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "6jJwMQzmsZ",
+        "raw_questions": "All questions and suggestions are already mentioned in the “Weaknesses” section as a list of numbered points.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "6ji64oZXKu",
+        "raw_questions": "Please see above on my questions, overall a solid paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "6Q12UZEOwW",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "6JPlkjpeE2",
+        "raw_questions": "No questions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "6BVqPeIouP",
+        "raw_questions": "See the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "67iJkjCxQQ",
+        "raw_questions": "See Weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5whxaf3Dar",
+        "raw_questions": "Please check the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5pXSB6IukR",
+        "raw_questions": "My questions are listed in the weakness part. \n\nI will consider improving the rating if the author adequately addresses my concerns.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5W8zZ8mQ1c",
+        "raw_questions": "Please refer to the questions in the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5Sh79Q2TGk",
+        "raw_questions": "See the weakness part.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5FGXDstr2K",
+        "raw_questions": "Please see the questions in the above weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "5COAuDGM17",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "57fAR2ze7f",
+        "raw_questions": "see weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4kgVTSkH06",
+        "raw_questions": "Please kindly refer to the questions raised in the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "51Uabbuq1T",
+        "raw_questions": "no questions - just an inappropriate paper",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4aunwrFvtH",
+        "raw_questions": "Please refer to \"Weaknesses\" section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4VVoFvltsA",
+        "raw_questions": "No",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4RkDzGOZ6G",
+        "raw_questions": "Please refer to the previous part",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4N7Ws2wZXf",
+        "raw_questions": "See weaknesses section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4JLV3Clkml",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4G1SwBp4Wg",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4EuO7eBvXc",
+        "raw_questions": "please see the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "4CADIFNjU1",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "48OBFOi0kd",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "46bvrbUyVU",
+        "raw_questions": "See above",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3zrqlfbg3k",
+        "raw_questions": "See Weaknesses*",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3wFwE3liEp",
+        "raw_questions": "Please see my questions in the previous section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3tBaXvLt3l",
+        "raw_questions": "Not applicable.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3oDiOYnaZs",
+        "raw_questions": "See the points raised in weaknesses for questions and suggestions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3juOyKJ3qW",
+        "raw_questions": "Please see Section \"Weaknesses\".",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3XB3MN7KAB",
+        "raw_questions": "Refer to the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3Jx9KXTFrb",
+        "raw_questions": "None.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "3F2CmbfzLe",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2zHIwsqRN5",
+        "raw_questions": "None, aside from the minor points presented in the weaknesses section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2tBfM3Wr0N",
+        "raw_questions": "See weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2vmggYaQpt",
+        "raw_questions": "see questions in weakness section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2o1oPQEJaG",
+        "raw_questions": "Please refer to the weaknesses section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2o181gPAfB",
+        "raw_questions": "Please see the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2gswaaUjOq",
+        "raw_questions": "please see weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2iK6fvLgKQ",
+        "raw_questions": "Could the authors address my questions in the Weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2d93AwGIkq",
+        "raw_questions": "I served as a reviewer for this submission at other conferences and had enough opportunities to (anonymously) interact with the authors. I do not have any further questions or inquiries.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2V4yA8x010",
+        "raw_questions": "See weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2RSkxmHFdk",
+        "raw_questions": "See the section of weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2Nx6nE8U2E",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "2LIkFaKhJG",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "24jOtRnHfH",
+        "raw_questions": "See weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "240Kf7w9Al",
+        "raw_questions": "As listed in weakness",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "20q40TxpSF",
+        "raw_questions": "Please see weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1kxbv365Yl",
+        "raw_questions": "See the above section",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1eOWTMihWN",
+        "raw_questions": "See above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1WOsIvoVYl",
+        "raw_questions": "Please refer to Weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1ZoJoPa6Ru",
+        "raw_questions": "Nothing.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1NbW5axGtZ",
+        "raw_questions": "NA",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1KIyF4ZSWp",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1JH1wslsdZ",
+        "raw_questions": "Please see the weaknesses above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "1C74UDZ2SM",
+        "raw_questions": "Please refer to the weaknesses Section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "154Oh1VrxI",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "0U8KiCwQwC",
+        "raw_questions": "See weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "0HBrs6W6cb",
+        "raw_questions": "None",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "0Rk7OGoR6p",
+        "raw_questions": "NO",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "0Dx7AfK1wL",
+        "raw_questions": "Please see the weakness above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "09tJ3FvZlV",
+        "raw_questions": "See weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "0631RSpvPM",
+        "raw_questions": "Please see the \"Weaknesses\" section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    },
+    {
+        "review_id": "062KWuxp1I",
+        "raw_questions": "See the weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": false
+            }
+        }
+    }
+]

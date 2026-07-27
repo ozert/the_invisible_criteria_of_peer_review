@@ -1,0 +1,79 @@
+[
+    {
+        "review_id": "v5tQtcpOMS",
+        "raw_questions": "Please refer to questions in the weaknesses section. \n\n[Minor] Writing suggestions:\n- Fix tense : Abstract, \".. has efficiently corrected .. \" \n- Section 1 : \"model's decision\" ^making \"process\" ? \n- Section 2 : \"importance\" -> \"Importance\"\n- Reword title of Section 3.2\n- Section 5 : \"FOr the pruni .. \"",
+        "separated_questions": [
+            {
+                "question": "Is the finetuning and validation being done on the same dataset ?",
+                "expanded_context": "The paper proposes a method to correct misclassifications by identifying salient parameters, which involves a one-step fine-tuning process. The reviewer is questioning the experimental setup described in section 5.1.2, specifically whether the same dataset was used for both fine-tuning and validation.",
+                "raw_question": "[Minor] Writing suggestions:\n- Fix tense : Abstract, \".. has efficiently corrected .. \" \n- Section 1 : \"model's decision\" ^making \"process\" ?",
+                "cosine_similarity_after_regex": 0.1440306454896927,
+                "cosine_similarity": 0.1440306454896927
+            },
+            {
+                "question": "The interpretations in Figure 4 are not clear, especially the conv5_x curve and its relation to the proposed approach.",
+                "expanded_context": "The paper provides empirical experiments to support its claims about using parameter saliency to understand misclassifications. However, the reviewer finds the visual evidence presented in Figure 4 to be unconvincing and is asking for clarification on the conv5_x curve and how it relates to the proposed method.",
+                "raw_question": "Please refer to questions in the weaknesses section.",
+                "cosine_similarity_after_regex": 0.20646420121192932,
+                "cosine_similarity": 0.20646414160728455
+            },
+            {
+                "question": "How do you differentiate between label errors and misclassification ?",
+                "expanded_context": "The paper's goal is to use parameter saliency to understand and correct misclassifications in neural networks. The reviewer is asking for clarification on how the authors distinguish between a model's prediction error (a misclassification) and a potential error in the ground truth data (a label error).",
+                "raw_question": "[Minor] Writing suggestions:\n- Fix tense : Abstract, \".. has efficiently corrected .. \" \n- Section 1 : \"model's decision\" ^making \"process\" ?",
+                "cosine_similarity_after_regex": 0.24231597781181335,
+                "cosine_similarity": 0.24231597781181335
+            },
+            {
+                "question": "Can the authors give more insight into when would this hold ? Perhaps as a function of class difficulty, model size, dataset size.",
+                "expanded_context": "The paper's methodology, as described in section 4.3, is built on the assumption that the \"anomalous behavior of filters.. is a rare event\". The reviewer is questioning the generalizability of this core assumption and asks for more details on the conditions under which it is valid.",
+                "raw_question": "[Minor] Writing suggestions:\n- Fix tense : Abstract, \".. has efficiently corrected .. \" \n- Section 1 : \"model's decision\" ^making \"process\" ? Please refer to questions in the weaknesses section.",
+                "cosine_similarity_after_regex": 0.3263263404369354,
+                "cosine_similarity": 0.2636103928089142
+            }
+        ],
+        "status": {
+            "question_separation_status": {
+                "is_success": true
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "piYrATxa6N",
+        "raw_questions": "It would be great to see the authors compare with the very basic baseline, perform ablation studies, and fix some config settings to make the paper more complete.",
+        "separated_questions": [
+            {
+                "question": "It would be great to see the authors compare with the very basic baseline...",
+                "expanded_context": "The reviewer suggests that a crucial baseline is missing from the experiments. They propose including a simple Transformer model that learns directly from the question and answer pairs in a semi-supervised fashion. This is suggested because the current Reward Model baseline underperforms significantly, and a new, comparably-sized baseline could help rule out overfitting as the cause.",
+                "raw_question": "It would be great to see the authors compare with the very basic baseline, perform ablation studies, and fix some config settings to make the paper more complete.",
+                "cosine_similarity_after_regex": 0.5581483840942383,
+                "cosine_similarity": 0.5581483840942383
+            },
+            {
+                "question": "...perform ablation studies...",
+                "expanded_context": "The proposed framework augments the input data x into an (x,r) pair using an LLM. The reviewer questions the importance of the sampled response (r) and suggests an ablation study to justify its inclusion. They propose testing the model's performance without 'r' or by replacing it with random strings to determine if the LLM-generated response is a critical component of the method.",
+                "raw_question": "It would be great to see the authors compare with the very basic baseline, perform ablation studies, and fix some config settings to make the paper more complete.",
+                "cosine_similarity_after_regex": 0.5148129463195801,
+                "cosine_similarity": 0.5148129463195801
+            },
+            {
+                "question": "...and fix some config settings to make the paper more complete.",
+                "expanded_context": "The reviewer points out a potential inconsistency in the experimental setup for the Reward Model baseline. The paper describes using a linear MLP head, but the code uses a LoraConfig, which may be the reason for the baseline's poor performance. Additionally, they suggest that using cross-entropy loss instead of MSE would be more appropriate for predicting a distribution.",
+                "raw_question": "It would be great to see the authors compare with the very basic baseline, perform ablation studies, and fix some config settings to make the paper more complete.",
+                "cosine_similarity_after_regex": 0.4049088954925537,
+                "cosine_similarity": 0.4049088954925537
+            }
+        ],
+        "status": {
+            "question_separation_status": {
+                "is_success": true
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    }
+]

@@ -1,0 +1,288 @@
+[
+    {
+        "review_id": "EtoTDI9JEk",
+        "raw_questions": "I would strongly recommend that the authors review existing published works in ICLR and other AI and computer vision conferences to understand how to improve their papers' presentation, experiments, contributions and style, etc. In its current form the paper is not acceptable as a scientific article.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "chi7XKupHM",
+        "raw_questions": "Unfortunately I do not foresee any changes that could motivate me to change my review at this time. You would need to fully re-do your evaluation and experiments at a much greater scale for me to consider a change in score here.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "czqaNoE9fC",
+        "raw_questions": "The paper has a shallow scientific quality and lacks scientific contribution.\nAt this stage, No response to my question can change my opinion.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "YhvDQa0GKX",
+        "raw_questions": "- Citation formet incorrect, \\citep{} be used to produce something like (Abc, et al., 2023) and not Abc, et al., 2023 everywhere.\n- Many grammatical errors, such as \"Throughout the fine-tuning...\"\"",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "YFqiPviMRo",
+        "raw_questions": "I suggest the authors see more recent papers on few-shot learning literature, especially [1,2], to get a better sense of what's going on in the field currently, and what are the main problems that the community cares about.\n\n[1] A Closer Look at Few-shot Classification Again. ICML 2023.\n[2] Pushing the Limits of Simple Pipelines for Few-Shot Learning: External Data and Fine-Tuning Make a Difference. CVPR 2022.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "R82f8RaRmk",
+        "raw_questions": "I consider this draft way below the quality required for ICLR. As I already mentioned, the manuscript feels more aimed at a textbook or divulgation note. Even if all its weaknesses were to be addressed, it still falls a bit outside the scope of ICLR, since it mostly deals with intricacies related more to Evolutionary Computation.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "sYsHx8Vzjs",
+        "raw_questions": "Please response W1,W2, W3, W4.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "rpPcvDy4oA",
+        "raw_questions": "1. The primary questions have been outlined in the weaknesses section.\n\n2. Minor suggestions:\n(1). I recommend adding a detailed introduction to the target domain accuracy estimation method because it is a crucial component of the method.\n(2). I recommend refining the writing to ensure it is well-organized and comprehensive. For example, in the \"Conclusion\" section, please correct \"shawed\" to \"showed,\" and consider starting the \"References\" section on a new page.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "VP6nKJGV6l",
+        "raw_questions": "Overall, I am interested in this regrouping idea for imbalance learning, although it has been proposed in previous explorations. What is the intrinsic difference for imbalanced learning should be highlighted, instead of some minor difference as in the description of the submission. For other questions, please see above weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "i76yR3AHDc",
+        "raw_questions": "I generally appreciate the direction and idea of this paper. However, the current state of this paper can only be considered a simple proof of concept and lacks depth. I would consider accepting this paper if the authors provide a comprehensive study of this method.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "wQJFeYhgy4",
+        "raw_questions": "One could argue that judging a paper on a task that it does not propose to do is to force a requirement on the paper outside of the scope of work.  One conceivably could always come up with such arguments - \"what about X or Y -- why were they not included in the work?\" and hence such criticisms might appear in general unfair.    The argument as to the weakness described could be considered as such.  However this is a stronger argument, that claims about a contribution must be substantiated against a conventional norm.   I am open to reconsideration of this point should the current contribution based purely on novelty be considered adequate.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "f6Jnq4yZJa",
+        "raw_questions": "Suggestions: \n\n1.  Please add relevant citations \n2.  Refer to weakness point 2-4 and please address those.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "aj54qP9XhO",
+        "raw_questions": "Please see weaknesses section above. I am more than happy to increase my score if the questions are answered appropriately.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "UMflBIjT9N",
+        "raw_questions": "Please refer to my weaknesses section above. Clarifying my questions and improving the readability of this work will help improve my rating of this submission.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "ZAmziNmCU6",
+        "raw_questions": "I would like to have some responses for (1)-(3) in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "vIxJaCSeE3",
+        "raw_questions": "The reviewer is open to learning about new evidences or analyses which address the points of the \u201cWeaknesses\u201d section above in this review.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "tXmkJsrWRj",
+        "raw_questions": "- In the related work, \u2018Reward-Weighted Regression\u2019 should be used before using its abbreviation (RWR). If not, it maybe a misleading phrase for the readers, especially ones without context.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "UH6agU9H4f",
+        "raw_questions": "The questions are listed in weakness. I would raise my score if the authors answer weakness 1) and  3).",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "v4NxcTkIdS",
+        "raw_questions": "Overall, I liked the Human Annotator Simulation approach to tackle learning domains that necessitates subjective labelling. Please see my comments in the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "lfT0rmabIS",
+        "raw_questions": "Would it be possible to address the minor issues I listed in the weakness section?",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "Oj7hO9fREv",
+        "raw_questions": "Would like to improve the authors have address the weakness above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "eq3NhPbWih",
+        "raw_questions": "I have asked most of my questions in the weakness section. If the authors can address my questions and add the relevant latency benchmarks too, I am willing to increase my score.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    }
+]

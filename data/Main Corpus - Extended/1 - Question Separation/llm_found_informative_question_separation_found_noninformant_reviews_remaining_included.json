@@ -1,0 +1,665 @@
+[
+    {
+        "review_id": "u1JOmgloZP",
+        "raw_questions": "See Weeknesses. Addressing these weaknesses (especially W1 and W2) will improve the convincing and quality of this paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "q1mZdj1aBp",
+        "raw_questions": "1. does the authors try other temperature in between? 0.5, 0.7 for both aLM and gLM?\n\n2. please refer to 1st point in **Weakness** section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "mNPiqqoOaM",
+        "raw_questions": "Weakness section has questions about the paper, which should be answered in the rebuttal.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "mEM9puQJBE",
+        "raw_questions": "Please answer the questions noted above. Overall, strong submission with several simple but empirically powerful contributions that enable improved prompt optimization. Happy to recommend acceptance.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "jEHG3NisGU",
+        "raw_questions": "You should use \\citep not \\cite in most place of citations.\n\nPlease address all the mentioned points above. \n\nAs I review this paper mainly based on the empirical evidence, I am good to elevate the rating if the concerns around empirical evidence are eased.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "iEIaPrZk7U",
+        "raw_questions": "I think the technical design of this paper is reasonable and interesting. But it is insufficient (maybe wrong) in the experiments and clarifications about their design. All the details are included in the weaknesses section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "hYHYu7SRoA",
+        "raw_questions": "Overall, the paper is sound and address a new but practical new task, as well as providing detailed experimental analysis. However, I think the proposed method is somehow incremental, as mentioned in the weakness part, and I do not really get some new and interesting insights from this submission.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "czqaNoE9fC",
+        "raw_questions": "The paper has a shallow scientific quality and lacks scientific contribution.\nAt this stage, No response to my question can change my opinion.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "cZ9GJxKSx4",
+        "raw_questions": "No questions, but a few notes and comments:\n* \"methd\" -> \"method\"\n\n* At \"Step 1: Computing heuristic ht\" ht should be set boldmath, analogously in Step 2 and Step 3.\n\n* At `Justin Fu, Aviral Kumar, Ofir Nachum, George Tucker, and Sergey Levine. D4rl: Datasets for deep\ndata-driven reinforcement learning, 2020` the indication where it was published is missing.\n\n* In the references there are some unintentional lower case letters, e.g. mdp, Monte carlo.\n\n* Just for completeness, I’d like to point out that there are also purely model-based batch/offline RL methods that do not use Q-function and are thus bootstrapping-free [1-4]. See [5] for a discussion. Since the authors have precisely formulated at the very beginning that this paper deals with the algorithm class with Q-function and bootstrapping, a mention of these bootstrapping-free algorithms is probably not necessary.\n\n[1] Schaefer et al., A recurrent control neural network for data efficient reinforcement learning, 2007\\\n[2] Deisenroth and Rasmussen, PILCO: A Model-Based and Data-Efficient Approach to Policy Search, 2011\\\n[3] Depeweg et al., Learning and policy search in stochastic dynamical systems with Bayesian neural networks, 2017\\\n[4] Swazinna et al., Overcoming model bias for robust offline deep reinforcement learning, 2021\\\n[5] Swazinna et al., Comparing Model-free and Model-based Algorithms for Offline Reinforcement Learning, 2022",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "btm07BIpCC",
+        "raw_questions": "(see weaknesses)\n\n\nOverall this is a good solid and interesting paper. I would like to see it being accepted.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "bXk1hAGRm4",
+        "raw_questions": "Please see W1/W2 above. In terms of additional comments:\n\n**C1**. The style of Figure 1 and Figure 2 is by now instantly recognizable and, in my opinion, represents a breach of anonymity.\n\n**C2**. The wording \"largest published benchmark of IRL algorithms [...]\" (abstract, p.2, p.9) is misleading. I assume that the authors do not intend to publish the actual benchmark (e.g., data and evaluation metrics), but solely the results of this evaluation. This should be revised.\n\n**C3**. Typos: \"rouute\" (Footnote 1)",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "aLr8uJtKCN",
+        "raw_questions": "Overall, I have several requests to further delineate the performance improvements due to various aspects, while also using stronger baselines as detailed above. I am ready to raise my rating upon satisfactory rebuttal.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "a88oEOQJMp",
+        "raw_questions": "I would like the authors to address the questions in the 'weaknessess' section in their rebuttal.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "YhwvJTvtui",
+        "raw_questions": "I encourage the authors to work further on this topic.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "VnRm5wl0Hl",
+        "raw_questions": "I don’t have any further questions from those outlined in Weaknesses.\n\n**Note:** If the authors can allay my concerns, then I fully intend to increase my review score.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "V6kCxZAY8P",
+        "raw_questions": "Can the authors please address the highlighted weaknesses",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "THVKYaSolV",
+        "raw_questions": "I do not have many questions about the current work, as the current contributions are not convincing, and the paper clearly needs much more work to reach a publishable level.\n\n# Post-rebuttal: \n\nI have increased my score to 6. There are some remaining concerns but I think the paper has some good merits.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "TYtLCNVLDj",
+        "raw_questions": "1. See weaknesses.\n\n2. Can you further polish the paper? Some typos: for example, in the fifth line of the abstract, should it be \"to solve them\"?",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "QNBuA1wLeW",
+        "raw_questions": "If the authors address the areas of improvement, I can reconsider my assessment.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "QJ7gqzGpuB",
+        "raw_questions": "At this point, what would change my mind the most is a much more thorough analysis of the dataset that focuses on polysemy (W1).",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "NlQlJGYI99",
+        "raw_questions": "My questions are demonstrated in the weakness part. Among them, I think the key is to provide more insights explaining why adversarial fine-tuning helps robustness and why pre-training can help robustness. In addition, more experimental studies are needed to make the conclusions more convincing.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "N94ELIVONv",
+        "raw_questions": "In general, I am positively inclined however I would suggest that the authors address the issues raised in the \"weaknesses\" section, especially regarding the human-specific baselines and the limitations/ethical considerations.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "MxOVTsST9S",
+        "raw_questions": "The quality of the figures in this paper is poor.\n\nSome typos: (1) page 4: $i\\in\\\\{1,\\ldots,M\\\\}$ $\\to$ $i\\in\\\\{1,\\ldots,m\\\\}$. (2) the third line on page 6: Equation 3 and 4 $\\to$ Equation 4 and 5.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "MHRwBKHkfy",
+        "raw_questions": "My major questions are on the experimental evaluation. It would tremendously strengthen this work by addressing the concerns listed in the Weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "LTSydZDE33",
+        "raw_questions": "It would be great if the authors can give a precise answer to the first two weaknesses pointed out above.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "LRhIs3EHs0",
+        "raw_questions": "Typo: \"Finetuning with Segmnenter\" -> segmenter (page 14)",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "L5caT6Nn9H",
+        "raw_questions": "The paper raises many questions due to its lack of detail and insufficient citations. I suggest that the authors supplement the details of the paper before initiating a fruitful discussion through the OpenReview platform.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "HnER9f2CM8",
+        "raw_questions": "If authors disagree my comments in weaknesses, clarifications can be presented in the rebuttal phase.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "HxYrvVV9zU",
+        "raw_questions": "[These are more writing comments - but feel free to answer my questions from \"weaknesses\" section]\n\n\n\nThe paper is motivated by a hardness result from [DSZ21] for the stronger notion of local Nash equilibrium. But the hardness result in [DSZ21] holds *only* in a non-standard setting where the feasible domain is not a product. In contrast, your work seems to rely on having a product domain. \n\n\nI think your solution concept should be called “local *coarse* correlated equilibrium”: You consider a single deviation rule and want to apply it to all x’s in the distribution. This also explains why you can find it by minimizing external regret.\n\nThe title should absolutely be updated to say something about (coarse) correlated.\n\n\nThere are two definitions (2 and 4) called “local correlated equilibrium”",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "GR9OjOEYbR",
+        "raw_questions": "The primary concerns are related to experimental evaluation, and the rating would improve if the experimental evaluation were comprehensive.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "EYPS4p5wK2",
+        "raw_questions": "If the authors could address my concern, I would raise my scoring.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "E60zlLaTes",
+        "raw_questions": "Please refer to above sections for details. As mentioned in the weakness part, I mainly concern the technical contribution. On the other hand, I recognize the other parts of contribution of this paper. I would like to encourage the author to further emphasize the technical contribution of this paper for discussion. In addition, I am also willing to check other reviewers' comments for my final decision.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "D3LX50O3a9",
+        "raw_questions": "Note: the correct review template is not used. The heading says “Published as a conference paper at ICLR 2024.” instead of “Under review as a conference paper at ICLR 2024”. The authors are using the camera ready template with the author names deleted - not the anonymized submission template.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "DMmnUJLRUD",
+        "raw_questions": "Should adding a skip connection between \\hat{E} and E help improve the current version, i.e., \\hat{E} = theta(E)+Code Module(E)? I think bottleneck representations such as ResNet etc will usually do so.\n\nFor the other questions please see weakness.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "Cni0jT6B1b",
+        "raw_questions": "I do not have any precise questions.  I would be grateful if the authors could comment on the weakness I highlighted.  I am willing to increase the score if it turns out it have misunderstood something essential about the paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "CZnb9odop1",
+        "raw_questions": "Kindly address the weakness as much as possible. I will update my review based on the rebuttal. Currently its borderline for me.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "AwYPeiEEUI",
+        "raw_questions": "No question! I suggest the author should not resubmit a manuscript like this again.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "ACE8ZLRX2R",
+        "raw_questions": "For this kind of paper that builds benchmarks based on a certain field, I would recommend the author to submit to a journal.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "7SJWMMpUVV",
+        "raw_questions": "1. Please correct the typos in the title, \"sparsity\" and \"recurrent\".\n2. It's preferable to place figures and tables at the top of a page.\n3. The authors may consider switching the sequence of Figure 4 and Figure 5 to align with their respective mentions in the text.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "6zpIAgcZi2",
+        "raw_questions": "Some minor points:\n\n1. The way citations are used is not syntactically sound. For example, \"(Meng et al.) proposes\" should instead be \"Meng et al. (2023) propose\"\n2. In page 8, \"our conduct\" is a typo\n3. There is unnecessary space before Footnote 6\n4. Section 6 gives too much detail that is not necessary in the main body; I would recommend delegating that information to the Appendix.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "6zP8ThkuVD",
+        "raw_questions": "1. See weaknesses. \n\n2. While the authors clearly state which lemmas and proofs of the prior works they are using, I think a more detailed high-level explanation of the arguments and the differences from prior work should appear in the main body of the paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "6JyC32Pkqg",
+        "raw_questions": "No questions.\n\nI would recommend \n1. make sure that the authors understand the proposed method.\n2. define the task clearly (ideally with the task used in the experiment).\n3. writing straightforward rather than beating around the bush.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "5oSTVr6WyN",
+        "raw_questions": "Please check the weaknesses section.\n\nTypos\n- When introducing the PDFs, I think you wanna say \"We let $S(\\sigma, \\eta)$ and $G(\\sigma, \\eta, k)$ be the probability density functions (PDFs) of ESG and EGG, respectively\". Currently, the ordering is wrong.\n- Similarly for substitution variances, \"We let $\\sigma_s$ and $\\sigma_g$ be the substitution variances of ESG and EGG, respectively\"",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "5Lb5rzzeE6",
+        "raw_questions": "I cannot evaluate this paper because I believe it is proper for a benchmarking and dataset track, not the main track.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "4vLmKhn4RP",
+        "raw_questions": "Q1: This paper requires substantial revisions and enhancements in many aspects (presentation, methodology, experiments, discussion, etc.) to align with the stringent standards expected by top-tier AI conferences.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "4JR8s0krnm",
+        "raw_questions": "I do not have any technical questions.  However, I am concerned at the level of novel contribution of this paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "2hpSH4Boo7",
+        "raw_questions": "No questions.  Clearly out-of-scope for ICLR.  Consider SIGCSE or other CS-education venue.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "2I5Qjwrhw6",
+        "raw_questions": "Maybe the authors want to clarify Weaknesses 1, 2, and 3.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "2KbWyghj2L",
+        "raw_questions": "Please see the question listed above, the current draft randomly grabbing a technique from statistics to CS without introducing the need. Thus the clarity and novelty could be further improved before publishing.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "27PPTRxcb2",
+        "raw_questions": "I feel the intuitions behind several choices in the paper could be presented better and the evaluation could be made more extensive by comparing with other measures of distance, representation learning methods and transfer settings. I request the authors to address my concerns above and I'd be happy to raise the rating.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "26q6InSWH3",
+        "raw_questions": "-\tAll experiments the authors did are well described and their results make sense to the reviewer. So, I’d like to give the authors suggestions about the experiments like listed in “Weaknesses”.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    }
+]

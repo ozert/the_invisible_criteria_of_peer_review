@@ -1,0 +1,327 @@
+[
+    {
+        "review_id": "caPAJaFbGt",
+        "raw_questions": "This paper lacks a significant technical contribution, and the overall representation is unclear. I don't think it's a good fit for ICLR.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "gNfNXHF4Jv",
+        "raw_questions": "please see the weakness for numerical experiments. I do expect to see additional and more convincing results. Maybe the time is not sufficient for ICLR2024, but hope later I could see the proposed method in other conference.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "ltFdDbnb1V",
+        "raw_questions": "- Do you have any evidence that supports your claims as witten in Weakness?",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "SOpF08DUHv",
+        "raw_questions": "(please see weaknesses above)\n- the conclusions drawn form the paper are very generic, coming up with more specific guidelines and measures for identifying similarities and differences would be a nice contribution. \n- The paper does not discuss the current SoTA in AI generated content detection which is a very important topic of study (also from AI regulations perspective)",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "vKGCTClM60",
+        "raw_questions": "Please improve the quality of the paper.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "jsWOqZ7cOD",
+        "raw_questions": "The paper is notably challenging to comprehend.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "iIStKwjVLr",
+        "raw_questions": "My main critique is summarized in the previous section. I think that the manuscript is not mature enough for publication in the current conference but perhaps my concerns could be address for future submissions.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "kzrY7IvV2N",
+        "raw_questions": "Please discuss the weaknesses.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "xBuhx35Qj8",
+        "raw_questions": "Suggestions: \n1. More comparisons with the state-of-the-art.\n2. Rephrase the contribution claims.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "lY7aRHT4TI",
+        "raw_questions": "Missing related work:\n\n- Are You Smarter Than a Sixth Grader? Textbook Question Answering for Multimodal Machine Comprehension\n- Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering\n\nTypos:\n- \u201cThis implementation decision is explained\u201d -> \u201cThe implementation details are explained\u201d",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "nte0Zhlqp5",
+        "raw_questions": "The phrase \"Reduce Hallucination Text Generation\" in the title seems awkward. A more appropriate expression  could be \"Reducing Hallucinations in Text Generation\" or \"Reducing Hallucinatory Text Generation\".",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "e29SjOLKQA",
+        "raw_questions": "Please address the above weaknesses.\n\nTypo:\nPage 4, second paragraph: terminates with with a <eos> -> terminates with a <eos>",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "uEzrv6KHAe",
+        "raw_questions": "1. Although this work is a combination of existing methods, it is fascinating to introduce this model from a higher level rather than loss function level. \n2. In B.3, learning rates is misspelled where \u20185e4\u2019 appears twice.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "tICEz0XYcQ",
+        "raw_questions": "Please comment on the points in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "tKFvSlJp73",
+        "raw_questions": "My main questions are included in the \"weaknesses\" section. If the authors only focused on comparing scaling laws for standard motion prediction architectures, that would be one thing. But since the authors measured scaling curves only for the new model that they proposed, it's important to understand if the proposed model has a principled design. It seems the authors main some design choices to improve the stability of diffusion, and it would be very helpful if the authors could ablate these choices more thoroughly. I also currently do not see the value in framing the approach as \"sequence modeling\" - which is a big emphasis of the paper - given that full attention and all-at-once diffusion should be more compute and parameter efficient.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "kIf8Z90x15",
+        "raw_questions": "There are several typos, including:\n\n(1) Page 4, in the 5th line in Section 3, the source and target problem are denoted by the same notation.\n\n(2) Page 4, in the last line, the LHS and RHS of the second to last inequality are the same.\n\n(3) Page 6, in the 5th line in Section 4.3, $n_S$ should be $n_T$.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "sQ7MaFEOrz",
+        "raw_questions": "The overall technical contribution is limited, and more strong baselines should be included for performance comparison.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "fRSNCXiYrk",
+        "raw_questions": "Response to rebuttal: Thanks for the good rebuttal and revision of the paper. I have no future concerns and thus keep my score.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "qNnnMfk3jo",
+        "raw_questions": "This is a nice piece of work and I do not have many major questions. See my comments in the weakness section.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "xIcGPjz22Q",
+        "raw_questions": "My questions are listed in weakness, please refer to weakness.\n\n----\nPost Rebuttal Comments:  \nThank you for the comprehensive response to my queries and for conducting additional experiments. Having thoroughly reviewed your revised manuscript and the expanded experimental evidence, I am inclined to revise my evaluation. Accordingly, I am considering raising my score from a 6 to an 8, reflecting the improvements and clarifications you have made.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "kgT2lUAH7X",
+        "raw_questions": "1. I suggest the authors to attempt BetaVAE and Beta-TC-VAE as the generative model to encode masked state observation into the the latent state representation and reconstruct state observation from latent state representation.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "xQc1VFT7C6",
+        "raw_questions": "The written English can be improved. There are few typos in different part of paper,  e.g. variey instead of variety in 2nd page.\nPlease revise and fix the problems.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "zD7Yqjd1Ne",
+        "raw_questions": "I've tried to detail most of the limitations and weaknesses of the proposed model in previous section, with some points that would need to be addressed in a rebuttal.\n\nOverall, I see here a strong manuscript with some ideas that are adequate for an ICLR conference.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "gj98ErFktu",
+        "raw_questions": "I have only minor questions and suggestions and I would like to hear authors' discussion on those points.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    },
+    {
+        "review_id": "QBqp5H2DfK",
+        "raw_questions": "(1) Please refer to the main questions in the weakness section.\n(2) A minor question: It will be better if the authors provide the results on other versions of stable diffusion, such as SD2.0 and SDXL.",
+        "separated_questions": [],
+        "status": {
+            "question_separation_status": {
+                "is_success": false
+            },
+            "informant_detector_status": {
+                "has_meaningful_questions": true
+            }
+        }
+    }
+]

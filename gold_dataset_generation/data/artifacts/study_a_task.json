@@ -1,0 +1,917 @@
+{
+  "task": [
+    {
+      "review_id": "o1z5EB6ftX",
+      "rating": 8,
+      "raw_questions": "IID not defined.",
+      "human_chunks": [],
+      "non_informative": true,
+      "_done": true
+    },
+    {
+      "review_id": "odUi2SVqua",
+      "rating": 1,
+      "raw_questions": "- Typo in the abstract (double spaces)\n- Abstract is not very clear -- what is an agent-centric state? Alternative intuitive algorithms? Etc.\n- \"Can we devise an unsupervised learning algorithm for automatically discovering the informative Markovian state space from a rich non-Markovian observation space?\" - Isn't this model-based RL or a dreamer-style approach?\n- \"To the best of our knowledge, no prior work has focused on developing techniques for state space discovery in such a setting.\" - There is prior work, please see [1] or any work on partially observable world models\n- \"Yet, none explicitly focused on state discovery.\" - What about [2]?\n\n[1] https://arxiv.org/pdf/1912.01603.pdf\n\n[2] https://proceedings.neurips.cc/paper/2020/hash/3c09bb10e2189124fdd8f467cc8b55a7-Abstract.html",
+      "human_chunks": [
+        {
+          "text": "Abstract is not very clear -- what is an agent-centric state? Alternative intuitive algorithms? Etc.",
+          "topic": 4
+        },
+        {
+          "text": "\"Can we devise an unsupervised learning algorithm for automatically discovering the informative Markovian state space from a rich non-Markovian observation space?\" - Isn'tthis model-based RL or a dreamer-style approach?",
+          "topic": 1
+        },
+        {
+          "text": "- \"Yet, none explicitly focused on state discovery.\" - What about [2]?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "atZIrobrdn",
+      "rating": 3,
+      "raw_questions": "How does PAIC scale beyond two agents?\nHow do some other recurrent models compare against PAIC? What is the expected/observed advantages/disadvantages of the recurrence?",
+      "human_chunks": [
+        {
+          "text": "How does PAIC scale beyond two agents?",
+          "topic": 2
+        },
+        {
+          "text": "How do some other recurrent models compare against PAIC? What is the expected/observed advantages/disadvantages of the recurrence?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "l4fDhsJbbI",
+      "rating": 6,
+      "raw_questions": "Below are the questions I have:\n- How does the proposed LEO compare to the approaches like Siarohin et al. 2019; 2021, where the motions are disentangled into region-based descriptors/flow-field?\n- What are the limitations of LEO? What are the failure cases? It would be great if the paper could show and discuss these topics.",
+      "human_chunks": [
+        {
+          "text": "- How does the proposed LEO compare to the approaches like Siarohin et al. 2019; 2021, where the motions are disentangled into region-based descriptors/flow-field?",
+          "topic": 1
+        },
+        {
+          "text": "- What are the limitations of LEO? What are the failure cases? It would be great if the paper could show and discuss these topics.",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "bw5nnGNnlU",
+      "rating": 3,
+      "raw_questions": "What is the purpose of \\hat{K}-NMF?",
+      "human_chunks": [
+        {
+          "text": "What is the purpose of \\hat{K}-NMF?",
+          "topic": 10
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "fwl5yaLiaS",
+      "rating": 3,
+      "raw_questions": "Questions: \n1. The previous work that you studied is based on a theoretical background. Could you please delve into the details of the theory part and justify your observation? I believe that if your argument is completely true, it should also be possible to find a flaw in the theory of the work.\n2. Section 5.1 (SETUP): How did you define which points impact the same test point?\n3. Section 4.2 (ERROR: DATASET LEAKAGE): Are you assuming that duplicate points are only found in memorized points?",
+      "human_chunks": [
+        {
+          "text": "The previous work that you studied is based on a theoretical background. Could you please delve into the details of the theory part and justify your observation? I believe that if your argument is completely true, it should also be possible to find a flaw in the theory of the work.",
+          "topic": 3
+        },
+        {
+          "text": "Section 5.1 (SETUP): How did you define which points impact the same test point?",
+          "topic": 0
+        },
+        {
+          "text": "Section 4.2 (ERROR: DATASET LEAKAGE): Are you assuming that duplicate points are only found in memorized points?",
+          "topic": 9
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "g9nU3nFiei",
+      "rating": 3,
+      "raw_questions": "How would this approach work with domain-specific classifiers, like ones designed for medical images (skin cancer detection, retinal image analysis, etc.), or even a more specific object classifier like Caltech-UCSD-Birds (CUB)?\n\nDo the concepts actually reflect things that the model thinks are in the image, or are they just things associated with the predicted class (for example, why does the model detect \"sun lotion\" in the top image of Figure 3)?\n\nWhy were the transformer-based models not used with ImageNet in the evaluation?\n\nIs it appropriate to include the test images when training the VAE? This seems to make the evaluation less reliable, since the model can learn a good representation for the test images, instead of having to encode the test images into a representation that\u2019s based on the training images.\n\nWhat does the sign indicate on the right side of Figure 3? It\u2019s not explained and I assume it\u2019s irrelevant (if so, this figure would be clearer if it showed absolute values).\n\nIn 4.4, how accurate was this approach (how well did it link the 24 images to the ~40 identified concepts)? This is hard to evaluate from Figure 4.\n\nAs a side note -- there appears to be an error in the citation formatting which causes citations to run into the text (e.g., \"pretrained models such as CLIP Radford et al. (2021)\").",
+      "human_chunks": [
+        {
+          "text": "How would this approach work with domain-specific classifiers, like ones designed for medical images (skin cancer detection, retinal image analysis, etc.), or even a more specific object classifier like Caltech-UCSD-Birds (CUB)?",
+          "topic": 2
+        },
+        {
+          "text": "Do the concepts actually reflect things that the model thinks are in the image, or are they just things associated with the predicted class (for example, why does the model detect \"sun lotion\" in the top image of Figure 3)?",
+          "topic": 6
+        },
+        {
+          "text": "Why were the transformer-based models not used with ImageNet in the evaluation?",
+          "topic": 1
+        },
+        {
+          "text": "Is it appropriate to include the test images when training the VAE? This seems to make the evaluation less reliable, since the model can learn a good representation for the test images, instead of having to encode the test images into a representation that\u2019s based on the training images.",
+          "topic": 8
+        },
+        {
+          "text": "What does the sign indicate on the right side of Figure 3? It\u2019s not explained and I assume it\u2019s irrelevant (if so, this figure would be clearer if it showed absolute values).",
+          "topic": 5
+        },
+        {
+          "text": "In 4.4, how accurate was this approach (how well did it link the 24 images to the ~40 identified concepts)? This is hard to evaluate from Figure 4.",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "lj0bdJKTpY",
+      "rating": 5,
+      "raw_questions": "1. I would like to ascertain the precise definition of \"BCSNN.\" Is it an abbreviation for \"Backward Connection SNN\" and does it refer to subnets extracted from a supernet?\n\n\n2. The research lacks an analysis of time series data. While backward connections may exhibit potential advantages in time series data, their performance in static data is unclear. Some studies suggest that BCs perform similarly to forward connections in static data but offer improved biological relevance. Has the author conducted experiments on time series data like DVS gesture recognition to address this aspect, instead of focusing solely on static data?\n\n3. The analysis of the search process is not comprehensive.  \n   3.1. Is it established that 100 epochs of training are sufficient to fully converge the supernet? Has any experimentation been done to establish the relationship between the performance of a subnet extracted from the trained supernet and a subnet trained from scratch until full convergence? Is there a strong positive correlation between the two?  \n   3.2. How many different seed values were employed in the ablation study? The experiment showed a slight improvement in performance, so it's important to discern whether this improvement can be attributed to the variation in random seed values or if it is linked to the different search methods applied.  \n   3.3. In Experiment 8 of the ablation study, it would be valuable to provide a comparison by conducting the same experiment but with a random search strategy in step 2, thereby comparing evolutionary search to random search.  \n   3.4. Given that the evolutionary search in Experiment 8 appears less effective, could the author include a plot depicting the search iteration versus accuracy to help illustrate the search process?",
+      "human_chunks": [
+        {
+          "text": "I would like to ascertain the precise definition of \"BCSNN.\" Is it an abbreviation for \"Backward Connection SNN\" and does it refer to subnets extracted from a supernet?",
+          "topic": 4
+        },
+        {
+          "text": "The research lacks an analysis of time series data. While backward connections may exhibit potential advantages in time series data, their performance in static data is unclear. Some studies suggest that BCs perform similarly to forward connections in static data but offer improved biological relevance. Has the author conducted experiments on time series data like DVS gesture recognition to address this aspect, instead of focusing solely on static data?",
+          "topic": 2
+        },
+        {
+          "text": "Is it established that 100 epochs of training are sufficient to fully converge the supernet? Has any experimentation been done to establish the relationship between the performance of a subnet extracted from the trained supernet and a subnet trained from scratch until full convergence? Is there a strong positive correlation between the two?",
+          "topic": 1
+        },
+        {
+          "text": "How many different seed values were employed in the ablation study? The experiment showed a slight improvement in performance, so it's important to discern whether this improvement can be attributed to the variation in random seed values or if it is linked to the different search methods applied.",
+          "topic": 1
+        },
+        {
+          "text": "In Experiment 8 of the ablation study, it would be valuable to provide a comparison by conducting the same experiment but with a random search strategy in step 2, thereby comparing evolutionary search to random search.",
+          "topic": 1
+        },
+        {
+          "text": "Given that the evolutionary search in Experiment 8 appears less effective, could the author include a plot depicting the search iteration versus accuracy to help illustrate the search process?",
+          "topic": 5
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "mWDaW28wtn",
+      "rating": 8,
+      "raw_questions": "- In section 5 the authors note \"it relies on the task requiring a well-defined expertise that can be succinctly specified in the prompt\".  Would it be possible in the prompt just to specify the LLM should as an \"expert in the subject\" or \"domain expert\". Why the need to explicitly state the LLM should adopt the persona of \"chemist\" or \"lawyer\".\n- How does the LLM perform on these tasks when no persona is provided?\n- In table 8 which of the persona prompts succeeded and which failed your test?\n- Did you consider how intersectionality could alter the results (i.e. you are a Hispanic life-long Republican). Would be really interesting.",
+      "human_chunks": [
+        {
+          "text": "In section 5 the authors note \"it relies on the task requiring a well-defined expertise that can be succinctly specified in the prompt\".  Would it be possible in the prompt just to specify the LLM should as an \"expert in the subject\" or \"domain expert\". Why the need to explicitly state the LLM should adopt the persona of \"chemist\" or \"lawyer\".",
+          "topic": 4
+        },
+        {
+          "text": "How does the LLM perform on these tasks when no persona is provided?",
+          "topic": 7
+        },
+        {
+          "text": "In table 8 which of the persona prompts succeeded and which failed your test?",
+          "topic": 7
+        },
+        {
+          "text": "Did you consider how intersectionality could alter the results (i.e. you are a Hispanic life-long Republican). Would be really interesting.",
+          "topic": 12
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "eQcmKQeUJl",
+      "rating": 5,
+      "raw_questions": "- Section 2.2 talks more about the general effect of over-smoothing and squashing in graph neural networks, but it is not clear what this has to do with the method of learning effective position encoding for graphs. Why is it relevant to the problem?\n- In Table 4 GPSE shows better performance on MoleculeNet dataset where it is mentioned that GPSE is at a comparative disadvantage but is this due to the nature of the dataset or the importance of structural and position to the specific dataset? It will be interesting to observe what will be the effect of GINE+{LapPE/RWSE} vs GPSE. \n- Why are results from other datasets like (ClinTox MUV HIV) not included in Table 4 as GraphLoG is evaluated on these datasets? \n- Why are GNN models used as a baseline for testing the extreme OOD node-classification benchmarks (table 6) instead it will be interesting to see how transformer+GPSE will perform on the dataset as they don't have the inductive bias of GNNs. \n- The paper [1] has a similar research question and method to GPSE, can the authors help me understand the difference? \n- For SSL the methods are generally pre-trained and then fine-tuned on down-stream tasks, whereas in GPSE the base model GINE is augmented with learned pse and trained from scratch, how does this comparison seem to stand out? The comparison to the baseline of GINE from Hu et al. (2020b) is fair, but how can it be compared to SSL techniques? \n\n\n[1] GRAPH NEURAL NETWORKS WITH LEARNABLE STRUCTURAL AND POSITIONAL REPRESENTATIONS (ICLR 22)",
+      "human_chunks": [
+        {
+          "text": "Section 2.2 talks more about the general effect of over-smoothing and squashing in graph neural networks, but it is not clear what this has to do with the method of learning effective position encoding for graphs. Why is it relevant to the problem?",
+          "topic": 10
+        },
+        {
+          "text": "In Table 4 GPSE shows better performance on MoleculeNet dataset where it is mentioned that GPSE is at a comparative disadvantage but is this due to the nature of the dataset or the importance of structural and position to the specific dataset? It will be interesting to observe what will be the effect of GINE+{LapPE/RWSE} vs GPSE.",
+          "topic": 1
+        },
+        {
+          "text": "Why are results from other datasets like (ClinTox MUV HIV) not included in Table 4 as GraphLoG is evaluated on these datasets?",
+          "topic": 5
+        },
+        {
+          "text": "Why are GNN models used as a baseline for testing the extreme OOD node-classification benchmarks (table 6) instead it will be interesting to see how transformer+GPSE will perform on the dataset as they don't have the inductive bias of GNNs.",
+          "topic": 1
+        },
+        {
+          "text": "The paper [1] has a similar research question and method to GPSE, can the authors help me understand the difference?",
+          "topic": 1
+        },
+        {
+          "text": "For SSL the methods are generally pre-trained and then fine-tuned on down-stream tasks, whereas in GPSE the base model GINE is augmented with learned pse and trained from scratch, how does this comparison seem to stand out? The comparison to the baseline of GINE from Hu et al. (2020b) is fair, but how can it be compared to SSL techniques?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "hpFxQl449O",
+      "rating": 8,
+      "raw_questions": "1. Why the success rate of the RL agent in some mini-games (e.g., SettlerBuildCity) is higher for the hard setting than for the easier settings?\n2. Can the authors comment on the reason for instability and the sudden drop in performance in Figure 9?\n3. It would be great if the authors could provide videos of the experiments or visualization ways in the future code repo.",
+      "human_chunks": [
+        {
+          "text": "Why the success rate of the RL agent in some mini-games (e.g., SettlerBuildCity) is higher for the hard setting than for the easier settings?",
+          "topic": 7
+        },
+        {
+          "text": "Can the authors comment on the reason for instability and the sudden drop in performance in Figure 9?",
+          "topic": 6
+        },
+        {
+          "text": "It would be great if the authors could provide videos of the experiments or visualization ways in the future code repo.",
+          "topic": 5
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "eseXSkrhIn",
+      "rating": 10,
+      "raw_questions": "- Shouldn\u2019t $D_{KL}$ be multiplied by $C_\\beta$ in line 11 of Algorithm 1 (according to eq. 4)?\n- Is the fixup phase analogous to line search in TRPO?\n- Can an entropy term be added to encourage exploration? I understand the point made in Fig. 4 but still wonder if additional exploration could be beneficial.\n- I find it interesting that in HalfCheetah, FixPO underperforms both PPO (fig. 3) and the constant $\\beta$ ablation (fig. 5). I wonder if using a high constant $\\beta$ (maybe without fixup) results in approximate trust region similar to what clipping does in PPO.\n- Just in case the authors would appreciate more related work on the Lagrangian optimization (where the Lagrange multiplier is learned), similar approaches are used in Adversarial (Inverse RL / Imitation Learning / Generative Networks) (https://arxiv.org/abs/1810.00821), Differentiable Economics (https://arxiv.org/abs/1706.03459, https://arxiv.org/abs/2202.13110), and Multi-Agent RL (https://arxiv.org/abs/2306.08419).",
+      "human_chunks": [
+        {
+          "text": "Shouldn\u2019t $D_{KL}$ be multiplied by $C_\\beta$ in line 11 of Algorithm 1 (according to eq. 4)?",
+          "topic": 0
+        },
+        {
+          "text": "Is the fixup phase analogous to line search in TRPO?",
+          "topic": 3
+        },
+        {
+          "text": "Can an entropy term be added to encourage exploration? I understand the point made in Fig. 4 but still wonder if additional exploration could be beneficial.",
+          "topic": 0
+        },
+        {
+          "text": "I find it interesting that in HalfCheetah, FixPO underperforms both PPO (fig. 3) and the constant $\\beta$ ablation (fig. 5). I wonder if using a high constant $\\beta$ (maybe without fixup) results in approximate trust region similar to what clipping does in PPO.",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "C9xH4Xeufy",
+      "rating": 1,
+      "raw_questions": "Looking at some nonlinearities would help. For example, just having one layer of ReLU, and see if the theory in the paper still works.",
+      "human_chunks": [],
+      "non_informative": true,
+      "_done": true
+    },
+    {
+      "review_id": "wgF4Csqwyj",
+      "rating": 10,
+      "raw_questions": "Remark 1 is indeed interesting, but it is not obvious. Did I miss an associated\nproof or example?\n\nWhy was the proof of Theorem 3.2 omitted? Was it rephrased to appear as Theorem\n6.1 in the supplementary material?  Establishing the convergence rates of\nvarious algorithms is not my expertise, but the results seem reasonable,\nespecially given assumptions of convexity and Lipshitz smoothness.",
+      "human_chunks": [
+        {
+          "text": "Remark 1 is indeed interesting, but it is not obvious. Did I miss an associated proof or example?",
+          "topic": 8
+        },
+        {
+          "text": "Why was the proof of Theorem 3.2 omitted? Was it rephrased to appear as Theorem 6.1 in the supplementary material?  Establishing the convergence rates of various algorithms is not my expertise, but the results seem reasonable, especially given assumptions of convexity and Lipshitz smoothness.",
+          "topic": 3
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "yfeAnO2dgn",
+      "rating": 8,
+      "raw_questions": "- Your work seems to be tailored to the specific choice of difference metric between two reward functions (their angle). I guess that the main reason for choosing this distance metric is that it is a STARC metric. \n\t- However, can you provide further justification for why the \"angle\" is a good choice or even the *right* choice? \n\t- What could another reasonable metric be?  \n\t- And, how would choosing a different metric impact your results?",
+      "human_chunks": [
+        {
+          "text": "However, can you provide further justification for why the \"angle\" is a good choice or even the *right* choice?",
+          "topic": 3
+        },
+        {
+          "text": "What could another reasonable metric be?",
+          "topic": 3
+        },
+        {
+          "text": "And, how would choosing a different metric impact your results?",
+          "topic": 3
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "xPyBuONVjL",
+      "rating": 5,
+      "raw_questions": "Also, the reported results both in Figure 3 and Table 1 seem to much lower than the results reported in Li et al. 2022 and their HyAR approach. How much resources did you spend training the benchmarks versus your DLPA? My biggest concern is that the reported sample efficiency is caused by better hyper parameter tuning.\n\nLearning models conditioned just on the initial state and not intermediate transitions must be much more difficult in stochastic environments (either stochastic transitions or actions), have you done any analysis in this direction?",
+      "human_chunks": [
+        {
+          "text": "How much resources did you spend training the benchmarks versus your DLPA?",
+          "topic": 11
+        },
+        {
+          "text": "Learning models conditioned just on the initial state and not intermediate transitions must be much more difficult in stochastic environments (either stochastic transitions or actions), have you done any analysis in this direction?",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "y2hObsiiWu",
+      "rating": 6,
+      "raw_questions": "- Were all images resized to the same aspect ratio?  The aspect ratio can impact wave speed, and it may be more natural to preserve the aspect ratio from the original images.\n- Conventional image compression methods like DCT transform the image into a linear composition of orthogonal basis. This is simple and provides a straightforward understanding of each coefficient. The paper effectively describes the differences, but what are the main strengths and weaknesses of this method?\n- Is the selection of hyperparameters for training this method not very sensitive? How long does the training process take?\n\nMinor comments:\n- Use ` for opening quotation mark in latex. Currently ' ... '.\n- There are some missing brackets for citations. For example, ... known as FINOLA Chen et al. (2023).",
+      "human_chunks": [
+        {
+          "text": "Were all images resized to the same aspect ratio?  The aspect ratio can impact wave speed, and it may be more natural to preserve the aspect ratio from the  original images.",
+          "topic": 9
+        },
+        {
+          "text": "Conventional image compression methods like DCT transform the image into a linear composition of orthogonal basis. This is simple and provides a straightforward understanding of each coefficient. The paper effectively describes the differences, but what are the main strengths and weaknesses of this method?",
+          "topic": 1
+        },
+        {
+          "text": "Is the selection of hyperparameters for training this method not very sensitive? How long does the training process take?",
+          "topic": 11
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "oVEQlnaJ6N",
+      "rating": 5,
+      "raw_questions": "- The motivation is unclear to me -- why do we want to learn a single universal policy? Each agent may interact with his/her own environment and learn a personalized policy for that environment. Isn't that better to be deployed on that environment than the single averaged policy across all environments?\n- I don't see the linear speedup in the simulation results?",
+      "human_chunks": [
+        {
+          "text": "The motivation is unclear to me -- why do we want to learn a single universal policy? Each agent may interact with his/her own environment and learn a personalized policy for that environment. Isn't that better to be deployed on that environment than the single averaged policy across all environments?",
+          "topic": 10
+        },
+        {
+          "text": "I don't see the linear speedup in the simulation results?",
+          "topic": 11
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "u43iFUuSfB",
+      "rating": 1,
+      "raw_questions": "The major questions are in the weaknesses. Here are some minor questions:\n1. In Section 2.3, the distance to destination is presumably the Euclidean/hyperbolic distance and not the graph distance, but this is not clearly specified.\n2. In Theorem 1 we assume that a (linear) ranking metric that satisfies RankPres exists (i.e. gives an optimal ranking of neighbouring nodes) and claim that it is therefore learnable. But unless I am missing something, the theorem then essentially just says we can learn a linear function with a neural network. Calling this a Theorem seems to be an overstatement. And surely the interesting cases would be when the assumption does not hold.\n3. Where is the proof for Proposition 1?\n4. Why are the page numbers in roman numerals?\n5. Footnote 1 on page v essentially describes \u201cmonotonically non-decreasing\u201d, perhaps you want to use this term instead.\n6. In Figure 2, what epsilon value is used?\n7. Throughout the paper, accuracy is reported, but what about other metrics? For example, the average relative cost increase versus the optimal solution would be interesting.\n8. Where are the results that confirm the claim on page vii \u201cthat the performance of all the learned policies exactly match the prediction accuracy of Greedy Forwarding\u201d?\n9. Do you have a citation to back up the claim on page viii that \u201cGF was believed to work close to the optimal routing\u201d? There are several theoretical works that go beyond greedy forwarding. Moreover, these works could even be used as baselines.",
+      "human_chunks": [
+        {
+          "text": "Where is the proof for Proposition 1?",
+          "topic": 8
+        },
+        {
+          "text": "Why are the page numbers in roman numerals?",
+          "topic": 5
+        },
+        {
+          "text": "In Figure 2, what epsilon value is used?",
+          "topic": 5
+        },
+        {
+          "text": "Throughout the paper, accuracy is reported, but what about other metrics?",
+          "topic": 7
+        },
+        {
+          "text": "Where are the results that confirm the claim on page vii \u201cthat the performance of all the learned policies exactly match the prediction accuracy of Greedy Forwarding\u201d?",
+          "topic": 7
+        },
+        {
+          "text": "Do you have a citation to back up the claim on page viii that \u201cGF was believed to work close to the optimal routing\u201d? There are several theoretical works that go beyond greedy forwarding. Moreover, these works could even be used as baselines.",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "Rbd4cuLtYB",
+      "rating": 6,
+      "raw_questions": "-\tYang & Bombarelli\u2019s model is called GenZProt and not CGVAE.",
+      "human_chunks": [],
+      "non_informative": true,
+      "_done": true
+    },
+    {
+      "review_id": "w9vVw82nr9",
+      "rating": 10,
+      "raw_questions": "- In Figure 1, the proposed MODPO is positioned as a marginalized reward formulation for fine-tuning LMs. This is generally in line with the well-known advantage of discriminative learning techniques in leveraging small datasets. What are the pros and cons of adopting this technique to deliver the Pareto-optimal solution? Are there alternative techniques available?",
+      "human_chunks": [
+        {
+          "text": "In Figure 1, the proposed MODPO is positioned as a marginalized reward formulation for fine-tuning LMs. This is generally in line with the well-known advantage of discriminative learning techniques in leveraging small datasets. What are the pros and cons of adopting this technique to deliver the Pareto-optimal solution? Are there alternative techniques available?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "sQ400UEv6I",
+      "rating": 8,
+      "raw_questions": "Adam is essentially RMSProp + momentum, where RMSProp is a method for adjusting the learning rate.\nIf my understanding is correct, Sophia is an entrywise learning rate scaling method, so a natural question is: have you considered combining Sophia with momentum?\n\nHow well does Sophia work for (potentially parameter-efficient) fine-tuning tasks instead of training a foundation model from scratch?\n\nThe idea of estimating the Hessian diagonal is not new, and both estimators proposed in the paper are not super novel. However, no second-order optimizer has performed as well as Sophia according to your experiments. How do you explain the success of Sophia? Is it due to regularization via gradient clipping?",
+      "human_chunks": [
+        {
+          "text": "If my understanding is correct, Sophia is an entrywise learning rate scaling method, so a natural question is: have you considered combining Sophia with momentum?",
+          "topic": 0
+        },
+        {
+          "text": "How well does Sophia work for (potentially parameter-efficient) fine-tuning tasks instead of training a foundation model from scratch?",
+          "topic": 2
+        },
+        {
+          "text": "However, no second-order optimizer has performed as well as Sophia according to your experiments. How do you explain the success of Sophia? Is it due to regularization via gradient clipping?",
+          "topic": 3
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "zg2Re5X7g8",
+      "rating": 5,
+      "raw_questions": "- Using huge LAION, then the fairness consideration in the experiments?\n\n- Detailed analysis of the long-tailed distribution and results?",
+      "human_chunks": [
+        {
+          "text": "Using huge LAION, then the fairness consideration in the experiments?",
+          "topic": 2
+        },
+        {
+          "text": "Detailed analysis of the long-tailed distribution and results?",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "xGyUL64b2s",
+      "rating": 5,
+      "raw_questions": "What are the technical innovations of this paper compared to existing works? This paper seems to be a simple combination of existing techniques in related works.",
+      "human_chunks": [
+        {
+          "text": "What are the technical innovations of this paper compared to existing works?",
+          "topic": 10
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "tiLMRGo8nl",
+      "rating": 5,
+      "raw_questions": "1. Would it be possible to give more details on the practicality of functional data? For example, are there realistic datasets that are considered to be \u201cfunctional data\u201d and how do the properties of functional data translate to the real world?\n\n2. Is there a formal definition for a \u201cweak classifier\u201d?\n\n3. The functional data classifiers are constructed under LDP, and then it seems to me that the LDP setting is kind of irrelevant to the rest of the paper (or at least, to the model average and model reversal techniques). Similarly for the functional data setting, after dimensionality reduction and re-scaling. Do MA and MR actually have anything to do specifically with LDP (or with functional data), or are they general techniques that could be used to improve the performance of any collection of weak classifiers?",
+      "human_chunks": [
+        {
+          "text": "Would it be possible to give more details on the practicality of functional data? For example, are there realistic datasets that are considered to be \u201cfunctional data\u201d and how do the properties of functional data translate to the real world?",
+          "topic": 9
+        },
+        {
+          "text": "Is there a formal definition for a \u201cweak classifier\u201d?",
+          "topic": 4
+        },
+        {
+          "text": "Do MA and MR actually have anything to do specifically with LDP (or with functional data), or are they general techniques that could be used to improve the performance of any collection of weak classifiers?",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "yA202pP2ou",
+      "rating": 6,
+      "raw_questions": "- In 3.1: \"To ensure the scene geometry is well-defined even outside the union of the camera frustra, for each camera we also calculate a polar representation of the displacement of p relative to the camera\u2019s center, and use the resulting angles to interpolate into a second feature map (with an equirectangular projection)\" - Does the result feature map $f_v'$ is shared amount all views? How to use the angles to interpolate this feature map?\n- The proposed method supports arbitrary views. How does the performance w.r.t number of views? \n- Real multi-view datasets usually contain camera calibration errors (as they are usually estimated via some algorithm). How does the robustness of proposed method w.r.t camera calibrations?\n- Regarding the ablation study experiment on using triplanes: It seems the experiment directly using 2D U-Net to output tri-plane features. Yet, as argued in [Q1], there exists an incompatibility between the tri-plane representation and the naive 2D U-Net method. In [Q1] a 3D-aware convolution for output tri-plane features from 2D U-Net is proposed and achieved good quality. How would this variant fit into the proposed method in this paper?\n\n[Q1] Wang, Tengfei, et al. \"Rodin: A generative model for sculpting 3d digital avatars using diffusion.\" Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.",
+      "human_chunks": [
+        {
+          "text": "Does the result feature map $f_v'$ is shared amount all views? How to use the angles to interpolate this feature map?",
+          "topic": 0
+        },
+        {
+          "text": "How does the performance w.r.t number of views?",
+          "topic": 7
+        },
+        {
+          "text": "How does the robustness of proposed method w.r.t camera calibrations?",
+          "topic": 2
+        },
+        {
+          "text": "In [Q1] a 3D-aware convolution for output tri-plane features from 2D U-Net is proposed and achieved good quality. How would this variant fit into the proposed method in this paper?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "gwej8WvSOY",
+      "rating": 8,
+      "raw_questions": "-\tThe primary incentive for training the model in a lower-dimensional latent space appears to be a reduction in computational complexity. Nevertheless, the experimental outcomes presented in Table 1 and 2 demonstrate that the proposed algorithm surpasses conventional techniques in terms of reconstruction quality. Could you provide insights into the potential factors contributing to this outcome?",
+      "human_chunks": [
+        {
+          "text": "Nevertheless, the experimental outcomes presented in Table 1 and 2 demonstrate that the proposed algorithm surpasses conventional techniques in terms of reconstruction quality. Could you provide insights into the potential factors contributing to this outcome?",
+          "topic": 6
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "XEaDcNyTdr",
+      "rating": 5,
+      "raw_questions": "1. The current article only validates the effectiveness of FGT on shallow and simpler network structures, showing comparable results to BPTT. However, its performance on deeper and more complex networks remains unexplored. The limited performance on smaller networks suggests that if this method fails to scale well to larger networks, the significance of this work may be limited. For example, the authors could discuss why the proposed framework provides a more feasible implementation of synchronous circuits. Also, there are existing methods that estimate the FLOPS and energy cost of a given NN based on its memory and operation. The authors could provide such comparisons as well. In addition, it is also necessary to provide the comparison with other  training methods on CIFAR-100 as well as ImageNet.",
+      "human_chunks": [],
+      "non_informative": true,
+      "_done": true
+    },
+    {
+      "review_id": "qnRCiTsXHn",
+      "rating": 8,
+      "raw_questions": "- I did not understand what Figure 3 is presenting and there is no reference in the paper. Does this plot mean that `DrS` is learning a sigmoid liked function of the sparse reward?\n- In the limitation section, the authors talk about the usage of language models such as ChatGPT and I think some discussion can be built around methods such as say-can[1]. I think the goal of both frameworks are aligned.\n\n\n\n\n\n[1] Do As I Can, Not As I Say: Grounding Language in Robotic Affordances -  https://say-can.github.io/",
+      "human_chunks": [
+        {
+          "text": "I did not understand what Figure 3 is presenting and there is no reference in the paper. Does this plot mean that `DrS` is learning a sigmoid liked function of the sparse reward?",
+          "topic": 5
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "pOE3XMqTmC",
+      "rating": 3,
+      "raw_questions": "1. In Section 1 (under \u201cOur contributions\u201d), the authors state that their method \u201ccan be potentially useful for other sequence transduction tasks.\u201d Can the authors describe what other tasks may benefit from sequence matching?\n\n2. There are several linear-time algorithms for pattern matching such as Rabin-Karp, Boyer-Moore, etc. It would be useful to include a discussion about why KMP is most appropriate for the task.",
+      "human_chunks": [
+        {
+          "text": "In Section 1 (under \u201cOur contributions\u201d), the authors state that their method \u201ccan be potentially useful for other sequence transduction tasks.\u201d Can the authors describe what other tasks may benefit from sequence matching?",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "pVbccFjRLl",
+      "rating": 8,
+      "raw_questions": "1.\tIn Figure 1, it's highlighted that the VQ generation FID sees a pivotal change at a vocabulary size of 2^14, while the LFG generation FID consistently improves. I'm curious to understand how the LFG generation FID would respond to even larger vocabulary sizes.\n2.\tRegarding Table 3, what could be the reason behind the proposed method's PSNR and MS-SSIM values being inferior to those of the standard video codec?",
+      "human_chunks": [
+        {
+          "text": "In Figure 1, it's highlighted that the VQ generation FID sees a pivotal change at a vocabulary size of 2^14, while the LFG generation FID consistently improves. I'm curious to understand how the LFG generation FID would respond to even larger vocabulary sizes.",
+          "topic": 7
+        },
+        {
+          "text": "Regarding Table 3, what could be the reason behind the proposed method's PSNR and MS-SSIM values being inferior to those of the standard video codec?",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "kz2CHhKk0f",
+      "rating": 3,
+      "raw_questions": "1. Is nonlinearity needed in eqn (4)?\n2. How to decide dimensions for separate and joint latent?",
+      "human_chunks": [
+        {
+          "text": "Is nonlinearity needed in eqn (4)?",
+          "topic": 3
+        },
+        {
+          "text": "How to decide dimensions for separate and joint latent?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "sUeg9bWvuU",
+      "rating": 6,
+      "raw_questions": "- In Figure 3, you simply concatenate SSM and local attention output, and apply a weight $\\bf W$, did you try any other method to fuse them?\n- It would be beneficial to include a relatively rigorous complexity analysis of SPADE comparing with various other methods, potentially in the appendix.",
+      "human_chunks": [
+        {
+          "text": "In Figure 3, you simply concatenate SSM and local attention output, and apply a weight $\\bf W$, did you try any other method to fuse them?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "Win0VoSvUe",
+      "rating": 1,
+      "raw_questions": "- What motivated your choice of the spectral truncation factor and the choice of kernel functions? Did you conduct any sensitivity analysis on these choices?\n\n- Have you considered comparing your proposed approach with existing GNN architectures on a broader set of benchmark datasets to ensure the generality of your claims? The paper lacks an extensive experimental investigation on multiple benchmarks and algorithms with several ablation studies regarding the claim of the paper? Or rather a theoretical study of the phenomenon observed.\n\n- Could you elaborate on the limitations and assumptions of your method? Are there scenarios where your approach may not be as effective, and if so, what are they?\n\n- There are multiple typos in the paper. Could you please proofread?",
+      "human_chunks": [
+        {
+          "text": "What motivated your choice of the spectral truncation factor and the choice of kernel functions? Did you conduct any sensitivity analysis on these choices?",
+          "topic": 0
+        },
+        {
+          "text": "Have you considered comparing your proposed approach with existing GNN architectures on a broader set of benchmark datasets to ensure the generality of your claims?",
+          "topic": 1
+        },
+        {
+          "text": "Could you elaborate on the limitations and assumptions of your method? Are there scenarios where your approach may not be as effective, and if so, what are they?",
+          "topic": 2
+        },
+        {
+          "text": "There are multiple typos in the paper. Could you please proofread?",
+          "topic": 5
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "i2jBreCPP8",
+      "rating": 6,
+      "raw_questions": "Just to be curious, as the main contribution lies in better estimating the gradient under the existence of noise, is it possible to extend the proposed method to other applications beyond network pruning?",
+      "human_chunks": [
+        {
+          "text": "Just to be curious, as the main contribution lies in better estimating the gradient under the existence of noise, is it possible to extend the proposed method to other applications beyond network pruning?",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "y2KQyGW4Ax",
+      "rating": 5,
+      "raw_questions": "1. Can this work be viewed as applying splinecam with some moderate adjustments, and deriving a summary to check double descent behavior?",
+      "human_chunks": [
+        {
+          "text": "Can this work be viewed as applying splinecam with some moderate adjustments, and deriving a summary to check double descent behavior?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "nx7y6yuuGe",
+      "rating": 1,
+      "raw_questions": "**Q1:**\nFrom the paper and figures I assume that the predictor outputs a series of temporally coarse frames, which are then predominantly used to refine the first prediction. The procedure is then repeated with this predicted and refined first prediction. To me, this means that $L>1$ predictions are made to advance the simulation by one frame. Is this the case? This should also be clarified in the paper.\n\n**Q2:**\n*Pfaff et al. (2021)* show that their method was stable across many steps. In Section 3.2 it is mentioned that *\u201c[...] they are inferior in modeling long-term interacting systems that are continuous in nature and could suffer from severe error accumulation when making long-term predictions\u201d*. Can you elaborate on this, especially regarding the inherent inferiority of GNNs?\n\n**Q3:**\nIn Section 4.1: *\u201cInstead of using inefficient iterative rollouts [...]\u201d* - It is not entirely clear to me how iterative approaches are inherently inefficient at solving PDEs. To my understanding, even the method presented in the paper fundamentally relies on iterative temporal advancement of the solution.\u00a0\n\n**Q4:**\nIn Section 4.1: *\u201c[...] thereby improving the capability to capture evolving patterns under potential noise\u201d* - Can you clarify which evaluations from the paper hint at better performance under noise?\n\n**Q5:**\nIn Section 4.1: *\u201cWhile previous approaches often integrate neighborhood information into ODEs to model interacting dynamics, they typically fall short in explicitly capturing the evolving dynamics of edges\u201d* - I do not fully understand this statement. Edges are not an inherent characteristic of the vector fields described by ODEs. Can you specify what you mean?\n\n**Q6:**\nIn Section 4.2: The loss formulation $\\mathcal{L}_{re}$ in equation (13) optimizes the refiner to match a ground truth $x^{t_1}$. The graph-ode predictor has, however, produced a series of future frames ($L$ to be precise). Is the refiner never trained to refine these steps?",
+      "human_chunks": [
+        {
+          "text": "From the paper and figures I assume that the predictor outputs a series of temporally coarse frames, which are then predominantly used to refine the first prediction. The procedure is then repeated with this predicted and refined first prediction. To me, this means that $L>1$ predictions are made to advance the simulation by one frame. Is this the case? This should also be clarified in the paper.",
+          "topic": 4
+        },
+        {
+          "text": "*Pfaff et al. (2021)* show that their method was stable across many steps. In Section 3.2 it is mentioned that *\u201c[...] they are inferior in modeling long-term interacting systems that are continuous in nature and could suffer from severe error accumulation when making long-term predictions\u201d*. Can you elaborate on this, especially regarding the inherent inferiority of GNNs?",
+          "topic": 3
+        },
+        {
+          "text": "In Section 4.1: *\u201cInstead of using inefficient iterative rollouts [...]\u201d* - It is not entirely clear to me how iterative approaches are inherently inefficient at solving PDEs. To my understanding, even the method presented in the paper fundamentally relies on iterative temporal advancement of the solution.",
+          "topic": 3
+        },
+        {
+          "text": "In Section 4.1: *\u201c[...] thereby improving the capability to capture evolving patterns under potential noise\u201d* - Can you clarify which evaluations from the paper hint at better performance under noise?",
+          "topic": 7
+        },
+        {
+          "text": "In Section 4.1: *\u201cWhile previous approaches often integrate neighborhood information into ODEs to model interacting dynamics, they typically fall short in explicitly capturing the evolving dynamics of edges\u201d* - I do not fully understand this statement. Edges are not an inherent characteristic of the vector fields described by ODEs. Can you specify what you mean?",
+          "topic": 3
+        },
+        {
+          "text": "In Section 4.2: The loss formulation $\\mathcal{L}_{re}$ in equation (13) optimizes the refiner to match a ground truth $x^{t_1}$. The graph-ode predictor has, however, produced a series of future frames ($L$ to be precise). Is the refiner never trained to refine these steps?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "wpFCVLHRm6",
+      "rating": 6,
+      "raw_questions": "I would be grateful to the authors for commenting on the weaknesses listed above, and answering the following question:\n- As far as as know, features from different hierarchical levels of a grid-based INR are usually concatenated before being fed to the network. I was surprised to see that in this paper they are summed together (p5, top paragraph). Is there any advantage/downside to summing them?",
+      "human_chunks": [
+        {
+          "text": "As far as as know, features from different hierarchical levels of a grid-based INR are usually concatenated before being fed to the network. I was surprised to see that in this paper they are summed together (p5, top paragraph). Is there any advantage/downside to summing them?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "iC17Qng9Kd",
+      "rating": 6,
+      "raw_questions": "1. If as the author statement, force maps and RGB id many-to-many mapping, what is the advantage of using force maps as tactile signal?  Why different object will not have similar surface texture property? And the challenge of disparity in spatial scale of different signals seems also exist even if it is one-one mapping?\n2. How is the robustness of the tactile glove, will it need to calibrate a lot to make sure the tactile data is accurate?\n3. How long will it take for test time optimization? Since this might be important for robotic application?",
+      "human_chunks": [
+        {
+          "text": "If as the author statement, force maps and RGB id many-to-many mapping, what is the advantage of using force maps as tactile signal?  Why different object will not have similar surface texture property? And the challenge of disparity in spatial scale of different signals seems also exist even if it is one-one mapping?",
+          "topic": 2
+        },
+        {
+          "text": "How is the robustness of the tactile glove, will it need to calibrate a lot to make sure the tactile data is accurate?",
+          "topic": 2
+        },
+        {
+          "text": "How long will it take for test time optimization? Since this might be important for robotic application?",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "VqUhH72DFX",
+      "rating": 8,
+      "raw_questions": "- Why is the proof of section 2.2 in Guth et al. insufficient to establish the duality of spatial and wavelet domain?",
+      "human_chunks": [
+        {
+          "text": "Why is the proof of section 2.2 in Guth et al. insufficient to establish the duality of spatial and wavelet domain?",
+          "topic": 3
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "fcJ2dRkcK5",
+      "rating": 3,
+      "raw_questions": "In Fig. 2, how the labels of small, moderate, and high minority scores are assigned in real data?\nIn Proposition 1, could you please clarify what you mean by \"Assume that a given noise-conditioned score network s\u03b8(xt, t) have enough capacity?\" and how does it affect the proposed method?\nWhy did not you evaluate CIFAR-LT which is seemingly designed for such a task? (Cao, K., Wei, C., Gaidon, A., Arechiga, N. and Ma, T., 2019. Learning imbalanced datasets with label-distribution-aware margin loss. Advances in neural information processing systems, 3)",
+      "human_chunks": [
+        {
+          "text": "In Fig. 2, how the labels of small, moderate, and high minority scores are assigned in real data?",
+          "topic": 9
+        },
+        {
+          "text": "In Proposition 1, could you please clarify what you mean by \"Assume that a given noise-conditioned score network s\u03b8(xt, t) have enough capacity?\" and how does it affect the proposed method?",
+          "topic": 3
+        },
+        {
+          "text": "Why did not you evaluate CIFAR-LT which is seemingly designed for such a task? (Cao, K., Wei, C., Gaidon, A., Arechiga, N. and Ma, T., 2019. Learning imbalanced datasets with label-distribution-aware margin loss. Advances in neural information processing systems, 3)",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "pUPPrVXSl7",
+      "rating": 3,
+      "raw_questions": "- Was a standard constrained optimization approach to the problem attempted before constructing the proposed algorithm?\n  - Although the intuition behind VFair is well explained, it seems that to motivate a new algorithm it would make sense to compare to standard CO algorithms or justify in some other way why they are not used.\n  - Why is the standard Lagrangian dual ascent formulation not used? e.g., see [A], and the [TensorFlow CO framework](https://github.com/google-research/tensorflow_constrained_optimization/blob/master/README.md)\n\n\n- > \"Lagrangian function, which however employs a fixed and finite multiplier and thus may not fully satisfy the constraint\"\n  - The Lagrangian function does not employ a fixed multiplier, the $\\lambda$ would have to be optimized jointly with the $\\theta$ until a stable saddle point is reached.\n\n- What ML algorithm is actually used to fit the data? The paper is written w.r.t. generic model parameters $\\theta$, which is fine, but what actual model was used in the experiments? A neural network?\n- Possibly I missed it, but I can't seem to find an actual definition for the loss function $\\ell$ used throughout the paper. Is it BCE?\n  - Multiple plots show the distribution of sample-wise loss for different models; are all algorithms evaluated on the same loss function?\n\n- Is there any explanation for why some (greyed out) rows of Table 2 always result in a constant/uniform classifier over the 10 runs?\n  - Perhaps plotting $\\lambda_1$ and $\\lambda_2$ as well as loss as training progresses could shed some light.\n\n---\n[A]: Cotter, Andrew, Heinrich Jiang, and Karthik Sridharan. \"Two-player games for efficient non-convex constrained optimization.\" Algorithmic Learning Theory. PMLR, 2019.",
+      "human_chunks": [
+        {
+          "text": "Was a standard constrained optimization approach to the problem attempted before constructing the proposed algorithm?",
+          "topic": 0
+        },
+        {
+          "text": "Why is the standard Lagrangian dual ascent formulation not used?",
+          "topic": 0
+        },
+        {
+          "text": "What ML algorithm is actually used to fit the data? The paper is written w.r.t. generic model parameters $\\theta$, which is fine, but what actual model was used in the experiments? A neural network?",
+          "topic": 0
+        },
+        {
+          "text": "Possibly I missed it, but I can't seem to find an actual definition for the loss function $\\ell$ used throughout the paper. Is it BCE?",
+          "topic": 4
+        },
+        {
+          "text": "Multiple plots show the distribution of sample-wise loss for different models; are all algorithms evaluated on the same loss function?",
+          "topic": 7
+        },
+        {
+          "text": "Is there any explanation for why some (greyed out) rows of Table 2 always result in a constant/uniform classifier over the 10 runs?",
+          "topic": 7
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "xYXtEagZXa",
+      "rating": 3,
+      "raw_questions": "1. If we simply re-weight the gradients with $w_i$ in the gradient averaging without using communication compression or EF21, would we obtain the same improvement in the theoretical results (from quadratic mean to arithmetic mean of the smoothness constants)?\n\n2. For the more complicated models or tasks, such as neural networks, how to obtain the smoothness constants and apply EF21-W?",
+      "human_chunks": [
+        {
+          "text": "If we simply re-weight the gradients with $w_i$ in the gradient averaging without using communication compression or EF21, would we obtain the same improvement in the theoretical results (from quadratic mean to arithmetic mean of the smoothness constants)?",
+          "topic": 3
+        },
+        {
+          "text": "For the more complicated models or tasks, such as neural networks, how to obtain the smoothness constants and apply EF21-W?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "VZkDrpDACf",
+      "rating": 3,
+      "raw_questions": "1. What is the possible performance of using other GAN paradigms (e.g., StyleGAN variants) compared to the proposed approach (CycleGAN variants) on this task?\n2. Please address my concerns stated in the weakness section. I would revise the rating based on further responses/rebuttals from the authors.",
+      "human_chunks": [
+        {
+          "text": "What is the possible performance of using other GAN paradigms (e.g., StyleGAN variants) compared to the proposed approach (CycleGAN variants) on this task?",
+          "topic": 1
+        },
+        {
+          "text": "Please address my concerns stated in the weakness section. I would revise the rating based on further responses/rebuttals from the authors.",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "l1cG1c2CxW",
+      "rating": 6,
+      "raw_questions": "There is less need for good segmentation boundaries when training with longer contexts.  Have you attempted to see whether your results still hold for model that are trained on longer contexts, e.g. 8k or 32k tokens?",
+      "human_chunks": [
+        {
+          "text": "There is less need for good segmentation boundaries when training with longer contexts.  Have you attempted to see whether your results still hold for model that are trained on longer contexts, e.g. 8k or 32k tokens?",
+          "topic": 2
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "pJPAT2ChMv",
+      "rating": 1,
+      "raw_questions": "The proposed technique is a simple tweak of those from Kobler et al. (2022b), Lou et al. (2020), Chakraborty (2020). \nNo new concepts or ideas have been developped w.r.t. these works. While the authors state that the proposed technique works for Lie groups and is able to control mean and variance in contrast to these works, extensions of these works to Lie groups, as done in the paper, are trivial.\n\nThe experimental results are not convincing since the proposed method is only compared with some SPD neural networks. For example, on human action recognition, the proposed method is outperformed by the method of Laraba et al. (2017) on HDM05 dataset by a large margin (72.27\\% vs. 83.33\\%). This shows that the proposed technique is probably not effective compared to other learning techniques designed in Euclidean space. \n\n*Question*\n\nHow does the proposed method perform on another Lie groups, e.g. when being used in LieNet (Huang et al., 2017) ?\n\n*References*\n\n1. Sohaib Laraba, Mohammed Brahimi, Jo\u00eblle Tilmanne, Thierry Dutoit: 3D skeleton-based action recognition by representing motion capture sequences as 2D-RGB images. Comput. Animat. Virtual Worlds 28(3-4) (2017)\n\n2. Zhiwu Huang, Chengde Wan, Thomas Probst, Luc Van Gool: Deep Learning on Lie Groups for Skeleton-Based Action Recognition. CVPR 2017: 1243-1252.",
+      "human_chunks": [
+        {
+          "text": "How does the proposed method perform on another Lie groups, e.g. when being used in LieNet (Huang et al., 2017) ?",
+          "topic": 1
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "mlBlzIF8j5",
+      "rating": 1,
+      "raw_questions": "A key aspect of action recognition is likely to be dynamics and time, which is not studied here.\n\nWithin the study of action recognition from frames, it would be useful to use rigorous datasets. If the authors are interested in the effect body and background, it would be important to rigorously control for basic variables like contrast, size, and multiple other confounds.",
+      "human_chunks": [],
+      "non_informative": true,
+      "_done": true
+    },
+    {
+      "review_id": "qZU4E9A3J6",
+      "rating": 6,
+      "raw_questions": "- How much do you vary/randomize in your sim and real robot examples, does the robot and world always start in the same configuration?\n- Can you also say something about how much the action parameters are varied in response to these, or maybe show us some example python code from different runs of the algorithm on e.g. the milk example?",
+      "human_chunks": [
+        {
+          "text": "How much do you vary/randomize in your sim and real robot examples, does the robot and world always start in the same configuration?",
+          "topic": 2
+        },
+        {
+          "text": "Can you also say something about how much the action parameters are varied in response to these, or maybe show us some example python code from different runs of the algorithm on e.g. the milk example?",
+          "topic": 0
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "jDEeGLedbC",
+      "rating": 10,
+      "raw_questions": "- Can you clarify \"truncating the back-propagation at the end of linear layers\"?\n- The line \"Edit first FC in FFN\u201d turns to edit the first linear layer in the FFN of the last 6 Transformer blocks\" is unclear to me. How does the non-ablated MALMEN differ?",
+      "human_chunks": [
+        {
+          "text": "Can you clarify \"truncating the back-propagation at the end of linear layers\"?",
+          "topic": 4
+        },
+        {
+          "text": "The line \"Edit first FC in FFN\u201d turns to edit the first linear layer in the FFN of the last 6 Transformer blocks\" is unclear to me. How does the non-ablated MALMEN differ?",
+          "topic": 4
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    },
+    {
+      "review_id": "ojEDlq0gng",
+      "rating": 1,
+      "raw_questions": "(1) The contribution is not clearly. For instance why nearest neighbor search would be listed as contribution since it is just a common method. Similarly , the random sampling method is also a very routine method. \n\n(2) The method lacks theoretical support. For instance, what is the error bound ? How does the method perform under noisy setting ?\n\n(3) The experimental evaluations are weak and not sufficient.",
+      "human_chunks": [
+        {
+          "text": "The method lacks theoretical support. For instance, what is the error bound ? How does the method perform under noisy setting ?",
+          "topic": 3
+        }
+      ],
+      "non_informative": false,
+      "_done": true
+    }
+  ]
+}
