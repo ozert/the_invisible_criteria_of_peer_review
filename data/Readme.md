@@ -16,15 +16,15 @@ Output of the **Source-Anchored Information Extraction** stage. This stage appli
 
 **Level 1 — Non-Informative Filtering** (`Gemini 2.5 Flash`): separates reviews that contain actionable questions from empty/referential ones (e.g., _"See weaknesses"_, _"None"_).
 
-- `llm_found_informant_reviews.json` — Reviews classified as **informative** (contain actionable content).
-- `llm_found_noninformant_reviews.json` — Reviews classified as **non-informative** (excluded from further processing).
+- `llm_found_informative_reviews.json` — Reviews classified as **informative** (contain actionable content).
+- `llm_found_noninformative_reviews.json` — Reviews classified as **non-informative** (excluded from further processing).
 
 **Level 2 — Context-Aware Extraction** (`Gemini 2.5 Pro`): segments the informative reviews into semantically coherent question chunks and performs a second, deeper informativeness check.
 
-- `llm_found_informant_question_separation_found_informant_reviews.json` — Extracted question chunks from reviews confirmed as informative.
-- `llm_found_informant_question_separation_found_noninformant_reviews.json` — Reviews that passed Level 1 but were found non-informative during the deeper Level 2 extraction.
+- `llm_found_informative_question_separation_found_informative_reviews.json` — Extracted question chunks from reviews confirmed as informative.
+- `llm_found_informative_question_separation_found_noninformative_reviews.json` — Reviews that passed Level 1 but were found non-informative during the deeper Level 2 extraction.
 
-> In the _Extended_ corpus, these files carry the `_remaining_included` suffix, indicating the remaining reviews (beyond one-per-submission) were included.
+> In the _Extended_ corpus, these files are generated from the same submissions as Main corpus, but share no common review, indicating the remaining reviews (beyond one-per-submission) were included.
 
 ---
 

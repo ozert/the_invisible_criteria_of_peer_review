@@ -1,198 +1,231 @@
-### Setting Up the Environment from Scratch
+# Replication Package
 
-Follow these steps to set up the environment from scratch:
+This repository contains the complete replication package for our study on review informativeness, question separation, topic modeling, and LLM-based analysis. It includes the data acquisition pipeline, LLM processing chains, prompts, datasets across multiple processing stages, gold-standard human annotations, and topic modeling artifacts.
 
-1. **Create a Conda Environment**  
-    Open your terminal and run the following command to create a new Conda environment named `paper_env` with Python 3.12:  
-    ```bash
-    conda create -n paper_env python=3.12 -y
-    ```
+---
 
-2. **Activate the Environment**  
-    Activate the newly created environment:  
-    ```bash
-    conda activate paper_env
-    ```
+## Table of Contents
 
-3. **Install Poetry**  
-    Use `pip` to install Poetry, a dependency management tool:  
-    ```bash
-    pip install poetry
-    ```
+- [Overview](#overview)
+- [Repository Structure](#repository-structure)
+- [Detailed Description](#detailed-description)
+  - [Root-Level Files](#root-level-files)
+  - [Configuration (`conf/`)](#configuration-conf)
+  - [Data Acquisition](#data-acquisition)
+  - [MongoDB Access (`mongodb/`)](#mongodb-access-mongodb)
+  - [LLM Pipeline (`llm_pipeline/`)](#llm-pipeline-llm_pipeline)
+  - [Gold Dataset Generation (`gold_dataset_generation/`)](#gold-dataset-generation-gold_dataset_generation)
+  - [Data (`data/`)](#data-data)
+  - [Topic Samples (`Topic Samples/`)](#topic-samples-topic-samples)
+- [Data Processing Pipeline](#data-processing-pipeline)
+- [Licenses](#licenses)
 
-4. **Install Dependencies**  
-    Run the following command to install all dependencies specified in the `pyproject.toml` file:  
-    ```bash
-    poetry install --no-root
-    ```
+---
 
-That's it! Your environment is now ready to use. 🎉
+## Overview
 
-### Using MongoDB on macOS
+The pipeline processes user reviews through a series of stages:
 
-To set up and use MongoDB with Docker on macOS, follow these steps:
+1. **Data Acquisition** — Collect raw reviews and store them in MongoDB.
+2. **Informativeness Filtering** — Use an LLM to separate informative from non-informative reviews.
+3. **Question Separation** — Split reviews into discrete question/statement units.
+4. **LLM-as-a-Judge Validation** — Validate the question separation via majority-vote agreement.
+5. **Topic Assignment** — Assign reviews/questions to topics generated using TopicGPT.
+6. **Evaluation** — Compare LLM outputs against a human-annotated gold dataset.
 
-1. **Start Colima**  
-    Ensure Colima is running to provide a Docker runtime:  
-    ```bash
-    colima start
-    ```
+The package provides three corpora: the **Main Corpus**, an **Extended Main Corpus**, and a **Validation Corpus**.
 
-2. **Create a Docker Volume**  
-    Create a Docker volume to persist MongoDB data:  
-    ```bash
-    docker volume create paper-volume-docker
-    ```
+---
 
-3. **Run MongoDB in a Docker Container**  
-    Start a MongoDB container using the created volume:  
-    ```bash
-    docker run -d --name paper-mongo-container -p 27017:27017 -v paper-volume-docker:/data/db mongo
-    ```
+## Repository Structure
 
-4. **Verify MongoDB is Running**  
-    Check if the MongoDB container is running:  
-    ```bash
-    docker ps
-    ```
+```
+.
+├── README.md                      # This file
+├── LICENSE                        # Primary code license
+├── DATA_LICENSES.md               # Licensing details for the datasets
+├── LICENSE_CC0_1.0.txt            # CC0 1.0 license text
+├── LICENSE_CC_4.0.txt             # CC BY 4.0 license text
+├── pyproject.toml                 # Project dependencies & build configuration
+│
+├── conf/                          # Configuration files
+├── data_acquisition.py            # Entry point for collecting raw review data
+├── mongodb/                       # MongoDB data-access utilities
+├── llm_pipeline/                  # LLM chains, prompts, and utilities
+├── gold_dataset_generation/       # Human-annotation & LLM-evaluation code
+├── data/                          # All datasets across processing stages
+├── Topic Samples/                 # Example topic visualizations (PNG)
+│
+├── human_annotated_informativeness_corpus_427_samples.json
+└── topicgpt_topic_generation_prompt_template_generation_1.txt
+```
 
-    You should see `paper-mongo-container` listed in the output.
+---
 
-5. **Connect to MongoDB**  
-    Use a MongoDB client or library to connect to the database at `localhost:27017`.
+## Detailed Description
 
+### Root-Level Files
 
-### Restoring MongoDB from a Backup
+| File                                                         | Description                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `README.md`                                                  | This documentation file.                                                 |
+| `Setup.md`                                                   | Environment setup guide.                                                 |
+| `LICENSE`                                                    | Main license governing the code in this repository.                      |
+| `DATA_LICENSES.md`                                           | Explains the licenses that apply to the datasets.                        |
+| `LICENSE_CC0_1.0.txt`                                        | Full text of the Creative Commons CC0 1.0 license.                       |
+| `LICENSE_CC_4.0.txt`                                         | Full text of the Creative Commons Attribution 4.0 license.               |
+| `pyproject.toml`                                             | Python project metadata, dependencies, and build configuration.          |
+| `data_acquisition.py`                                        | Script to acquire/collect raw review data.                               |
+| `human_annotated_informativeness_corpus_427_samples.json`    | Gold-standard corpus of 427 human-annotated samples for informativeness. |
+| `topicgpt_topic_generation_prompt_template_generation_1.txt` | Prompt template used to generate topics with TopicGPT.                   |
 
-To restore a MongoDB database from a `.gz` backup file, follow these steps:
+### Configuration (`conf/`)
 
-1. **Copy the Backup File to the Container**  
-    Use the `docker cp` command to copy the `.gz` backup file into the MongoDB container:  
-    ```bash
-    docker cp openreview_db_backup.gz paper-mongo-container:/tmp/openreview_db_backup.gz
-    ```
+| File          | Description                                                   |
+| ------------- | ------------------------------------------------------------- |
+| `config.yaml` | Central configuration (paths, model names, parameters, etc.). |
+| `config.py`   | Loads and exposes the YAML configuration to the Python code.  |
 
-2. **Restore the Backup**  
-    Execute the following command to restore the MongoDB database from the `.gz` backup file:  
-    ```bash
-    docker exec -it paper-mongo-container mongorestore \
-        --gzip \
-        --archive=/tmp/openreview_db_backup.gz
-    ```
+### Data Acquisition
 
-Your MongoDB database has now been restored from the backup file. 🎉
-### MongoDB Commands Overview
+- **`data_acquisition.py`** — Collects raw reviews from the source and persists them (via the MongoDB layer) for downstream processing.
 
-Here’s how to view your database and its collections in MongoDB:
+### MongoDB Access (`mongodb/`)
 
-1. **Enter the Docker Container**  
-    To access the MongoDB container, use the following command:  
-    ```bash
-    docker exec -it paper-mongo-container bash
-    ```
-2. **Start `mongosh`**  
-    To interact with MongoDB, start the `mongosh` shell:  
-    ```bash
-    mongosh
-    ```
+| File                   | Description                                                           |
+| ---------------------- | --------------------------------------------------------------------- |
+| `mongo_data_access.py` | Data-access layer providing read/write helpers for the MongoDB store. |
 
-3. **List Databases**  
-    Run the following command to see all databases:  
-    ```bash
-    show dbs
-    ```
-    Example Output:  
-    ```
-    admin                     40.00 KiB
-    config                   108.00 KiB
-    local                     72.00 KiB
-    openreview_db_iclr_2024  173.54 MiB
-    openreview_db_iclr_2025  318.20 MiB
-    ```
+### LLM Pipeline (`llm_pipeline/`)
 
-4. **Switch to a Database**  
-    Use this command to switch to `openreview_db_iclr_2024`:  
-    ```bash
-    use openreview_db_iclr_2024
-    ```
-    Example Output:  
-    ```
-    switched to db openreview_db_iclr_2024
-    ```
+The core of the LLM-based processing.
 
-5. **List Collections**  
-    To view all collections in `openreview_db_iclr_2024`, run:  
-    ```bash
-    show collections
-    ```
-    Example Output:  
-    ```
-    accepted_submissions
-    decisions
-    desk_rejected_submissions
-    meta_reviews
-    official_comments
-    reviews
-    submissions
-    withdrawn_submissions
-    ```
+```
+llm_pipeline/
+├── ai/
+│   └── chat.py                    # LLM client / chat interface wrapper
+├── chains/
+│   └── chains.py                  # Orchestrates multi-step LLM chains
+├── prompts/                       # Prompt definitions for each task
+│   ├── correspondance_assignment.py
+│   ├── judge_question_separation.py
+│   ├── judge_topic_assignment.py
+│   ├── non_informant_review_filtering.py
+│   ├── question_separation.py
+│   ├── summarization.py
+│   └── topic_assignment.py
+└── utils/
+    └── embedding_generation.py    # Generates embeddings (e.g., for similarity)
+```
 
+| Prompt File                         | Purpose                                           |
+| ----------------------------------- | ------------------------------------------------- |
+| `non_informant_review_filtering.py` | Detect and filter non-informative reviews.        |
+| `question_separation.py`            | Split reviews into individual questions/units.    |
+| `judge_question_separation.py`      | LLM-as-a-judge validation of question separation. |
+| `topic_assignment.py`               | Assign topics to reviews/questions.               |
+| `judge_topic_assignment.py`         | LLM-as-a-judge validation of topic assignment.    |
+| `correspondance_assignment.py`      | Establish correspondence/mapping between items.   |
+| `summarization.py`                  | Summarize content.                                |
 
-6. **Count Documents in All Collections**  
-    To see the document counts of all collections in `openreview_db_iclr_2024`, use the following script in `mongosh`:  
-    ```javascript
-    // Connect to the database
-    const db = db.getSiblingDB("openreview_db_iclr_2024");
+### Gold Dataset Generation (`gold_dataset_generation/`)
 
-    // Get all collections in the database
-    const collections = db.getCollectionNames();
+Code and artifacts to build the human-annotated gold set and evaluate LLM performance against it.
 
-    // Iterate over each collection and count documents
-    collections.forEach(collection => {
-        const count = db[collection].countDocuments();
-        print(`Collection: ${collection}, Document Count: ${count}`);
-    });
-    ```
-    Example Output (ICLR 2024):
-    ```
-    Collection: desk_rejected_submissions, Document Count: 53
-    Collection: accepted_submissions, Document Count: 2260
-    Collection: withdrawn_submissions, Document Count: 1656
-    Collection: submissions, Document Count: 7404
-    Collection: meta_reviews, Document Count: 5781
-    Collection: reviews, Document Count: 28028
-    Collection: decisions, Document Count: 5780
-    Collection: official_comments, Document Count: 70624
-    ```
-    Example Output (ICLR 2025):
-    ```
-    Collection: withdrawn_submissions, Document Count: 2979
-    Collection: submissions, Document Count: 11672
-    Collection: desk_rejected_submissions, Document Count: 70
-    Collection: decisions, Document Count: 8727
-    Collection: meta_reviews, Document Count: 8727
-    Collection: accepted_submissions, Document Count: 3704
-    Collection: reviews, Document Count: 46748
-    Collection: official_comments, Document Count: 149219
-    ```
+| File                                                           | Description                                                      |
+| -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `dataset_generation_for_human_annotation.py`                   | Prepares data samples for human annotation.                      |
+| `human_annotation_question_separation_and_topic_assignment.py` | Tooling for annotating question separation and topic assignment. |
+| `llm_performance_analysis.ipynb`                               | Notebook analyzing LLM performance vs. human annotations.        |
+| `data/artifacts/study_a_task.json`                             | Task definition/data for annotation study A.                     |
+| `data/artifacts/study_a_manual_matches.json`                   | Manually verified matches from study A.                          |
 
-### MongoDB Database Backup
-To create a backup of the openreview_db_iclr_2024 MongoDB database and copy it to your local machine, follow these steps:
+### Data (`data/`)
 
-1. **Backup the MongoDB Database**
+Contains all corpora, organized by processing stage. Each corpus follows the same three-stage folder layout.
 
-    In order to take a backup of the MongoDB database from a container go to your working directory in Mac then run the following command.
+```
+data/
+├── Readme.md                                # Data-specific documentation
+├── Topic Modeling Consolidation.xlsx        # Spreadsheet consolidating topic modeling results
+├── cosine_similarity_eliminated_samples.json# Samples removed via cosine-similarity dedup
+├── question_weakness_strength_relation.json # Relations between question strengths/weaknesses
+│
+├── Main Corpus/
+├── Main Corpus - Extended/
+├── Validation Corpus/
+└── TopicGPT Artifacts/
+```
 
-    ```bash
-    docker exec paper-mongo-container mongodump \
-        --db=openreview_db_iclr_2024 \
-        --archive=/data/db/openreview_db_iclr_2024_backup.gz \
-        --gzip
-    ```
-2. **Copy the Backup to Your Local Machine**
+**Per-corpus stage layout** (`Main Corpus`, `Main Corpus - Extended`, `Validation Corpus`):
 
-    Copy the backup from docker container to Mac.
+| Subfolder                                  | Contents                                                                                                    |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `1 - Question Separation`                  | Reviews split into informative/non-informative sets and separated into informant / non-informant questions. |
+| `2 - LLM as a Judge - Question Separation` | Majority-vote validated question lists and samples lacking mutual agreement.                                |
+| `3 - Topic Assignment`                     | Topic-assigned outputs, extended with rating and review ID.                                                 |
 
-    ```bash
-    docker cp paper-mongo-container:/data/db/openreview_db_iclr_2024_backup.gz data/
-    ```
+Representative files:
+
+| File                                                                        | Description                                              |
+| --------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `llm_found_informative_reviews.json`                                        | Reviews classified as informative.                       |
+| `llm_found_noninformative_reviews.json`                                     | Reviews classified as non-informative.                   |
+| `llm_found_informative_question_separation_found_informant_reviews.json`    | Informant-question units from informative reviews.       |
+| `llm_found_informative_question_separation_found_noninformant_reviews.json` | Non-informant-question units from informative reviews.   |
+| `question_separated_majority_vote_passed_question_list_all_samples.jsonl`   | Question lists that passed majority-vote judging.        |
+| `judge_question_separation_no_mutual_aggreement_samples.json`               | Samples where judges did not reach agreement.            |
+| `topic_assignment_output_*_samples.json`                                    | Raw topic-assignment outputs (sample count in filename). |
+| `topic_assignment_*_extended_with_rating_and_review_id.jsonl`               | Topic assignments enriched with rating and review ID.    |
+
+> The **Extended** corpus files mirror the Main Corpus but include remaining/additional samples (suffixed `_remaining_included` / `_extended`).
+
+**TopicGPT Artifacts:**
+
+| Path                                                        | Description                                    |
+| ----------------------------------------------------------- | ---------------------------------------------- |
+| `Intermediate Topics/gpt_4o_all_samples_topics.md`          | Topics generated by GPT-4o over all samples.   |
+| `Intermediate Topics/gpt_4o_second_half_topics.md`          | GPT-4o topics for the second half of the data. |
+| `Intermediate Topics/gemini_2_5_flash_first_half_topics.md` | Gemini 2.5 Flash topics for the first half.    |
+| `Final Topics/consolidated_topics.md`                       | Final consolidated topic list.                 |
+
+### Topic Samples (`Topic Samples/`)
+
+Contains `Topic-1.png` through `Topic-13.png` — example visualizations for each of the 13 identified topics.
+
+---
+
+## Data Processing Pipeline
+
+```
+data_acquisition.py
+        │
+        ▼
+   MongoDB store  ──►  llm_pipeline (chains + prompts)
+        │
+        ├─ 1. Informativeness Filtering
+        ├─ 2. Question Separation
+        ├─ 3. LLM-as-a-Judge Validation
+        └─ 4. Topic Assignment  ◄── TopicGPT topics
+                    │
+                    ▼
+        Evaluation vs. Gold Dataset
+        (gold_dataset_generation/)
+```
+
+Outputs of each stage are stored under `data/<Corpus>/<Stage>/`.
+
+---
+
+## Licenses
+
+- **Code** is released under the terms in [`LICENSE`](LICENSE).
+- **Data** licensing is described in [`DATA_LICENSES.md`](DATA_LICENSES.md), and may be governed by:
+  - [CC0 1.0](LICENSE_CC0_1.0.txt) (public domain dedication), and/or
+  - [CC BY 4.0](LICENSE_CC_4.0.txt) (attribution).
+
+Please review the applicable license before reusing any component of this package.
+
+---
+
+_For questions about data-specific details, see [`data/Readme.md`](data/Readme.md)._
