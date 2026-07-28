@@ -3,15 +3,15 @@
 Follow these steps to set up the environment from scratch:
 
 1. **Create a Conda Environment**  
-    Open your terminal and run the following command to create a new Conda environment named `thesis_env` with Python 3.12:  
+    Open your terminal and run the following command to create a new Conda environment named `paper_env` with Python 3.12:  
     ```bash
-    conda create -n thesis_env python=3.12 -y
+    conda create -n paper_env python=3.12 -y
     ```
 
 2. **Activate the Environment**  
     Activate the newly created environment:  
     ```bash
-    conda activate thesis_env
+    conda activate paper_env
     ```
 
 3. **Install Poetry**  
@@ -41,13 +41,13 @@ To set up and use MongoDB with Docker on macOS, follow these steps:
 2. **Create a Docker Volume**  
     Create a Docker volume to persist MongoDB data:  
     ```bash
-    docker volume create thesis-volume-docker
+    docker volume create paper-volume-docker
     ```
 
 3. **Run MongoDB in a Docker Container**  
     Start a MongoDB container using the created volume:  
     ```bash
-    docker run -d --name thesis-mongo-container -p 27017:27017 -v thesis-volume-docker:/data/db mongo
+    docker run -d --name paper-mongo-container -p 27017:27017 -v paper-volume-docker:/data/db mongo
     ```
 
 4. **Verify MongoDB is Running**  
@@ -56,7 +56,7 @@ To set up and use MongoDB with Docker on macOS, follow these steps:
     docker ps
     ```
 
-    You should see `thesis-mongo-container` listed in the output.
+    You should see `paper-mongo-container` listed in the output.
 
 5. **Connect to MongoDB**  
     Use a MongoDB client or library to connect to the database at `localhost:27017`.
@@ -69,13 +69,13 @@ To restore a MongoDB database from a `.gz` backup file, follow these steps:
 1. **Copy the Backup File to the Container**  
     Use the `docker cp` command to copy the `.gz` backup file into the MongoDB container:  
     ```bash
-    docker cp openreview_db_backup.gz thesis-mongo-container:/tmp/openreview_db_backup.gz
+    docker cp openreview_db_backup.gz paper-mongo-container:/tmp/openreview_db_backup.gz
     ```
 
 2. **Restore the Backup**  
     Execute the following command to restore the MongoDB database from the `.gz` backup file:  
     ```bash
-    docker exec -it thesis-mongo-container mongorestore \
+    docker exec -it paper-mongo-container mongorestore \
         --gzip \
         --archive=/tmp/openreview_db_backup.gz
     ```
@@ -88,7 +88,7 @@ Here’s how to view your database and its collections in MongoDB:
 1. **Enter the Docker Container**  
     To access the MongoDB container, use the following command:  
     ```bash
-    docker exec -it thesis-mongo-container bash
+    docker exec -it paper-mongo-container bash
     ```
 2. **Start `mongosh`**  
     To interact with MongoDB, start the `mongosh` shell:  
@@ -184,7 +184,7 @@ To create a backup of the openreview_db_iclr_2024 MongoDB database and copy it t
     In order to take a backup of the MongoDB database from a container go to your working directory in Mac then run the following command.
 
     ```bash
-    docker exec thesis-mongo-container mongodump \
+    docker exec paper-mongo-container mongodump \
         --db=openreview_db_iclr_2024 \
         --archive=/data/db/openreview_db_iclr_2024_backup.gz \
         --gzip
@@ -194,16 +194,5 @@ To create a backup of the openreview_db_iclr_2024 MongoDB database and copy it t
     Copy the backup from docker container to Mac.
 
     ```bash
-    docker cp thesis-mongo-container:/data/db/openreview_db_iclr_2024_backup.gz data/
+    docker cp paper-mongo-container:/data/db/openreview_db_iclr_2024_backup.gz data/
     ```
-
-## Explanation of Certain Notebooks/Scripts
-| **Purpose**         | **File/Notebook**              | **Description**                                      | **Needs Work** |
-|----------------------|--------------------------------|------------------------------------------------------|----------------|
-| Data Acquisition     | `data_acquisition.py`         | This script is used for data acquisition from OpenReview. | ❌ False       |
-| EDA                  | `notebooks/EDA_reviews.ipynb` | This notebook is created for complete EDA of the thesis-related data. | ❌ False        |
-| Review Data Exploration | `notebooks/data_check_and_exploration.ipynb` | This notebook is used for exploring and checking the review data. | ❌ False       |
-| Network Visualization | `notebooks/graph_example_single_forum_networkx.ipynb` | This notebook creates a network visualization for a single specified forum. | ❌ False       |
-| Question Separation   | `notebooks/question_separation.ipynb` | This script is used for separating meaningful question chunks from the review texts. | ❌ False       |
-| LLM as a Judge        | `notebooks/llm_as_a_judge_question_separation.ipynb` | This notebook is created to evaluate question separation performance using 3 LLMs as judges. | ❌ False       |
-| TopicGPT Data Preparation | `notebooks/topic_gpt_data_preparation.ipynb` | This notebook is created to sample preprocessed data for TopicGPT. | ❌ False       |
