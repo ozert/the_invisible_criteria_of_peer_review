@@ -1,0 +1,255 @@
+{
+  "version": "Guideline is updated based on the annotation outputs of the first round.",
+  "task": [
+    "In this study we examine peer reviews written for papers submitted to the ICLR 2024 conference. Each review contains three free-text fields: Strengths (the paper’s strong points), Weaknesses (its weak points) and Questions (questions the reviewer asks the authors).",
+    "These fields have already been divided into small pieces called units. Each unit is intended to express a single assessment or a single concern; if you think it does not, you flag this in the boundary check. Your task is to label what each unit is about, using one of the 13 topics below or Other.",
+    "The only thing to attend to is the topic. A unit may praise something, criticise it, or ask about it as a question. This difference does not change your label. “The ablation study is thorough”, “The ablation study is missing” and “Why is there no ablation?” are all about the same topic.",
+    "The page shows one text at a time: one part of a review, already divided into units. All units of the text stay on screen, and the unit you are labelling is highlighted; Next moves the highlight to the next unit, and after the last unit the next text appears. Texts come from different reviews, in a mixed order, and the page does not say which part of a review a text is. Do not discuss your labels with the other annotators during the study; noting the cases where you were unsure in the comment is enough.",
+    "Decide by content, not by wording. What a unit is about decides its topic and its boundary check; words such as “and”, “however”, “particularly”, “unclear” or the name of a table do not. The main set takes about 2 to 2.5 hours of active work; take breaks whenever you like."
+  ],
+  "topics": [
+    [
+      "Methodology",
+      "Content regarding the techniques, models, or approaches used, including their design, specific configurations, and components",
+      "regarding the ablation study, how did you choose the final learning and scaling schemas?"
+    ],
+    [
+      "Comparative Analysis",
+      "Content focused on the external context, including comparisons to baselines, related work, and alternative approaches",
+      "The paper should report a better contextualization in the literature and comparison with similar works (it misses a related work section)."
+    ],
+    [
+      "Applicability & Limitations",
+      "Content regarding the scope of the work's claims, including its generalizability, robustness, scalability, and practical real-world use",
+      "The reviewer is interested if the proposed ControlVideo can be extended to generate more challenging new information, such as a novel view/unseen part of an object."
+    ],
+    [
+      "Theoretical Foundations",
+      "Content regarding the theoretical background, assumptions, and justifications underlying the work",
+      "And it would be possible to derive theoretical results on this?"
+    ],
+    [
+      "Terminology & Clarity",
+      "Content regarding the choice, appropriateness, and clarity of terms, definitions, and written language",
+      "Better use symbols consistently. The same symbols in GP preliminaries and model formulation with different meanings are confusing."
+    ],
+    [
+      "Presentation & Figures",
+      "Content regarding how results and data are presented, focusing on figures, tables, and overall structure",
+      "Table 3: I think this table would be easier to read if names of interpretable methods were split in two columns (features and glass-box model)"
+    ],
+    [
+      "Interpretability & Explanation",
+      "Content seeking to understand the 'why' behind the model's behavior, including requests for explanations or transparency of its internal mechanisms",
+      "Can the authors elaborate on the intuition of why Tanh and ReLU behave in this way?"
+    ],
+    [
+      "Performance & Metrics",
+      "Content focused on the internal results, outcomes, and the metrics used to measure the work's performance",
+      "I would be very interested to see how a glass-box model trained on ground-truth FeatShort performs on predicted FeatShort (i.e. NormIntSleep) and vice-versa."
+    ],
+    [
+      "Validity & Reproducibility",
+      "Content concerning the correctness of claims, the reliability of the results, and the ability to replicate the work",
+      "Will the authors release all the code, models, and data to ensure the reproducibility of this work?"
+    ],
+    [
+      "Data",
+      "Content specifically about the dataset(s) used, including its source, statistics, preprocessing, or availability",
+      "How was the dataset filtered?"
+    ],
+    [
+      "Motivation & Contribution",
+      "Content regarding the purpose, novelty, and significance of the work, including the rationale for the research",
+      "The analysis on how the activation function can enforce a different latent representation geometry is to the best of my knowledge, novel and interesting."
+    ],
+    [
+      "Computational Efficiency",
+      "Content regarding the computational cost, resource usage (time, memory), or speed of the proposed methods",
+      "It seems the interleaved-frame smoother still brings more computational cost and affects the model efficiency due to the additional conversion and interpolation."
+    ],
+    [
+      "Ethical Considerations",
+      "Content regarding the ethical implications of the work, including concerns about privacy, data protection, and potential bias",
+      "The dataset may contain personal data."
+    ],
+    [
+      "Other",
+      "Content that fits none of the above, or a general assessment with no specific topic",
+      "Overall, a good paper."
+    ]
+  ],
+  "rules": [
+    [
+      "Attend only to the topic.",
+      "Whether the unit praises, criticises or asks does not change the label."
+    ],
+    [
+      "The dominant topic is primary.",
+      "If a unit touches several topics, the topic is the one the unit is mainly directed at, whether as a request for an answer, a correction or praise."
+    ],
+    [
+      "Use a second topic only for a genuine second topic.",
+      "If a single concern touches two topics equally, choose the second one under Second topic. If unsure, leave it empty."
+    ],
+    [
+      "Other is a last resort, but do not hesitate to use it.",
+      "If no definition fits, choose Other rather than forcing a topic, and describe briefly in your own words what the unit is about (for example: general praise, reference to the authors’ earlier work, request for an additional experiment)."
+    ],
+    [
+      "Flag unit boundaries as part of labelling.",
+      "If a unit boundary looks wrong, label the unit as it is, choose the matching option in the boundary check, and add a short comment if needed. Do not split or merge units yourself."
+    ],
+    [
+      "Decide by content, not by wording.",
+      "Linking words (and, however, moreover, particularly) and signal words (unclear, motivated, significant) do not decide a topic or a boundary. Ask what the unit is about."
+    ],
+    [
+      "The place is not the topic.",
+      "A table, figure, section, equation or line named as the place of an issue does not make a unit Presentation & Figures. “in table 4: for projectors fitted using ridge regression, how did you choose the value of the regularization parameter?” is Methodology. Presentation & Figures is for how something is shown: readability, layout, labels, colours, scale, what a figure contains."
+    ],
+    [
+      "Methodology is the design of the method.",
+      "Use Methodology for the architecture, components, configuration, training procedure and choices such as hyperparameters. Results, comparisons, reliability and extensions have their own topics, even though they are about the method. “The proposed technique demonstrate some ability to adapt to data with different energy spectra than those encountered during training.” is Applicability & Limitations, not Methodology."
+    ],
+    [
+      "The paper’s own variants versus other people’s methods.",
+      "Comparing the paper’s own variants, settings or ablations is Performance & Metrics (internal results). Comparing with baselines, related work or other people’s methods is Comparative Analysis (external context). “FCN should not be considered a valid baseline…” is Comparative Analysis."
+    ],
+    [
+      "Reliability of results is Validity & Reproducibility.",
+      "Missing standard errors, error bars, seeds or significance tests, the fairness of a comparison, and whether the experiments support the claims are Validity & Reproducibility. “results are reported without standard error to the mean, so in my opinion it is hard to assess which approach is performing the best” is Validity & Reproducibility."
+    ],
+    [
+      "Extensions and scope are Applicability & Limitations.",
+      "Extending the method to new tasks, settings or scales, generalisation, robustness, and a setting that is too simple are Applicability & Limitations. “The problem setting is too simplistic to demonstrate significance. The authors exclusively focus on the linear heat equation…” is Applicability & Limitations."
+    ],
+    [
+      "Three kinds of questions.",
+      "A question about why the model or a result behaves as it does is Interpretability & Explanation: “Can the authors elaborate on the intuition of why Tanh and ReLU behave in this way?” A question about why the authors designed it this way, or did not choose another option, is Methodology: “What is the intuition to consider all the frames as a large image? Why not select some key frames…?” A question about what something is or how it is defined is Terminology & Clarity: “What is the mathematical formulation of the nonlinearity analyzed in section 7?”"
+    ],
+    [
+      "“Unclear” names a doubt, not a topic.",
+      "“It is not clear whether X” usually doubts X, so the topic is that of X: “it is not clear to me if one can make a fair comparison between models fitted on NormIntSleep and FeatLong…” is Validity & Reproducibility. Terminology & Clarity is for text that is hard to understand: “I might not understand what the alignment metric actually measures, which is also a problem in this paper.”"
+    ],
+    [
+      "Typos and the structure of the paper.",
+      "Typos and grammar are Terminology & Clarity, never Other or No content: “section 5 eiegenvalues -> eigenvalues”. What to include, remove or move (background, sections, appendix, length) is Presentation & Figures: “It is suggested to remove some content about the background and preliminary since such information is well-known.”"
+    ],
+    [
+      "Motivation & Contribution is about the work as a whole.",
+      "It covers the purpose, novelty and significance of the work. A single component that is “undermotivated” is not: “The encoder for task representation is undermotivated.” is Methodology."
+    ]
+  ],
+  "pairs": [
+    [
+      "Performance & Metrics or Comparative Analysis",
+      "If a result is compared with a baseline or another author’s method, Comparative Analysis; if only the work’s own results, variants or metrics are discussed, Performance & Metrics."
+    ],
+    [
+      "Validity & Reproducibility or Performance & Metrics",
+      "If the question is whether a result is correct or reliable, Validity & Reproducibility; if it is about the size or quality of the result, Performance & Metrics."
+    ],
+    [
+      "Methodology or Theoretical Foundations",
+      "How the method is built or works is Methodology; the assumption, proof or justification for why it should work is Theoretical Foundations."
+    ],
+    [
+      "Terminology & Clarity or Presentation & Figures",
+      "Written language and terms are Terminology & Clarity; how figures and tables are shown, and the paper’s structure, are Presentation & Figures."
+    ],
+    [
+      "Motivation & Contribution or Other",
+      "An assessment of the work’s novelty, importance or significance is Motivation & Contribution; general praise that names no dimension is Other."
+    ],
+    [
+      "Methodology or Applicability & Limitations",
+      "How the method is built is Methodology; whether it works beyond the tested setting (other tasks, scales, data) is Applicability & Limitations."
+    ],
+    [
+      "Terminology & Clarity or Performance & Metrics",
+      "A metric that is not explained or defined is Terminology & Clarity; the choice of a metric or the values it gives are Performance & Metrics."
+    ],
+    [
+      "Presentation & Figures or Validity & Reproducibility",
+      "What a figure shows (“What kind of error bars are used?”) is Presentation & Figures; missing measures of reliability (no standard errors, a single seed) are Validity & Reproducibility."
+    ],
+    [
+      "Methodology or Interpretability & Explanation",
+      "Why the authors chose a design is Methodology; why the model or a result behaves as it does is Interpretability & Explanation."
+    ]
+  ],
+  "flags": [
+    [
+      "OK",
+      "The unit fully expresses a single concern or assessment."
+    ],
+    [
+      "Two separate concerns",
+      "The unit actually contains two separate concerns and should have been split."
+    ],
+    [
+      "Continues the previous unit",
+      "The unit is part of the same concern as the unit directly above it and should have been merged with it."
+    ],
+    [
+      "Should be connected to the next one",
+      "The unit is part of the same concern as the unit directly below it and should have been merged with it."
+    ],
+    [
+      "No content",
+      "The unit carries no assessment or question (a greeting, an empty phrase, a heading). No topic is needed."
+    ]
+  ],
+  "boundary_rules": [
+    [
+      "Mark every piece.",
+      "The first piece gets “Should be connected to the next one”; every following piece gets “Continues the previous unit”."
+    ],
+    [
+      "Give all pieces the same topic.",
+      "The pieces form one concern, so they share one topic: the topic of the whole concern, read together. Do not use Other or No content for a piece just because it makes little sense on its own. If the concern touches two topics equally, give all pieces the same second topic."
+    ],
+    [
+      "A piece that also adds a new point.",
+      "If a piece finishes the concern above it and then raises a separate point, choose “Two separate concerns” for it, and give it the topic of its main point. The link to the unit above is already recorded on that unit."
+    ],
+    [
+      "A piece that is really a new concern.",
+      "If, on reading on, the next unit turns out to be about something else, it is not a continuation: go back, set the earlier unit to OK, and label the next unit on its own."
+    ],
+    [
+      "At the start and the end.",
+      "The first unit of a text has no unit above it in that text, and its last unit has none below it, so “Continues the previous unit” is switched off on the first unit of every text and “Should be connected to the next one” on the last."
+    ],
+    [
+      "Same concern, not just the same topic.",
+      "Link two units only when the second one continues the same point or cannot stand alone (“in table5: similar observation with Quantile NormIntSleep-LogReg.” continues the unit above). Two different points about the same topic stay separate, such as two different notation problems. A linking word is not enough: “And it would be possible to derive theoretical results on this?” is a new point after a question about intuition."
+    ],
+    [
+      "No content means nothing to label.",
+      "Use No content only for text with no assessment or question, such as a greeting or a heading. A typo note has content, and so does a unit that refers back to another unit; link that one to the unit above instead."
+    ],
+    [
+      "Two points in one unit.",
+      "Praise followed by criticism, or an enumeration such as (i) … (ii) … with different concerns, is “Two separate concerns”. Label the main point."
+    ]
+  ],
+  "boundary_example": {
+    "intro": "Example from the trial round: units 1 and 2 are one concern, cut in two.",
+    "rows": [
+      [
+        "1",
+        "My most fundamental concerns with this work are mainly on the novelty and significance fronts",
+        "Should be connected to the next one",
+        "Motivation & Contribution"
+      ],
+      [
+        "2",
+        "The proposed framework does not show enough novelty. The main adaptation in the architecture is simply embedding a discretized Laplacian structure in the convolution filters…",
+        "Continues the previous unit",
+        "Motivation & Contribution"
+      ]
+    ]
+  }
+}
