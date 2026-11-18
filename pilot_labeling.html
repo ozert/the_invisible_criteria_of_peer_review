@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Labelling page</title>
+<style>
+:root {
+  --bg: #eef2f5; --paper: #ffffff; --ink: #1d2733; --muted: #5d6b7a; --line: #d3dbe2;
+  --accent: #155e75; --accent-soft: #e2eff2; --done: #2f7d4f; --started: #9a6400; --need: #b42318;
+  --ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --read: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 var(--ui); color: var(--ink); background: var(--bg); }
+[hidden] { display: none !important; }
+header { position: sticky; top: 0; z-index: 3; display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center;
+         padding: .55rem 1rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+header .title { font-weight: 650; font-size: 1rem; }
+header .who { font-weight: 600; color: var(--accent); }
+header .progress { color: var(--muted); font-size: .9rem; }
+header .actions { margin-left: auto; display: flex; gap: .5rem; flex-wrap: wrap; }
+.timer { display: inline-flex; align-items: baseline; gap: .35rem; padding: .38rem .7rem; border: 1px solid var(--line);
+         border-radius: 4px; background: #f7f9fa; font-size: .9rem; color: var(--muted); }
+.timer.running { border-color: #b4d9c1; background: #eef7f1; }
+.timer.running .timer-label::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%;
+                                      background: var(--done); margin-right: .35rem; vertical-align: .05rem; }
+header .note { flex-basis: 100%; color: var(--muted); font-size: .82rem; margin: 0; }
+/* Progress bar with milestones at 25, 50 and 75 percent. */
+.pwrap { flex-basis: 100%; padding: .1rem 0 .15rem; }
+.pbar { position: relative; height: .55rem; border-radius: 999px; background: #dde4ea; overflow: hidden; }
+.pfill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--accent); border-radius: 999px;
+         transition: width .3s ease; }
+.ptick { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #fff; opacity: .9; }
+.pmarks { position: relative; height: 1.15rem; font-size: .74rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pmark { position: absolute; top: .1rem; transform: translateX(-50%); }
+.pmark.reached { color: var(--accent); font-weight: 700; }
+.pmark.reached::before { content: "\2713 "; }
+.ppct { position: absolute; right: 0; top: .1rem; color: var(--ink); font-weight: 600; }
+.practice { flex-basis: 100%; margin: 0; padding: .35rem .6rem; background: #fff6e0; border: 1px solid #ecd28f;
+            border-radius: 4px; font-size: .85rem; }
+.practice.notice { background: #fdeceb; border-color: #f2b8b5; color: #7a1d16; font-weight: 600; }
+.paused { flex-basis: 100%; margin: 0; color: var(--started); font-size: .85rem; }
+button, .file { font: .9rem var(--ui); padding: .38rem .75rem; border: 1px solid #b9c3cc; border-radius: 4px;
+                background: #f7f9fa; color: var(--ink); cursor: pointer; }
+button:hover, .file:hover { border-color: var(--accent); }
+button:disabled { opacity: .45; cursor: default; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button:focus-visible, .file:focus-within, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px; }
+.file { position: relative; }
+.file input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.file:has(input:disabled) { opacity: .45; cursor: default; }
+.banner { margin: .75rem 1rem 0; padding: .55rem .8rem; background: #fff4e5; border: 1px solid #f0c27b; border-radius: 4px; }
+.banner-action { margin-left: .5rem; }
+.layout { display: flex; gap: 1rem; padding: 1rem; align-items: flex-start; }
+.layout[inert] { opacity: .5; }
+nav#list { position: sticky; top: calc(var(--head, 5rem) + .5rem); flex: 0 0 7.5rem; display: flex; flex-direction: column;
+           gap: .2rem; max-height: calc(100vh - var(--head, 5rem) - 1.5rem); overflow: auto; padding-right: .2rem; }
+nav#list .item { text-align: left; font: .82rem/1.2 var(--ui); padding: .22rem .45rem; font-variant-numeric: tabular-nums; }
+nav#list .item::before { content: "\25CB  "; color: var(--muted); }
+nav#list .item.started::before { content: "\25D0  "; color: var(--started); }
+nav#list .item.done::before { content: "\25CF  "; color: var(--done); }
+nav#list .item.current { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+nav#list .item { display: flex; justify-content: space-between; gap: .4rem; }
+nav#list .item .count { color: var(--muted); font-weight: 400; font-size: .74rem; }
+main { flex: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(20rem, 26rem); gap: .9rem 1rem;
+       align-items: start; grid-template-areas: "where where" "strip panel" "controls panel"; grid-template-rows: auto auto 1fr; }
+main > h2.where { grid-area: where; margin: 0; font-size: 1.05rem; font-weight: 600; }
+.strip { grid-area: strip; }
+.panel { grid-area: panel; }
+.controls { grid-area: controls; }
+.muted { color: var(--muted); font-weight: 400; }
+/* The reading strip: the unit being labelled, with the two units before and after it. */
+.strip { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: .6rem 0; }
+.unit { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: .25rem; padding: .45rem 1.1rem .45rem 0; }
+.unit .num { text-align: right; padding-right: .75rem; font: .8rem/1.9 var(--ui); color: var(--muted);
+             font-variant-numeric: tabular-nums; }
+.unit { position: relative; }
+.unit .umark { position: absolute; right: .7rem; top: .5rem; color: var(--done); font: 700 .85rem var(--ui); }
+.unit.near.done .utext { color: #7a8794; }
+.unit .utext { margin: 0; font-family: var(--read); white-space: pre-wrap; overflow-wrap: anywhere; max-width: 68ch; }
+.unit.near .utext { font-size: .95rem; line-height: 1.55; color: #6b7783; }
+.unit.current { background: var(--accent-soft); border-left: 4px solid var(--accent); margin: .35rem 0; padding-top: .9rem; padding-bottom: .9rem; }
+.unit.current .num { color: var(--accent); font-weight: 700; padding-right: calc(.75rem - 4px); }
+.unit.current .utext { font-size: 1.18rem; line-height: 1.6; color: var(--ink); }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: .8rem 1rem 1rem;
+         position: sticky; top: calc(var(--head, 5rem) + .5rem); max-height: calc(100vh - var(--head, 5rem) - 1.5rem); overflow: auto; }
+.panel h3 { font-size: .98rem; margin: 1.1rem 0 .45rem; }
+.panel h3:first-child { margin-top: .2rem; }
+.panel h3 + .flags, .panel h3 + .topics { margin-top: 0; }
+.topics { display: grid; grid-template-columns: 1fr 1fr; gap: .3rem; }
+.flags { display: flex; flex-direction: column; gap: .3rem; }
+.choice { position: relative; display: flex; align-items: flex-start; gap: .45rem; font-size: .86rem; line-height: 1.25;
+          border: 1px solid #c6cfd7; border-radius: 4px; padding: .3rem .45rem; cursor: pointer; background: #fafbfc; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.choice:hover { border-color: var(--accent); }
+.choice:focus-within { outline: 2px solid var(--accent); outline-offset: 1px; }
+.choice.picked { border-color: var(--accent); background: var(--accent); color: #fff; }
+.choice.picked .key { color: #fff; border-color: rgba(255,255,255,.6); }
+.choice.other { grid-column: 1 / -1; }
+.choice.unavailable { opacity: .45; cursor: not-allowed; background: #f1f3f5; }
+.choice.unavailable:hover { border-color: #c6cfd7; }
+.hint-box { font-size: .84rem; margin: .5rem 0 0; padding: .4rem .6rem; background: #fff6e0; border: 1px solid #ecd28f;
+            border-radius: 4px; color: #5c4200; }
+.key { flex: 0 0 auto; font: .72rem/1.3 var(--ui); color: var(--muted); border: 1px solid var(--line); border-radius: 3px;
+       padding: 0 .28rem; margin-top: .08rem; }
+.def { font-size: .84rem; color: var(--muted); margin: .45rem 0 .7rem; min-height: 2.4em; }
+.field-label { display: block; font-size: .86rem; font-weight: 600; margin: .7rem 0 .3rem; }
+select, input[type=text], textarea { width: 100%; font: .9rem var(--ui); padding: .35rem .45rem; border: 1px solid #b9c3cc;
+                                     border-radius: 4px; background: #fff; color: var(--ink); }
+select:disabled { opacity: .55; }
+input.need { border-color: var(--need); box-shadow: 0 0 0 1px var(--need); }
+.hint { font-size: .8rem; color: var(--muted); margin: .25rem 0 .6rem; }
+.checklist { list-style: none; margin: 0 0 .6rem; padding: 0; display: flex; flex-wrap: wrap; gap: .35rem .5rem; }
+.checklist li { display: inline-flex; align-items: center; gap: .4rem; font-size: .88rem; font-weight: 600;
+                padding: .25rem .6rem .25rem .4rem; border-radius: 4px; border: 1px solid; }
+.checklist li .mark { display: inline-flex; align-items: center; justify-content: center; width: 1.2rem; height: 1.2rem;
+                      border-radius: 50%; color: #fff; font-size: .8rem; line-height: 1; }
+.checklist li.no { color: var(--need); background: #fdeceb; border-color: #f2b8b5; }
+.checklist li.no .mark { background: var(--need); }
+.checklist li.yes { color: var(--done); background: #e8f4ec; border-color: #b4d9c1; }
+.checklist li.yes .mark { background: var(--done); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.nav { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .4rem; }
+.keys { font-size: .76rem; color: var(--muted); margin: .7rem 0 0; }
+.sheet { grid-column: 1 / -1; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 1.2rem 1.4rem; max-width: 42rem; }
+.sheet h2 { margin-top: 0; font-size: 1.15rem; }
+/* Guidelines: a panel over the right side of the page. */
+#guide-panel { position: fixed; top: 0; right: 0; bottom: 0; z-index: 5; width: min(46rem, 94vw); background: var(--paper);
+               border-left: 1px solid var(--line); box-shadow: -8px 0 24px rgba(29,39,51,.12); display: flex; flex-direction: column; }
+#guide-panel .bar { display: flex; align-items: center; justify-content: space-between; padding: .7rem 1rem; border-bottom: 1px solid var(--line); }
+#guide-panel .bar h2 { margin: 0; font-size: 1.05rem; }
+#guide-body { overflow: auto; padding: .4rem 1.2rem 1.5rem; font-size: .92rem; }
+#guide-body h3 { font-size: 1rem; margin: 1.1rem 0 .4rem; }
+#guide-body p, #guide-body li { max-width: 72ch; }
+.table-wrap { overflow-x: auto; }
+#guide-body table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+#guide-body th, #guide-body td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); padding: .35rem .5rem .35rem 0; }
+#guide-body td:first-child { font-weight: 600; white-space: nowrap; }
+#guide-body td.ex { font-family: var(--read); color: var(--muted); }
+@media (max-width: 1100px) {
+  main { grid-template-columns: minmax(0, 1fr); grid-template-areas: "where" "strip" "panel" "controls"; grid-template-rows: none; }
+  .panel { position: static; max-height: none; }
+}
+@media (max-width: 760px) {
+  header { position: static; }
+  .layout { flex-direction: column; }
+  nav#list { position: static; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; max-height: none; width: 100%; }
+  .topics { grid-template-columns: 1fr; }
+  .unit { grid-template-columns: 2.2rem minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } .pfill { transition: none; } }
+
+</style>
+</head>
+<body>
+<header>
+<div class="title" id="title">Labelling page</div>
+<div class="who" id="who"></div>
+<div class="progress" id="progress"></div>
+<div class="actions">
+<span class="timer" id="timer" role="status" title="Shows whether your working time on the current unit is being counted. It counts only while you work on this page; breaks of two minutes or more are not counted.">
+<span class="timer-label" id="timer-label">Not started</span></span>
+<button id="guide-open" type="button">Guidelines</button>
+<button id="download" class="primary" type="button">Download labels</button>
+<label class="file">Load a saved file<input type="file" id="load" accept=".csv,text/csv"></label>
+</div>
+<div class="pwrap">
+<div class="pbar" id="pbar" role="progressbar" aria-label="Units done" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+<div class="pfill" id="pfill"></div>
+<span class="ptick" style="left:25%"></span><span class="ptick" style="left:50%"></span><span class="ptick" style="left:75%"></span>
+</div>
+<div class="pmarks" aria-hidden="true"><span class="pmark" data-at="25" style="left:25%">25%</span><span class="pmark" data-at="50" style="left:50%">50%</span><span class="pmark" data-at="75" style="left:75%">75%</span><span class="ppct" id="ppct">0%</span></div>
+</div>
+<p class="practice" id="practice" hidden>Practice page. The texts were written for practice and are not from the study. Your labels here are not used.</p>
+<p class="note">Your work is kept in this browser on this computer as you go. Download your labels at the end of every session and keep the file. To continue in another browser or on another computer, open this page there and load the file. The page keeps track of how long you work on each unit, but only while this page is in front and you are using the mouse or keyboard; a break of two minutes or more is not counted.</p>
+<p class="paused" id="paused" hidden>Paused: no activity for two minutes, so this break is not counted. Time counts again when you continue.</p>
+</header>
+<div id="banner" class="banner" hidden></div>
+<noscript><p class="banner">This page needs JavaScript. Turn it on for this file, or contact the person who runs the study.</p></noscript>
+<div class="layout"><nav id="list" aria-label="Units"></nav><main id="main"></main></div>
+<aside id="guide-panel" hidden aria-label="Guidelines">
+<div class="bar"><h2>Guidelines</h2><button id="guide-close" type="button">Close</button></div>
+<div id="guide-body"></div>
+</aside>
+<script type="application/json" id="data">{"set": "pilot", "title": "Pilot: topic labelling", "practice": false, "annotator": "", "annotators": ["A1", "A2", "A3", "A4"], "build": "53178a4746d8", "units": [{"code": "P001", "block": "T01", "text": "Potential typo second line of page 7: \"sample it up in space\" - do you mean sample it down in time?"}, {"code": "P002", "block": "T02", "text": "The model formulation needs clarification."}, {"code": "P003", "block": "T02", "text": "Missing observation (output) $\\mathbf{y}$ likelihood."}, {"code": "P004", "block": "T02", "text": "Latent force $\\mathbf{f}_n$ and $f$ (likelihood) are the same or not?"}, {"code": "P005", "block": "T02", "text": "Better use symbols consistently. The same symbols in GP preliminaries and model formulation with different meanings are confusing."}, {"code": "P006", "block": "T02", "text": "The figures captions lack description."}, {"code": "P007", "block": "T02", "text": "It is unclear how this is and should be in framework of meta-learning. What meta knowledge is learned and used, the task representation? The encoder for task representation is undermotivated."}, {"code": "P008", "block": "T03", "text": "While the analysis is interesting and it it wasn't clear to me how much it can impact can the paper have, its current form: (i) it is not clear  how much the analysis extends to real tasks: the experiments of Cifar are somewhat limited (just the alignment metric is reported and it is not clear if this behavior holds for deeper networks: i.e. some ablations on the network depth should be incorporated in the experiment in my opinion)  and the assumptions done on the synthetic tasks are unlikely to hold on larger networks (ii) there is no theory or additional experimental evidence that support why tanh and ReLU behave differently (see question section);"}, {"code": "P009", "block": "T03", "text": "The paper should report a better contextualization in the literature and comparison with similar works (it misses a related work section). I reported some works that should be discussed:\nHayou, S., Doucet, A.; Rousseau, J.. On the Impact of the Activation function on Deep Neural Networks Training. Proceedings of the 36th International Conference on Machine Learning\nRamachandran, Prajit, Barret Zoph, and Quoc V. Le. \"Searching for activation functions.\" arXiv preprint arXiv:1710.05941 (2017).\nDing, Bin, Huimin Qian, and Jun Zhou. \"Activation functions and their characteristics in deep neural networks.\" 2018 Chinese control and decision conference (CCDC). IEEE, 2018.\nPapyan, Vardan, X. Y. Han, and David L. Donoho. \"Prevalence of neural collapse during the terminal phase of deep learning training.\" Proceedings of the National Academy of Sciences 117, no. 40 (2020): 24652-24663.\nZhu, Zhihui, Tianyu Ding, Jinxin Zhou, Xiao Li, Chong You, Jeremias Sulam, and Qing Qu. \"A geometric analysis of neural collapse with unconstrained features.\" Advances in Neural Information Processing Systems 34 (2021): 29820-29834."}, {"code": "P010", "block": "T03", "text": "Concerning clarity a better description of the metrics employed (especially SD an CCPD) would be needed, also in terms of mathematical/formal statements,if helpful."}, {"code": "P011", "block": "T03", "text": "section 5 eiegenvalues -> eigenvalues"}, {"code": "P012", "block": "T04", "text": "I cannot really tell if this piece of work is original or not, but I agree with the authors that model interpretability is important for clinical applications."}, {"code": "P013", "block": "T04", "text": "In my opinion, results reported in this paper are not paradigm-shifting, but I deem this is an interesting and valuable line of research, and that it is important to publicly report results comparable to that present in this piece of work"}, {"code": "P014", "block": "T04", "text": "In my opinion, this paper is generally well written and clear."}, {"code": "P015", "block": "T04", "text": "The problem is well motivated, and a high number of cases were tested"}, {"code": "P016", "block": "T05", "text": "Why are the latent force observable?"}, {"code": "P017", "block": "T05", "text": "Why do the observations not exist for test in Fig 4b?"}, {"code": "P018", "block": "T05", "text": "What do the colors represent in the figures?"}, {"code": "P019", "block": "T05", "text": "What kind of error bars are used?"}, {"code": "P020", "block": "T06", "text": "Why does the hierarchal sampler improve model efficiency? It seems all the frames still need to be generated, although it is a top-down generation from key frames."}, {"code": "P021", "block": "T06", "text": "It is suggested to remove some content about the background and preliminary since such information is well-known."}, {"code": "P022", "block": "T06", "text": "The reviewer is interested if the proposed ControlVideo can be extended to generate more challenging new information, such as a novel view/unseen part of an object."}, {"code": "P023", "block": "T06", "text": "Will the authors release all the code, models, and data to ensure the reproducibility of this work?"}, {"code": "P024", "block": "T07", "text": "The paper is generally well written and easy to follow."}, {"code": "P025", "block": "T07", "text": "The proposed technique demonstrate some ability to adapt to data with different energy spectra than those encountered during training."}, {"code": "P026", "block": "T08", "text": "The paper is clearly written, well organized, and easy to follow. The symbols, terms, and concepts are adequately defined and explained. The language usage is good."}, {"code": "P027", "block": "T08", "text": "The proposed method is simple and easy to understand. Sufficient details are provided for the readers."}, {"code": "P028", "block": "T08", "text": "The experiments are generally well-executed. The empirical results show the effectiveness of the proposed method, showing certain advantages over state-of-the-art baselines."}, {"code": "P029", "block": "T09", "text": "The proposed method has been shown fast and scalable to large datasets comparing to other methods, which makes more practical use of LFMs. The introduction of task representation vector is to generalize LFM to new tasks. The deep GP kernels grants the model more expressive power."}, {"code": "P030", "block": "T10", "text": "My most fundamental concerns with this work are mainly on the novelty and significance fronts"}, {"code": "P031", "block": "T10", "text": "The proposed framework does not show enough novelty. The main adaptation in the architecture is simply embedding a discretized Laplacian structure in the convolution filters in order to reduce the total number of parameters in the model."}, {"code": "P032", "block": "T10", "text": "The problem setting is too simplistic to demonstrate significance. The authors exclusively focus on the linear heat equation with nonhomogeneous unknown coefficients, which is nowhere near the complexity of the other problems referenced, including Navier-Stokes and weather/climate. The heat equation has linear dynamics and generally admits smooth solutions, which means errors do not accumulate over time in complicated ways and solution has very little small-scaled features (so that representing the solution/dynamics fields is relatively easy). The claim that it is \"complex enough\" (page 4 top) is too much of a stretch. It is certainly not evident that the same OOD generalization might be observed on, for example, turbulent flows."}, {"code": "P033", "block": "T10", "text": "FCN should not be considered a valid baseline if the dynamics is known to be local. In addition, the both FCN and ConvN show signs of overfitting, which suggests the architecture/training is sub-optimal. Techniques such as layer/group normalizations and learning rate annealing should at least be considered."}, {"code": "P034", "block": "T11", "text": "in table 4: for projectors fitted using ridge regression, how did you choose the value of the regularization parameter?"}, {"code": "P035", "block": "T11", "text": "regarding the ablation study, how did you choose the final learning and scaling schemas?"}, {"code": "P036", "block": "T11", "text": "in table 4: to me, cosine similarity for NormIntSleep-LogisticRegression seems comparable or marginally better than that of the other best combinations, and in particular NormIntSleep-LogReg Standardization Least Squares"}, {"code": "P037", "block": "T11", "text": "in table5: similar observation with Quantile NormIntSleep-LogReg."}, {"code": "P038", "block": "T11", "text": "moreover, it's unclear to me what difference you make between Least Square and Linear Regression (the `LinearRegression` model of `sklearn`, which I assume you used, solves an Ordinary Least Squares linear regression problem)"}, {"code": "P039", "block": "T11", "text": "I am very intrigued by the fact that a glass-box model trained on ground-truth FeatShort would be out-performed by a class-box model trained on a prediction of FeatShort (i.e. `NormIntSleep`). Can you comment on why you think this is possible? My concern is that, if the linear projector had perfect accuracy when reconstructing features, there should not be any difference of sleep-stage decoding performance between models trained on ground-truth features and predicted features. Could it be that your framework somewhat regularises features from FeatShort in a way that makes them more prone to fitting a glass-box algorithm?"}, {"code": "P040", "block": "T11", "text": "As a follow-up on this question, I would be very interested to see how a glass-box model trained on ground-truth FeatShort performs on predicted FeatShort (i.e. `NormIntSleep`) and vice-versa. Could you please include these results to better understand what is going on?"}, {"code": "P041", "block": "T11", "text": "Moreover,  FeatShort-LogisticRegression seems to be missing from Table3, could you please add it?"}, {"code": "P042", "block": "T11", "text": "in Figure2: I am wondering what the same figure for a model trained on ground-truth FeatShort features would look like. It feels to me that $\\text{Alignment}_{DT}$ should be very high for this model as well"}, {"code": "P043", "block": "T11", "text": "as stated in the \"weaknesses\" section, I have trouble understanding the $\\text{Alignment}_{DT}$ metric ; however, I wonder if it is fair to compare `NormIntSleep` to FeatLong through this metric, given that `NormIntSleep` was built to have features similar to that of what the alignment metric expects. This feels like a form of double-dipping to me. Shouldn't you try to extract a subset of features from FeatLong, train your linear projector on this subset, and then compare alignment values to AASM?"}, {"code": "P044", "block": "T12", "text": "The analysis on how the activation function can enforce a different latent representation geometry is to the best of my knowledge, novel and interesting direction to investigate."}, {"code": "P045", "block": "T12", "text": "The paper is overall clear."}, {"code": "P046", "block": "T12", "text": "There are multiple experiments on the synthetic setting which  support quite well the claims of the paper. However, the real experiment is not strongly supported( see weaknesses section)."}, {"code": "P047", "block": "T12", "text": "While the result on synthetic data are promising, there still some missing buts in order that make somewhat difficult to evaluate the impact of the paper ( see weaknesses section)."}, {"code": "P048", "block": "T13", "text": "The qualitative results showcase certain advantages of the proposed method over state-of-the-art baselines in controllable text-to-video generation. However, by checking the provided video results, the temporal consistency can still be improved. Also, in some cases, the background looks unchanged. Some visual details can still be improved. Providing more discussions on these could strengthen this paper further."}, {"code": "P049", "block": "T13", "text": "The fully cross-frame interaction mechanism considers all frames as the reference, which thus increases the computational burden. What is the intuition to consider all the frames as a large image? Why not select some key frames to reduce redundant information? It is interesting to provide more discussions and analysis on this."}, {"code": "P050", "block": "T13", "text": "The paper mentioned that the proposed interleaved-frame smoother is performed on predicted RGB frames at timesteps {30, 31} by default. It can be more interesting if more studies and analyses on different steps to apply such a mechanism are provided."}, {"code": "P051", "block": "T13", "text": "It seems the interleaved-frame smoother still brings more computational cost and affects the model efficiency due to the additional conversion and interpolation steps."}, {"code": "P052", "block": "T14", "text": "it is not clear why models trained on predicted features of a given feature space should perform better than models trained on ground-truth features of this same space"}, {"code": "P053", "block": "T14", "text": "it is not clear to me if one can make a fair comparison between models fitted on NormIntSleep and FeatLong respectively using the alignment metric. Indeed, it feels to me that, by construction, NormIntSleep features are similar to those used in the alignment metric, when FeatLong features are not."}, {"code": "P054", "block": "T14", "text": "I might not understand what the alignment metric actually measures, which is also a problem in this paper."}, {"code": "P055", "block": "T14", "text": "code to reproduce presented experiments is missing"}, {"code": "P056", "block": "T14", "text": "in my opinion, Figure 1 could be clearer. In particular, I think panel A should help the reader understand that there are multiple steps represented (step 1: fit DNN, step 2: extract and normalise domain features, step 3: fit linear mapping between latent representation from DNN and domain features). Moreover, I find it misleading to use the boxes \"embeddings\" and \"normalization\" as inputs of the box \"optimization\". Finally, you could already add notations at this stage (for $T$, $F$, $E$, etc). Generally, it is not clear to me what the colour code used for boxes represents."}, {"code": "P057", "block": "T14", "text": "although I find this paper generally well written, the overall layout feels a bit dense. In my opinion, Algorithm 1 and 2 are mildly informative and take a lot of space: maybe they could be moved to the appendix. I have a similar feeling about Fig1.c"}, {"code": "P058", "block": "T14", "text": "As a side note, in algorithm 2 line 9, what is $R'$ compared to $R$? Similar question for $T'$ in algorithm 1"}, {"code": "P059", "block": "T14", "text": "equation 1: to me, a clear definition of what it means for a node to be \"aligned with clinical domain knowledge\" is still needed at this stage, otherwise the overall definition of the alignment metric feels very circular. In particular, do you use the threshold value to determine if a node is aligned? Moreover, it feels to me that this notation should specify what nodes are compared to (in this case, I guess it would be the AASM Manual, but details feel hazy to me)"}, {"code": "P060", "block": "T14", "text": "results are reported without standard error to the mean, so in my opinion it is hard to assess which approach is performing the best"}, {"code": "P061", "block": "T14", "text": "Table 3: I think this table would be easier to read if names of interpretable methods were split in two columns (features and glass-box model)"}, {"code": "P062", "block": "T15", "text": "Can the authors elaborate on the intuition of why Tanh and ReLU behave in this way?"}, {"code": "P063", "block": "T15", "text": "And it would be possible to derive theoretical results on this?"}, {"code": "P064", "block": "T15", "text": "The target alignment  phenomenon of Tanh relates to neural collapse [a] phenomenon : i.e. when training is kept under zero error the representation in the last layer tend to collapse in equidistance clusters aligned to the targets.\nHowever, to the best of my knowledge this phenomenon should be agnostic of the activation function. Can the authors elaborate on this perspective?\n[a] Papyan, Vardan, X. Y. Han, and David L. Donoho. \"Prevalence of neural collapse during the terminal phase of deep learning training.\" Proceedings of the National Academy of Sciences 117, no. 40 (2020): 24652-24663.\n[b] Zhu, Zhihui, Tianyu Ding, Jinxin Zhou, Xiao Li, Chong You, Jeremias Sulam, and Qing Qu. \"A geometric analysis of neural collapse with unconstrained features.\" Advances in Neural Information Processing Systems 34 (2021): 29820-29834."}, {"code": "P065", "block": "T15", "text": "How much the assumptions of fixing weights of the second layer is limiting in terms of measuring the four metrics employed (alignment, decodability, ccpd, sd). Is it needed just in order to approximate the dynamics?"}, {"code": "P066", "block": "T15", "text": "What is the mathematical formulation of the nonlinearity analyzed in section 7 ?"}]}</script>
+<script type="application/json" id="guide">{"version": "Draft guideline from the annotation protocol of 23 October 2026. The final version is fixed after the pilot.", "task": ["In this study we examine peer reviews written for papers submitted to the ICLR 2024 conference. Each review contains three free-text fields: Strengths (the paper’s strong points), Weaknesses (its weak points) and Questions (questions the reviewer asks the authors).", "These fields have already been divided into small pieces called units. Each unit is intended to express a single assessment or a single concern; if you think it does not, you flag this in the boundary check. Your task is to label what each unit is about, using one of the 13 topics below or Other.", "The only thing to attend to is the topic. A unit may praise something, criticise it, or ask about it as a question. This difference does not change your label. “The ablation study is thorough”, “The ablation study is missing” and “Why is there no ablation?” are all about the same topic.", "The page shows one text at a time: one part of a review, already divided into units. All units of the text stay on screen, and the unit you are labelling is highlighted; Next moves the highlight to the next unit, and after the last unit the next text appears. Texts come from different reviews, in a mixed order, and the page does not say which part of a review a text is. Do not discuss your labels with the other annotators during the study; noting the cases where you were unsure in the comment is enough."], "topics": [["Methodology", "The techniques, models or approaches used, including their design, configuration and components", "The two-stage training procedure is well designed."], ["Comparative Analysis", "Comparison with baselines, related work or alternative approaches", "How does this compare with LoRA?"], ["Applicability & Limitations", "The scope of the claims: generalisability, robustness, scalability, real-world use", "Results are only shown on synthetic data."], ["Theoretical Foundations", "Theoretical background, assumptions, proofs and justifications", "Assumption 2 seems too strong."], ["Terminology & Clarity", "The choice, appropriateness and clarity of terms, definitions and written language", "The paper is clearly written."], ["Presentation & Figures", "How results and data are presented: figures, tables, overall structure", "Figure 3 is hard to read."], ["Interpretability & Explanation", "Understanding why the model behaves as it does; transparency of its internal mechanisms", "Why does attention collapse after layer 6?"], ["Performance & Metrics", "The results obtained and the metrics used to measure performance", "The improvement of 0.3 BLEU is marginal."], ["Validity & Reproducibility", "Correctness of claims, reliability of results, replicability", "Code is released, which aids reproducibility."], ["Data", "The datasets used: source, statistics, preprocessing, availability", "How was the dataset filtered?"], ["Motivation & Contribution", "The purpose, novelty, significance and rationale of the work", "The problem is important and timely."], ["Computational Efficiency", "Computational cost, resource use (time, memory), speed", "What is the training cost in GPU hours?"], ["Ethical Considerations", "Ethical implications: privacy, data protection, potential bias", "The dataset may contain personal data."], ["Other", "Content that fits none of the above, or a general assessment with no specific topic", "Overall, a good paper."]], "rules": [["Attend only to the topic.", "Whether the unit praises, criticises or asks does not change the label."], ["The dominant topic is primary.", "If a unit touches several topics, the topic is the one the unit is mainly directed at, whether as a request for an answer, a correction or praise."], ["Use a second topic only for a genuine second topic.", "If a single concern touches two topics equally, choose the second one under Second topic. If unsure, leave it empty."], ["Other is a last resort, but do not hesitate to use it.", "If no definition fits, choose Other rather than forcing a topic, and describe briefly in your own words what the unit is about (for example: general praise, reference to the authors’ earlier work, request for an additional experiment)."], ["Flag unit boundaries as part of labelling.", "If a unit boundary looks wrong, label the unit as it is, choose the matching option in the boundary check, and add a short comment if needed. Do not split or merge units yourself."]], "pairs": [["Performance & Metrics or Comparative Analysis", "If a result is compared with another method, Comparative Analysis; if only the work’s own result or metric is discussed, Performance & Metrics."], ["Validity & Reproducibility or Performance & Metrics", "If the question is whether a result is correct or reliable, Validity & Reproducibility; if it is about the size or quality of the result, Performance & Metrics."], ["Methodology or Theoretical Foundations", "How the method is built or works is Methodology; the assumption, proof or justification for why it should work is Theoretical Foundations."], ["Terminology & Clarity or Presentation & Figures", "Written language and terms are Terminology & Clarity; figures, tables and the paper’s structure are Presentation & Figures."], ["Motivation & Contribution or Other", "An assessment such as “novel”, “important” or “significant” is Motivation & Contribution; general praise that names no dimension is Other."]], "flags": [["OK", "The unit fully expresses a single concern or assessment."], ["Two separate concerns", "The unit actually contains two separate topics and should have been split."], ["Continues the previous unit", "The unit is part of the same concern as the unit directly above it and should have been merged with it."], ["Should be connected to the next one", "The unit is part of the same concern as the unit directly below it and should have been merged with it."], ["No content", "The unit carries no assessment or question (a greeting, an empty phrase, a heading). No topic is needed."]], "boundary_rules": [["Mark every piece.", "The first piece gets “Should be connected to the next one”; every following piece gets “Continues the previous unit”."], ["Give all pieces the same topic.", "The pieces form one concern, so they share one topic: the topic of the whole concern, read together. Do not use Other or No content for a piece just because it makes little sense on its own. If the concern touches two topics equally, give all pieces the same second topic."], ["A piece that also adds a new point.", "If a piece finishes the concern above it and then raises a separate point, choose “Two separate concerns” for it, and give it the topic of its main point. The link to the unit above is already recorded on that unit."], ["A piece that is really a new concern.", "If, on reading on, the next unit turns out to be about something else, it is not a continuation: go back, set the earlier unit to OK, and label the next unit on its own."], ["At the start and the end.", "The first unit of a text has no unit above it in that text, and its last unit has none below it, so “Continues the previous unit” is switched off on the first unit of every text and “Should be connected to the next one” on the last."]], "boundary_example": {"intro": "Example (invented): units 2 and 3 are one concern that was cut in two.", "rows": [["1", "The method is simple and well motivated.", "OK", "Methodology"], ["2", "The comparison in Table 3 uses", "Should be connected to the next one", "Comparative Analysis"], ["3", "a weaker baseline than the one reported in the original paper.", "Continues the previous unit", "Comparative Analysis"], ["4", "The writing is clear.", "OK", "Terminology & Clarity"]]}}</script>
+<script>
+/* Labelling page for the topic-coding study (Comments 2.1 and 2.4).
+   Pure functions live in LabelCore so they can be tested under node. The page needs no network:
+   work is kept in the browser's local storage as it is entered, "Download labels" writes
+   <annotator>_<set>.csv, and "Load a saved file" reads such a file back.
+   The page holds only neutral unit codes and unit texts. It never contains review IDs, fields,
+   ratings or block boundaries; the author keeps those in a separate key file. */
+(function (root) {
+  "use strict";
+
+  var TOPICS = [
+    { name: "Methodology", key: "a" },
+    { name: "Comparative Analysis", key: "b" },
+    { name: "Applicability & Limitations", key: "c" },
+    { name: "Theoretical Foundations", key: "d" },
+    { name: "Terminology & Clarity", key: "e" },
+    { name: "Presentation & Figures", key: "f" },
+    { name: "Interpretability & Explanation", key: "g" },
+    { name: "Performance & Metrics", key: "h" },
+    { name: "Validity & Reproducibility", key: "i" },
+    { name: "Data", key: "j" },
+    { name: "Motivation & Contribution", key: "k" },
+    { name: "Computational Efficiency", key: "l" },
+    { name: "Ethical Considerations", key: "m" },
+    { name: "Other", key: "n" }
+  ];
+  var TOPIC_NAMES = TOPICS.map(function (t) { return t.name; });
+  var FLAGS = [
+    { value: "OK", text: "OK: the unit expresses a single concern or assessment" },
+    { value: "Two separate concerns", text: "Two separate concerns: it should have been split" },
+    { value: "Continues the previous unit", text: "Continues the previous unit: it belongs with the unit above" },
+    { value: "Should be connected to the next one", text: "Should be connected to the next one: it belongs with the unit below" },
+    { value: "No content", text: "No content: no assessment or question (a greeting, an empty phrase); no topic needed" }
+  ];
+  var NO_CONTENT = "No content";
+  var PREV = "Continues the previous unit", NEXT = "Should be connected to the next one";
+  var FLAG_VALUES = FLAGS.map(function (f) { return f.value; });
+  var COLUMNS = ["annotator", "set", "unit_code", "text_code", "position", "position_in_text", "text", "primary_topic",
+                 "secondary_topic", "other_note", "segment_flag", "comment", "seconds", "first_seen", "last_change",
+                 "label_changes", "app_build"];
+  var IDLE_MS = 120000;   // time stops counting after two minutes without mouse or keyboard activity
+
+  // Units come in texts: one text is one field of one review, shown whole, with its units in their
+  // original order. The page knows only neutral text codes (T01, T02, ...), never the review or the
+  // field. blocksOf returns the texts in page order with the index of their first and last unit.
+  function blocksOf(units) {
+    var blocks = [], byUnit = [];
+    units.forEach(function (u, i) {
+      var code = u.block || "T01";
+      if (!blocks.length || blocks[blocks.length - 1].code !== code) blocks.push({ code: code, first: i, last: i });
+      blocks[blocks.length - 1].last = i;
+      byUnit.push(blocks.length - 1);
+    });
+    return { blocks: blocks, byUnit: byUnit };
+  }
+
+  // The first unit of a text has no unit above it within the text, and its last unit has none below
+  // it, so those two options are not offered there.
+  function flagAllowed(value, index, units) {
+    var b = blocksOf(units), blk = b.blocks[b.byUnit[index]];
+    if (value === PREV && index === blk.first) return false;
+    if (value === NEXT && index === blk.last) return false;
+    return true;
+  }
+
+  function blankUnit() {
+    return { primary: "", secondary: "", otherNote: "", flag: "", comment: "",
+             seconds: 0, firstSeen: "", lastChange: "", changes: 0 };
+  }
+
+  function blankState(data) {
+    var units = {};
+    data.units.forEach(function (u) { units[u.code] = blankUnit(); });
+    return { version: 1, build: data.build, annotator: data.annotator || "", current: 0, units: units,
+             lastDownload: "", lastLoad: "" };
+  }
+
+  // A stored state from an earlier session: kept only if it belongs to this page build.
+  function restoreState(data, stored) {
+    var state = blankState(data);
+    if (!stored || stored.build !== data.build || stored.version !== 1 || !stored.units) return state;
+    data.units.forEach(function (u) {
+      if (stored.units[u.code]) state.units[u.code] = Object.assign(blankUnit(), stored.units[u.code]);
+    });
+    if (!data.annotator && data.annotators.indexOf(stored.annotator) >= 0) state.annotator = stored.annotator;
+    state.current = Math.min(Math.max(0, stored.current | 0), data.units.length - 1);
+    state.lastDownload = stored.lastDownload || "";
+    state.lastLoad = stored.lastLoad || "";
+    return state;
+  }
+
+  function needsOtherNote(s) { return s.primary === "Other" && !String(s.otherNote || "").trim(); }
+
+  // A unit with no content needs no topic; every other unit needs a topic and a boundary check,
+  // and a note when its topic is Other.
+  function needsTopic(s) { return s.flag !== NO_CONTENT; }
+
+  function unitDone(s) {
+    if (FLAG_VALUES.indexOf(s.flag) < 0) return false;
+    if (!needsTopic(s)) return true;
+    return TOPIC_NAMES.indexOf(s.primary) >= 0 && !needsOtherNote(s);
+  }
+
+  function unitStarted(s) {
+    return Boolean(s.primary || s.secondary || s.flag || String(s.comment || "").trim() ||
+                   String(s.otherNote || "").trim());
+  }
+
+  // What is still missing before a unit counts as done, in words for the annotator.
+  function missing(s) {
+    var out = [];
+    if (FLAG_VALUES.indexOf(s.flag) < 0) out.push("a boundary check");
+    if (needsTopic(s) && TOPIC_NAMES.indexOf(s.primary) < 0) out.push("a topic");
+    if (needsTopic(s) && needsOtherNote(s)) out.push("a short note on what the unit is about (you chose Other)");
+    return out;
+  }
+
+  // The checklist shown under the text: what a unit needs before it counts as done.
+  function checklist(s) {
+    var items = [{ id: "flag", label: "Boundary check", ok: FLAG_VALUES.indexOf(s.flag) >= 0 }];
+    if (!needsTopic(s)) return items;
+    items.push({ id: "topic", label: "Topic", ok: TOPIC_NAMES.indexOf(s.primary) >= 0 });
+    if (s.primary === "Other") items.push({ id: "note", label: "Note on what the unit is about (needed for Other)", ok: !needsOtherNote(s) });
+    return items;
+  }
+
+  // Gentle reminders about the annotator's own links between neighbouring units. They never block
+  // Next; they only point at choices that do not fit the rules for concerns split over several units.
+  function neighbourHints(prev, cur, next) {
+    var out = [];
+    if (prev && prev.flag === NEXT && cur.flag !== PREV && cur.flag !== "Two separate concerns") {
+      out.push("The unit above is marked \u201cShould be connected to the next one\u201d. If this unit is its continuation, choose \u201cContinues the previous unit\u201d.");
+    }
+    if (cur.flag === PREV && prev && prev.primary && cur.primary && prev.primary !== cur.primary) {
+      out.push("Pieces of one concern share one topic. The unit above has \u201c" + prev.primary + "\u201d.");
+    }
+    if ((cur.flag === PREV && prev && prev.flag === NO_CONTENT) || (cur.flag === NEXT && next && next.flag === NO_CONTENT)) {
+      out.push("The unit you are linking to is marked \u201cNo content\u201d. Check whether the link is right.");
+    }
+    return out;
+  }
+
+  // Set one coded field. A change from one value to a different one is counted; the secondary
+  // topic is cleared when it would equal the primary topic.
+  function setField(s, field, value, nowIso) {
+    var before = s[field];
+    if (before === value) return false;
+    if (before && value && (field === "primary" || field === "secondary" || field === "flag")) s.changes += 1;
+    s[field] = value;
+    if (field === "primary" && s.secondary === value) s.secondary = "";
+    // A unit with no content gets no topic: choosing No content clears the topic fields.
+    if (field === "flag" && value === NO_CONTENT) { s.primary = ""; s.secondary = ""; s.otherNote = ""; }
+    if (field === "primary" && value !== "Other") { /* the note is kept, but no longer required */ }
+    s.lastChange = nowIso;
+    return true;
+  }
+
+  function csvField(v) {
+    v = v === null || v === undefined ? "" : String(v);
+    return /[",\r\n;]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  }
+
+  function toCSV(rows) {
+    return rows.map(function (r) { return r.map(csvField).join(","); }).join("\r\n") + "\r\n";
+  }
+
+  // UTF-8, or Windows-1252 when the bytes are not valid UTF-8 (Excel's plain CSV on Windows).
+  function decodeText(buffer) {
+    try { return new TextDecoder("utf-8", { fatal: true }).decode(buffer); }
+    catch (e) { return new TextDecoder("windows-1252").decode(buffer); }
+  }
+
+  // A semicolon when the header line has more semicolons than commas (Excel in decimal-comma
+  // locales), a comma otherwise.
+  function csvDelimiter(text) {
+    var semi = 0, comma = 0, quoted = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (c === '"') quoted = !quoted;
+      else if (!quoted && (c === "\n" || c === "\r")) break;
+      else if (!quoted && c === ";") semi += 1;
+      else if (!quoted && c === ",") comma += 1;
+    }
+    return semi > comma ? ";" : ",";
+  }
+
+  // RFC 4180 with quoted newlines; a leading byte-order mark is dropped.
+  function parseCSV(text) {
+    if (text.charCodeAt(0) === 0xfeff) text = text.slice(1);
+    var sep = csvDelimiter(text), rows = [], row = [], field = "", i = 0, quoted = false;
+    while (i < text.length) {
+      var c = text[i];
+      if (quoted) {
+        if (c === '"') {
+          if (text[i + 1] === '"') { field += '"'; i += 2; continue; }
+          quoted = false; i += 1; continue;
+        }
+        field += c; i += 1; continue;
+      }
+      if (c === '"') { quoted = true; i += 1; continue; }
+      if (c === sep) { row.push(field); field = ""; i += 1; continue; }
+      if (c === "\r") { i += 1; continue; }
+      if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; i += 1; continue; }
+      field += c; i += 1;
+    }
+    if (field !== "" || row.length) { row.push(field); rows.push(row); }
+    return rows.filter(function (r) { return r.some(function (x) { return x !== ""; }); });
+  }
+
+  function exportRows(data, state) {
+    var rows = [COLUMNS], b = blocksOf(data.units);
+    data.units.forEach(function (u, i) {
+      var s = state.units[u.code], blk = b.blocks[b.byUnit[i]];
+      var v = { annotator: state.annotator, set: data.set, unit_code: u.code, text_code: blk.code, position: i + 1,
+                position_in_text: i - blk.first + 1, text: u.text,
+                primary_topic: s.primary, secondary_topic: s.secondary,
+                other_note: s.primary === "Other" ? s.otherNote : "",
+                segment_flag: s.flag, comment: s.comment, seconds: Math.round(s.seconds),
+                first_seen: s.firstSeen, last_change: s.lastChange, label_changes: s.changes,
+                app_build: data.build };
+      rows.push(COLUMNS.map(function (c) { return v[c] === undefined ? "" : v[c]; }));
+    });
+    return rows;
+  }
+
+  // Read a downloaded file into a new state. Reports how many units of this page it matched, rows
+  // that match no unit, units listed twice (the last row is used), and the builds and annotators
+  // the file names.
+  function importRows(data, rows) {
+    var state = blankState(data);
+    var none = { state: state, matched: 0, unknown: 0, duplicates: [], builds: [], annotators: [], columns: false };
+    if (!rows.length) return none;
+    var head = rows[0].map(function (h) { return h.trim(); });
+    var col = function (name) { return head.indexOf(name); };
+    if (col("unit_code") < 0) return Object.assign(none, { unknown: rows.length - 1 });
+    var known = {}, indexOf = {};
+    data.units.forEach(function (u, i) { known[u.code] = true; indexOf[u.code] = i; });
+    var matched = 0, unknown = 0, builds = [], annotators = [], seen = {}, duplicates = [];
+    rows.slice(1).forEach(function (r) {
+      var get = function (name) { var j = col(name); return j < 0 ? "" : (r[j] || ""); };
+      var code = get("unit_code").trim();
+      if (!known[code]) { unknown += 1; return; }
+      if (seen[code]) { if (duplicates.indexOf(code) < 0) duplicates.push(code); }
+      else { seen[code] = true; matched += 1; }
+      var b = get("app_build").trim(), a = get("annotator").trim();
+      if (b && builds.indexOf(b) < 0) builds.push(b);
+      if (a && annotators.indexOf(a) < 0) annotators.push(a);
+      var s = state.units[code], p = get("primary_topic").trim(), sec = get("secondary_topic").trim(),
+          fl = get("segment_flag").trim();
+      s.primary = TOPIC_NAMES.indexOf(p) >= 0 ? p : "";
+      s.secondary = TOPIC_NAMES.indexOf(sec) >= 0 && sec !== s.primary && sec !== "Other" ? sec : "";
+      var pos = indexOf[code];
+      s.flag = FLAG_VALUES.indexOf(fl) >= 0 && flagAllowed(fl, pos, data.units) ? fl : "";
+      s.otherNote = get("other_note");
+      s.comment = get("comment");
+      s.seconds = parseFloat(get("seconds")) || 0;
+      s.firstSeen = get("first_seen").trim();
+      s.lastChange = get("last_change").trim();
+      s.changes = parseInt(get("label_changes"), 10) || 0;
+    });
+    if (!data.annotator && annotators.length === 1 && data.annotators.indexOf(annotators[0]) >= 0) {
+      state.annotator = annotators[0];
+    }
+    return { state: state, matched: matched, unknown: unknown, duplicates: duplicates, builds: builds,
+             annotators: annotators, columns: true };
+  }
+
+  function loadWarnings(data, current, res) {
+    var warnings = [];
+    var foreign = res.builds.filter(function (b) { return b !== data.build; });
+    if (foreign.length) {
+      warnings.push("This file was downloaded from another labelling page (build " + foreign.join(", ") +
+                    "; this page is " + data.set + ", build " + data.build + "). Load it only if it is your own file " +
+                    "for this page.");
+    }
+    var who = current.annotator;
+    var others = res.annotators.filter(function (a) { return who && a !== who; });
+    if (others.length) {
+      warnings.push("This file holds the labels of " + others.join(", ") + ", and this page is labelled by " + who +
+                    ". Load it only if it is your own file.");
+    }
+    if (res.duplicates.length) {
+      warnings.push("The file lists " + res.duplicates.length + " unit(s) in more than one row; only the last row " +
+                    "of each is used.");
+    }
+    var labelled = 0, lost = 0;
+    data.units.forEach(function (u) {
+      if (unitStarted(res.state.units[u.code])) labelled += 1;
+      else if (unitStarted(current.units[u.code])) lost += 1;
+    });
+    if (lost) {
+      warnings.push("The file has labels for " + labelled + " of the " + data.units.length + " units. Loading it " +
+                    "removes the labels you entered on this page for " + lost + " unit(s).");
+    }
+    return warnings;
+  }
+
+  var LabelCore = { TOPICS: TOPICS, TOPIC_NAMES: TOPIC_NAMES, FLAGS: FLAGS, FLAG_VALUES: FLAG_VALUES,
+                    COLUMNS: COLUMNS, IDLE_MS: IDLE_MS, blankUnit: blankUnit, blankState: blankState,
+                    restoreState: restoreState, unitDone: unitDone, unitStarted: unitStarted, missing: missing,
+                    needsOtherNote: needsOtherNote, needsTopic: needsTopic, NO_CONTENT: NO_CONTENT, PREV: PREV, NEXT: NEXT,
+                    flagAllowed: flagAllowed, blocksOf: blocksOf, neighbourHints: neighbourHints, checklist: checklist, setField: setField, toCSV: toCSV, parseCSV: parseCSV,
+                    csvDelimiter: csvDelimiter, decodeText: decodeText, exportRows: exportRows,
+                    importRows: importRows, loadWarnings: loadWarnings };
+  if (typeof module !== "undefined" && module.exports) module.exports = LabelCore;
+  root.LabelCore = LabelCore;
+})(typeof window !== "undefined" ? window : globalThis);
+
+</script>
+<script>
+/* Interface of the labelling page. Uses LabelCore (core.js). */
+(function () {
+  "use strict";
+  var C = window.LabelCore;
+
+  function el(tag, attrs, children) {
+    var e = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      var v = attrs[k];
+      if (k === "text") e.textContent = v;
+      else if (k === "class") e.className = v;
+      else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), v);
+      else if (v === true) e.setAttribute(k, "");
+      else if (v !== false && v !== null && v !== undefined) e.setAttribute(k, v);
+    });
+    (children || []).forEach(function (c) { if (c) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function nowIso() { return new Date().toISOString(); }
+
+  function start() {
+    var data = JSON.parse(document.getElementById("data").textContent);
+    var guide = JSON.parse(document.getElementById("guide").textContent);
+    var KEY = "topic-labels:" + (data.annotator || "shared") + ":" + data.set + ":" + data.build;
+    var storageOK = true, stored = null;
+    try { stored = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { storageOK = false; }
+    var state = C.restoreState(data, stored);
+    var B = C.blocksOf(data.units);                       // the texts and which text each unit is in
+    function blockOf(i) { return B.blocks[B.byUnit[i]]; }
+    var dirty = false, locked = false;
+
+    document.title = data.title;
+    document.getElementById("title").textContent = data.title;
+    if (data.practice) document.getElementById("practice").hidden = false;
+    if (data.notice) {                        // e.g. a preview page that must not be used for labelling
+      var note = document.getElementById("practice");
+      note.textContent = data.notice; note.hidden = false; note.classList.add("notice");
+    }
+
+    // ------------------------------------------------------------ banner and lock
+    var banner = document.getElementById("banner");
+    function showBanner(text, button) {
+      banner.textContent = text;
+      if (button) banner.appendChild(el("button", { "class": "banner-action", onclick: button.onclick }, [button.label]));
+      banner.hidden = false;
+    }
+    function lock(reason) {
+      if (locked) return;
+      locked = true;
+      document.querySelector(".layout").inert = true;
+      document.getElementById("download").disabled = true;
+      document.getElementById("load").disabled = true;
+      showBanner(reason + " This copy is now locked so that it cannot overwrite that work. Close it, or reload it " +
+                 "to continue here with the labels saved there.",
+                 { label: "Reload this copy", onclick: function () { location.reload(); } });
+    }
+    window.addEventListener("storage", function (e) { if (e.key === KEY) lock("This page was changed in another tab or window."); });
+    var channel = null;
+    try { channel = new BroadcastChannel(KEY); } catch (e) { channel = null; }
+    if (channel) {
+      channel.onmessage = function (e) {
+        if (e.data === "opened") { channel.postMessage("locked"); lock("This page was opened again in another tab or window."); }
+        else if (e.data === "locked" && !locked) {
+          showBanner("This page is also open in another tab or window. That copy is now locked, so you can continue " +
+                     "here; close it when you can.", { label: "OK", onclick: function () { banner.hidden = true; } });
+        }
+      };
+      channel.postMessage("opened");
+    }
+
+    function save() {
+      if (locked) return;
+      dirty = true;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); }
+      catch (e) {
+        storageOK = false;
+        showBanner("This browser does not keep your work for this page. Download your labels before you close it, " +
+                   "and load the file again next time.");
+      }
+      renderStatus();
+    }
+    if (!storageOK) save();
+
+    function cur() { return data.units[state.current]; }
+    function st(u) { return state.units[u.code]; }
+
+    // ------------------------------------------------------------ activity and time
+    // Time is counted for the current unit only while the page is in front, the window has focus,
+    // and the annotator has used the mouse or keyboard recently. Seconds are first collected as
+    // "pending" and added to the unit at the next activity. If there is no activity for IDLE_MS
+    // (two minutes), the pending seconds are dropped: the whole stretch since the last activity is
+    // treated as a break, so a page left open during a break adds no time at all.
+    var IDLE = data.idle_ms || C.IDLE_MS;
+    var lastActivity = Date.now(), pending = 0, timerActive = true, timerRunning = false;
+    function commit() {
+      if (pending > 0 && state.annotator && !locked) { st(cur()).seconds += pending; pending = 0; save(); }
+      pending = 0;
+    }
+    function activity() {
+      if (Date.now() - lastActivity < IDLE) commit(); else pending = 0;
+      lastActivity = Date.now();
+    }
+    ["keydown", "pointerdown", "wheel", "input"].forEach(function (ev) {
+      document.addEventListener(ev, activity, true);     // capture: runs before a click moves to another unit
+    });
+    var lastMove = 0;
+    document.addEventListener("pointermove", function () {
+      var t = Date.now();
+      if (t - lastMove > 1000) { lastMove = t; activity(); }
+    }, true);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden" && Date.now() - lastActivity < IDLE) commit();
+    });
+    window.addEventListener("blur", function () { if (Date.now() - lastActivity < IDLE) commit(); });
+    // The indicator at the top only says whether time is being recorded right now. It shows no
+    // number, so that annotators can see a break is not counted without feeling timed.
+    function showTimer(active, running) {
+      var box = document.getElementById("timer");
+      box.classList.toggle("running", running);
+      document.getElementById("timer-label").textContent = !state.annotator ? "Not started" :
+        running ? "Actively labeling" : active ? "Paused (page not in front)" : "Paused (break)";
+    }
+    setInterval(function () {
+      var active = Date.now() - lastActivity < IDLE;
+      var running = !locked && Boolean(state.annotator) && document.visibilityState === "visible" && document.hasFocus() && active;
+      if (!locked && state.annotator && document.visibilityState === "visible" && document.hasFocus()) {
+        if (active) pending += 1; else pending = 0;
+      }
+      document.getElementById("paused").hidden = active || !state.annotator;
+      timerActive = active; timerRunning = running;
+      showTimer(active, running);
+    }, 1000);
+
+    // ------------------------------------------------------------ status and list
+    function renderStatus() {
+      if (typeof showTimer === "function") showTimer(timerActive, timerRunning);
+      var done = data.units.filter(function (u) { return C.unitDone(st(u)); }).length;
+      var pct = data.units.length ? Math.floor(100 * done / data.units.length) : 0;
+      document.getElementById("pfill").style.width = (100 * done / Math.max(1, data.units.length)) + "%";
+      document.getElementById("pbar").setAttribute("aria-valuenow", String(pct));
+      document.getElementById("pbar").setAttribute("aria-valuetext", pct + "% (" + done + " of " + data.units.length + " units)");
+      document.getElementById("ppct").textContent = pct + "%";
+      Array.prototype.forEach.call(document.querySelectorAll(".pmark"), function (m) {
+        m.classList.toggle("reached", pct >= parseInt(m.getAttribute("data-at"), 10));
+      });
+      Array.prototype.forEach.call(document.querySelectorAll(".ptick"), function (tk, k) {
+        tk.classList.toggle("reached", pct >= 25 * (k + 1));
+      });
+      document.getElementById("who").textContent = state.annotator ? "Annotator " + state.annotator : "";
+      document.getElementById("download").disabled = locked || !state.annotator;
+      document.getElementById("progress").textContent = done + " of " + data.units.length + " units done, " +
+        (state.lastLoad ? "loaded from " + state.lastLoad + ", not downloaded since" :
+         state.lastDownload ? "last downloaded " + state.lastDownload : "not downloaded yet");
+      var list = document.getElementById("list"), top = list.scrollTop, currentButton = null;
+      list.textContent = "";
+      var curBlock = B.byUnit[state.current];
+      B.blocks.forEach(function (blk, k) {
+        var n = blk.last - blk.first + 1, d = 0, started = false;
+        for (var i = blk.first; i <= blk.last; i++) {
+          var s = st(data.units[i]);
+          if (C.unitDone(s)) d += 1; else if (C.unitStarted(s)) started = true;
+        }
+        var cls = d === n ? "done" : d || started ? "started" : "empty";
+        var said = cls === "done" ? "done" : cls === "started" ? d + " of " + n + " units done" : "not started";
+        var b = el("button", { "class": "item " + cls + (k === curBlock ? " current" : ""), title: said,
+          "aria-label": "Text " + (k + 1) + ", " + said, "aria-current": k === curBlock ? "true" : null,
+          disabled: !state.annotator, onclick: function () { goText(k); } },
+          [el("span", { text: "Text " + (k + 1) }), el("span", { "class": "count", text: d + "/" + n })]);
+        if (k === curBlock) currentButton = b;
+        list.appendChild(b);
+      });
+      list.scrollTop = top;
+      if (currentButton) {
+        var r = currentButton.getBoundingClientRect(), n = list.getBoundingClientRect();
+        if (r.top < n.top) list.scrollTop -= n.top - r.top + 4;
+        else if (r.bottom > n.bottom) list.scrollTop += r.bottom - n.bottom + 4;
+      }
+    }
+
+    var header = document.querySelector("header");
+    function fitHeader() { document.documentElement.style.setProperty("--head", header.offsetHeight + "px"); }
+    fitHeader();
+    window.addEventListener("resize", fitHeader);
+
+    // ------------------------------------------------------------ choose annotator (shared pages)
+    function chooseAnnotator() {
+      var main = document.getElementById("main");
+      main.textContent = "";
+      main.appendChild(el("section", { "class": "sheet intro" }, [
+        el("h2", { text: "Who is labelling?" }),
+        el("p", { text: "All annotators use this same page. Choose your annotator code. It names the file you download " +
+                        "and hand in." }),
+        el("div", { "class": "nav" }, data.annotators.map(function (a) {
+          return el("button", { "class": "primary", onclick: function () {
+            if (!window.confirm("Label this page as " + a + "?")) return;
+            state.annotator = a; save(); go(state.current);
+          } }, [a]);
+        })),
+        el("p", { "class": "muted", text: "Before you start, open the guidelines (button at the top) and read them once." })
+      ]));
+    }
+
+    // ------------------------------------------------------------ the unit and its neighbours
+    // The whole current text, with the unit being labelled highlighted. Moving to the next unit of
+    // the same text only moves the highlight.
+    function readingStrip(i) {
+      var blk = blockOf(i);
+      var strip = el("section", { "class": "strip", "aria-label": "The text, with the unit you are labelling highlighted" });
+      for (var j = blk.first; j <= blk.last; j++) {
+        var u = data.units[j], isCur = j === i, s = st(u);
+        var mark = C.unitDone(s) ? "\u2713" : "";
+        strip.appendChild(el("div", { "class": "unit" + (isCur ? " current" : " near") + (C.unitDone(s) && !isCur ? " done" : ""),
+                                      "aria-current": isCur ? "true" : null },
+          [el("span", { "class": "num", text: String(j - blk.first + 1) }),
+           el("p", { "class": "utext", text: u.text }),
+           el("span", { "class": "umark", "aria-hidden": "true", text: isCur ? "" : mark })]));
+      }
+      return strip;
+    }
+
+    var topicPicks = {}, flagPicks = [];
+    function render() {
+      if (!state.annotator) { chooseAnnotator(); renderStatus(); return; }
+      var u = cur(), s = st(u), main = document.getElementById("main");
+      if (!s.firstSeen) { s.firstSeen = nowIso(); save(); }
+      main.textContent = "";
+      var stateWord = C.unitDone(s) ? "done" : C.unitStarted(s) ? "not finished" : "not started";
+      var blk = blockOf(state.current);
+      main.appendChild(el("h2", { "class": "where", tabindex: "-1" }, [
+        "Text " + (B.byUnit[state.current] + 1) + " of " + B.blocks.length + ", unit " + (state.current - blk.first + 1) +
+        " of " + (blk.last - blk.first + 1) + " ",
+        el("span", { "class": "muted", id: "unit-status", text: "(" + stateWord + ")" })]));
+      main.appendChild(readingStrip(state.current));
+
+      var panel = el("section", { "class": "panel", "aria-label": "Labels for this unit" });
+
+      // boundary check
+      flagPicks = [];
+      panel.appendChild(el("h3", { id: "flag-label", text: "Is the unit boundary right?" }));
+      var flags = el("div", { "class": "flags", role: "radiogroup", "aria-labelledby": "flag-label" });
+      C.FLAGS.forEach(function (f, k) {
+        var allowed = C.flagAllowed(f.value, state.current, data.units);
+        flagPicks.push(allowed ? f.value : null);
+        var input = el("input", { type: "radio", name: "flag", value: f.value, checked: s.flag === f.value, disabled: !allowed,
+          onchange: function () { pick("flag", f.value, 'input[name="flag"][value="' + f.value + '"]'); } });
+        flags.appendChild(el("label", { "class": "choice" + (s.flag === f.value ? " picked" : "") + (allowed ? "" : " unavailable"),
+          title: allowed ? null : (f.value === C.PREV ? "This is the first unit of the text; there is no unit above it." : "This is the last unit of the text; there is no unit below it.") },
+          [input, el("span", { "class": "key", "aria-hidden": "true", text: String(k + 1) }), el("span", { text: f.text })]));
+      });
+      panel.appendChild(flags);
+      var prevS = state.current > blk.first ? st(data.units[state.current - 1]) : null;
+      var nextS = state.current < blk.last ? st(data.units[state.current + 1]) : null;
+      C.neighbourHints(prevS, s, nextS).forEach(function (h) { panel.appendChild(el("p", { "class": "hint-box", text: h })); });
+
+      topicPicks = {};
+      if (!C.needsTopic(s)) {
+        panel.appendChild(el("h3", { text: "What is this unit about?" }));
+        panel.appendChild(el("p", { "class": "def", text: "No topic is needed for a unit with no content. If the unit does say something, choose another boundary option and then a topic." }));
+      } else {
+        // topic
+        panel.appendChild(el("h3", { id: "topic-label", text: "What is this unit about?" }));
+        var grid = el("div", { "class": "topics", role: "radiogroup", "aria-labelledby": "topic-label" });
+        C.TOPICS.forEach(function (t) {
+          topicPicks[t.key] = t.name;
+          var input = el("input", { type: "radio", name: "topic", value: t.name, checked: s.primary === t.name,
+            onchange: function () { pick("primary", t.name, 'input[name="topic"][value="' + t.name + '"]'); } });
+          grid.appendChild(el("label", { "class": "choice" + (s.primary === t.name ? " picked" : "") + (t.name === "Other" ? " other" : ""),
+                                         title: defOf(t.name) },
+            [input, el("span", { "class": "key", "aria-hidden": "true", text: t.key }), el("span", { text: t.name })]));
+        });
+        panel.appendChild(grid);
+        panel.appendChild(el("p", { "class": "def", text: s.primary ? s.primary + ": " + defOf(s.primary) + "." :
+          "Choose the topic the unit is mainly about. Letter keys a to n choose a topic." }));
+
+        // other note
+        if (s.primary === "Other") {
+          panel.appendChild(el("label", { "class": "field-label", "for": "other-note",
+            text: "In a few words, what is this unit about? (required for Other)" }));
+          panel.appendChild(el("input", { id: "other-note", type: "text", "class": C.needsOtherNote(s) ? "need" : "",
+            value: s.otherNote, placeholder: "for example: general praise", oninput: function (e) {
+              s.otherNote = e.target.value; s.lastChange = nowIso(); save(); e.target.classList.toggle("need", C.needsOtherNote(s));
+              updateMissing(); } }));
+        }
+
+        // secondary
+        panel.appendChild(el("label", { "class": "field-label", "for": "secondary", text: "Second topic (optional)" }));
+        var sel = el("select", { id: "secondary", disabled: !s.primary || s.primary === "Other", onchange: function (e) {
+          pick("secondary", e.target.value, "#secondary"); } });
+        sel.appendChild(el("option", { value: "", text: "None" }));
+        C.TOPIC_NAMES.forEach(function (n) {
+          if (n === "Other" || n === s.primary) return;
+          sel.appendChild(el("option", { value: n, text: n, selected: s.secondary === n }));
+        });
+        panel.appendChild(sel);
+        panel.appendChild(el("p", { "class": "hint", text: "Only for a genuine second topic that the unit touches as much as the first. If unsure, leave it at None." }));
+
+      }
+
+      // comment
+      panel.appendChild(el("label", { "class": "field-label", "for": "comment", text: "Comment (optional): doubts, a boundary problem, anything else" }));
+      panel.appendChild(el("textarea", { id: "comment", rows: 2, oninput: function (e) {
+        s.comment = e.target.value; s.lastChange = nowIso(); save(); updateMissing(); } }, [s.comment]));
+
+      main.appendChild(panel);
+
+      // still needed and navigation, under the text so they stay in view
+      var last = state.current === data.units.length - 1;
+      main.appendChild(el("section", { "class": "controls", "aria-label": "Move between units" }, [
+        el("ul", { "class": "checklist", id: "checklist", "aria-label": "Needed before Next", "aria-live": "polite" }),
+        el("div", { "class": "nav" }, [
+          el("button", { id: "back", disabled: state.current === 0, onclick: back }, ["Back"]),
+          el("button", { id: "next", "class": "primary", disabled: !C.unitDone(s) || last, onclick: next }, ["Next"]),
+          el("button", { onclick: nextUnfinished, title: "Go to the earliest unit that is not done yet" }, ["First unfinished"])]),
+        el("p", { "class": "keys", text: "Keys: 1 to 5 the boundary check, a to n choose a topic, Enter or the right arrow goes on, the left arrow goes back, ? opens the guidelines." })]));
+      updateMissing();
+      renderStatus();
+    }
+
+    function updateMissing() {
+      var s = st(cur()), list = document.getElementById("checklist");
+      if (!list) return;
+      list.textContent = "";
+      C.checklist(s).forEach(function (item) {
+        list.appendChild(el("li", { "class": item.ok ? "yes" : "no" }, [
+          el("span", { "class": "mark", "aria-hidden": "true", text: item.ok ? "\u2713" : "\u2717" }),
+          el("span", { text: item.label }),
+          el("span", { "class": "sr", text: item.ok ? " (done)" : " (missing)" })]));
+      });
+      var nx = document.getElementById("next");
+      if (nx) nx.disabled = !C.unitDone(s) || state.current === data.units.length - 1;
+      var us = document.getElementById("unit-status");
+      if (us) us.textContent = "(" + (C.unitDone(s) ? "done" : C.unitStarted(s) ? "not finished" : "not started") + ")";
+    }
+
+    // Each choice rebuilds the panel; keyboard users get their focus back, mouse users do not.
+    var lastPointer = 0;
+    document.addEventListener("pointerdown", function () { lastPointer = Date.now(); }, true);
+    function pick(field, value, focusSel) {
+      var s = st(cur());
+      if (!C.setField(s, field, value, nowIso())) return;
+      save(); render();
+      if (Date.now() - lastPointer > 1000 && focusSel) {
+        var t = document.querySelector(focusSel);
+        if (t) t.focus();
+      }
+      if (field === "primary" && value === "Other") {
+        var on = document.getElementById("other-note");
+        if (on && !s.otherNote) on.focus();
+      }
+    }
+
+    function defOf(name) {
+      for (var i = 0; i < guide.topics.length; i++) if (guide.topics[i][0] === name) return guide.topics[i][1];
+      return "";
+    }
+
+    // ------------------------------------------------------------ navigation
+    function show() {
+      render();
+      var main = document.getElementById("main");
+      var y = main.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight - 8;
+      window.scrollTo(0, Math.max(0, y));
+    }
+    function go(i) { state.current = i; save(); show(); }
+    function goText(k) {
+      var blk = B.blocks[k];
+      for (var i = blk.first; i <= blk.last; i++) if (!C.unitDone(st(data.units[i]))) { go(i); return; }
+      go(blk.first);
+    }
+    function next() {
+      if (!C.unitDone(st(cur()))) { updateMissing(); return; }
+      if (state.current < data.units.length - 1) go(state.current + 1);
+    }
+    function back() { if (state.current > 0) go(state.current - 1); }
+    // "First unfinished" goes to the earliest unit that is not done, other than the one on screen.
+    // (It used to look only forward from the current unit, so it skipped units left unfinished
+    // further up and, while working in order, simply moved one unit on, like Next.)
+    function nextUnfinished() {
+      for (var i = 0; i < data.units.length; i++) {
+        if (i !== state.current && !C.unitDone(st(data.units[i]))) { go(i); return; }
+      }
+      if (!C.unitDone(st(cur()))) { updateMissing(); return; }
+      window.alert("Every unit is done. Download your labels to hand them in.");
+    }
+
+    // ------------------------------------------------------------ guidelines drawer
+    var drawer = document.getElementById("guide-panel");
+    function buildGuide() {
+      var g = document.getElementById("guide-body");
+      g.textContent = "";
+      g.appendChild(el("p", { "class": "muted", text: guide.version }));
+      g.appendChild(el("h3", { text: "Your task" }));
+      guide.task.forEach(function (t) { g.appendChild(el("p", { text: t })); });
+      g.appendChild(el("h3", { text: "Topics" }));
+      var tb = el("table", {}, [el("thead", {}, [el("tr", {}, [el("th", { text: "Topic" }), el("th", { text: "The unit is about" }), el("th", { text: "Example" })])])]);
+      var body = el("tbody");
+      guide.topics.forEach(function (t) { body.appendChild(el("tr", {}, [el("td", { text: t[0] }), el("td", { text: t[1] }), el("td", { "class": "ex", text: "\u201C" + t[2] + "\u201D" })])); });
+      tb.appendChild(body); g.appendChild(el("div", { "class": "table-wrap" }, [tb]));
+      g.appendChild(el("h3", { text: "Decision rules" }));
+      var ol = el("ol");
+      guide.rules.forEach(function (r) { ol.appendChild(el("li", {}, [el("strong", { text: r[0] }), " " + r[1]])); });
+      g.appendChild(ol);
+      g.appendChild(el("h3", { text: "Topics that are easy to confuse" }));
+      var ul = el("ul");
+      guide.pairs.forEach(function (p) { ul.appendChild(el("li", {}, [el("strong", { text: p[0] + ". " }), p[1]])); });
+      g.appendChild(ul);
+      g.appendChild(el("h3", { text: "Boundary check" }));
+      var fl = el("ul");
+      guide.flags.forEach(function (f) { fl.appendChild(el("li", {}, [el("strong", { text: f[0] + ". " }), f[1]])); });
+      g.appendChild(fl);
+      if (guide.boundary_rules) {
+        g.appendChild(el("h3", { text: "When a concern is split over several units" }));
+        var br = el("ol");
+        guide.boundary_rules.forEach(function (r) { br.appendChild(el("li", {}, [el("strong", { text: r[0] + " " }), r[1]])); });
+        g.appendChild(br);
+        if (guide.boundary_example) {
+          var ex = guide.boundary_example;
+          g.appendChild(el("p", { text: ex.intro }));
+          var t = el("table", {}, [el("thead", {}, [el("tr", {}, [el("th", { text: "Unit" }), el("th", { text: "Text" }), el("th", { text: "Boundary check" }), el("th", { text: "Topic" })])])]);
+          var tbody = el("tbody");
+          ex.rows.forEach(function (r) { tbody.appendChild(el("tr", {}, r.map(function (c, k) { return el("td", { "class": k === 1 ? "ex" : null, text: c }); }))); });
+          t.appendChild(tbody); g.appendChild(el("div", { "class": "table-wrap" }, [t]));
+        }
+      }
+    }
+    buildGuide();
+    var opener = null;
+    function openGuide() { opener = document.activeElement; drawer.hidden = false; document.getElementById("guide-close").focus(); }
+    function closeGuide() { drawer.hidden = true; if (opener && opener.focus) opener.focus(); }
+    document.getElementById("guide-open").addEventListener("click", openGuide);
+    document.getElementById("guide-close").addEventListener("click", closeGuide);
+
+    // ------------------------------------------------------------ download and load
+    document.getElementById("download").addEventListener("click", function () {
+      commit();
+      var left = data.units.filter(function (u) { return !C.unitDone(st(u)); }).length;
+      if (left && !window.confirm(left + " unit(s) are not finished. Download anyway? You can load the file later and continue.")) return;
+      var blob = new Blob(["\uFEFF" + C.toCSV(C.exportRows(data, state))], { type: "text/csv;charset=utf-8" });
+      var a = el("a", { href: URL.createObjectURL(blob), download: state.annotator + "_" + data.set + ".csv" });
+      document.body.appendChild(a); a.click(); a.remove();
+      state.lastDownload = new Date().toLocaleString(); state.lastLoad = ""; save(); dirty = false;
+    });
+
+    document.getElementById("load").addEventListener("change", function (e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        var res = C.importRows(data, C.parseCSV(C.decodeText(reader.result)));
+        if (!res.matched) {
+          window.alert("This file holds no unit of this page. " + (res.columns ? "Its unit codes belong to another page." :
+                       "It has no unit_code column, so it is not a labels file. Choose the file this page downloaded."));
+          return;
+        }
+        var warnings = C.loadWarnings(data, state, res);
+        if (!window.confirm((warnings.length ? "Warning. " + warnings.join("\n\n") + "\n\n" : "") +
+                            "Replace the labels on this page with the " + res.matched + " unit(s) in the file" +
+                            (warnings.length ? " anyway?" : "?") +
+                            (res.unknown ? " " + res.unknown + " row(s) of the file belong to no unit here and are left out." : ""))) return;
+        var before = JSON.parse(JSON.stringify(state));
+        try { localStorage.setItem(KEY + ":before-load", JSON.stringify({ at: nowIso(), state: before })); } catch (err) { /* undo below still works */ }
+        res.state.current = state.current; res.state.lastDownload = state.lastDownload;
+        if (state.annotator) res.state.annotator = state.annotator;
+        res.state.lastLoad = file.name + " at " + new Date().toLocaleString();
+        state = res.state; save(); render();
+        showBanner("Loaded " + file.name + ". The labels from before the load are kept.", { label: "Undo the load",
+          onclick: function () {
+            if (!window.confirm("Put back the labels from before you loaded " + file.name + "? Changes made since the load are lost.")) return;
+            state = before; save(); render(); banner.hidden = true;
+          } });
+      };
+      reader.readAsArrayBuffer(file);
+      e.target.value = "";
+    });
+
+    // ------------------------------------------------------------ keys
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !drawer.hidden) { e.preventDefault(); closeGuide(); return; }
+      var tag = e.target.tagName;
+      if (tag === "TEXTAREA" || tag === "INPUT" && e.target.type === "text" || tag === "SELECT") return;
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.key === "?") { e.preventDefault(); if (drawer.hidden) openGuide(); else closeGuide(); return; }
+      if (locked || !state.annotator || !drawer.hidden) return;
+      if (tag === "BUTTON" && e.key === "Enter") return;
+      var k = e.key.toLowerCase();
+      if (topicPicks[k] && C.needsTopic(st(cur()))) { e.preventDefault(); lastPointer = 0; pick("primary", topicPicks[k], 'input[name="topic"][value="' + topicPicks[k] + '"]'); return; }
+      var n = parseInt(e.key, 10);
+      if (n >= 1 && n <= flagPicks.length && flagPicks[n - 1]) { e.preventDefault(); lastPointer = 0; pick("flag", flagPicks[n - 1], 'input[name="flag"][value="' + flagPicks[n - 1] + '"]'); return; }
+      if (e.key === "Enter" || e.key === "ArrowRight") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); back(); }
+    });
+
+    window.addEventListener("beforeunload", function (e) {
+      if (!storageOK && dirty) { e.preventDefault(); e.returnValue = ""; }
+    });
+    render();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+
+</script>
+</body>
+</html>
